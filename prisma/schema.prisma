@@ -1,0 +1,286 @@
+// DrugOS Backend Schema
+// SQLite-backed persistence for users, organizations, projects, billing,
+// collaboration, evidence packages, audit logs, notifications, and API keys.
+// NOTE: Knowledge graph nodes/edges, raw dataset tables, and RL model artifacts
+// are intentionally NOT modeled here — those are owned by the standalone ML
+// services (Neo4j graph, Airflow data pipeline, Stable-Baselines3 RL agent).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// AUTH & USERS
+// ---------------------------------------------------------------------------
+
+model User {
+  id                String        @id @default(cuid())
+  email             String        @unique
+  passwordHash      String
+  name              String?
+  role              String        @default("researcher") // researcher | admin | owner | billing | viewer
+  status            String        @default("active")     // active | suspended | pending_approval
+  mfaSecret         String?
+  mfaEnabled        Boolean       @default(false)
+  emailVerified     Boolean       @default(false)
+  academicVerified  Boolean       @default(false)
+  lastLoginAt       DateTime?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  organizationMemberships OrganizationMember[]
+  projects                Project[]
+  apiKeys                 ApiKey[]
+  auditLogs               AuditLog[]
+  notifications           Notification[]
+  evidencePackages        EvidencePackage[]
+  billingInvoices         BillingInvoice[]
+  refreshTokens           RefreshToken[]
+}
+
+model Organization {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  plan        String   @default("free") // free | researcher | team | enterprise
+  status      String   @default("active")
+  seats       Int      @default(1)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  members           OrganizationMember[]
+  projects          Project[]
+  apiKeys           ApiKey[]
+  billingInvoices   BillingInvoice[]
+  subscription      Subscription?
+}
+
+model OrganizationMember {
+  id              String       @id @default(cuid())
+  userId          String
+  organizationId  String
+  role            String       @default("member") // owner | admin | member | viewer | billing
+  invitedBy       String?
+  joinedAt        DateTime     @default(now())
+
+  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organization   Organization  @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, organizationId])
+}
+
+model RefreshToken {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  revokedAt DateTime?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// ---------------------------------------------------------------------------
+// PROJECTS & COLLABORATION
+// ---------------------------------------------------------------------------
+
+model Project {
+  id              String       @id @default(cuid())
+  name            String
+  description     String?
+  status          String       @default("active") // active | archived | completed | on_hold
+  visibility      String       @default("private") // private | org | public
+  ownerId         String
+  organizationId  String
+  tags            String       @default("") // comma-separated
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  owner           User           @relation(fields: [ownerId], references: [id])
+  organization    Organization   @relation(fields: [organizationId], references: [id])
+  hypotheses      Hypothesis[]
+  comments        Comment[]
+  activities      ProjectActivity[]
+  evidencePackages EvidencePackage[]
+}
+
+model Hypothesis {
+  id            String   @id @default(cuid())
+  projectId     String
+  title         String
+  drugName      String
+  diseaseName   String
+  status        String   @default("draft") // draft | reviewing | validated | rejected | archived
+  // The three scores managed by the standalone RL agent — we store the
+  // most recent values for display, but the RL agent is the source of truth.
+  plausibilityScore  Float?
+  safetyScore        Float?
+  marketScore        Float?
+  overallScore       Float?
+  notes        String?
+  createdById  String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  project          Project          @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  evidencePackages EvidencePackage[]
+}
+
+model Comment {
+  id         String   @id @default(cuid())
+  projectId  String
+  userId     String?
+  authorName String
+  body       String
+  createdAt  DateTime @default(now())
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+model ProjectActivity {
+  id         String   @id @default(cuid())
+  projectId  String
+  type       String   // hypothesis_created | status_changed | comment_added | file_uploaded
+  actorName  String
+  summary    String
+  createdAt  DateTime @default(now())
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}
+
+// ---------------------------------------------------------------------------
+// BILLING
+// ---------------------------------------------------------------------------
+
+model Subscription {
+  id              String       @id @default(cuid())
+  organizationId  String       @unique
+  plan            String       @default("free")
+  status          String       @default("active") // active | canceled | past_due | trialing
+  seats           Int          @default(1)
+  currentPeriodStart DateTime
+  currentPeriodEnd   DateTime
+  cancelAtPeriodEnd  Boolean   @default(false)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+}
+
+model BillingInvoice {
+  id              String   @id @default(cuid())
+  organizationId  String
+  userId          String?
+  number          String   @unique
+  amountCents     Int
+  currency        String   @default("usd")
+  status          String   @default("open") // open | paid | void | uncollectible
+  periodStart     DateTime
+  periodEnd       DateTime
+  dueDate         DateTime
+  pdfUrl          String?
+  createdAt       DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  user         User?         @relation(fields: [userId], references: [id])
+}
+
+// ---------------------------------------------------------------------------
+// EVIDENCE PACKAGES
+// ---------------------------------------------------------------------------
+
+model EvidencePackage {
+  id            String   @id @default(cuid())
+  projectId     String?
+  hypothesisId  String?
+  userId        String?
+  drugName      String
+  diseaseName   String
+  title         String
+  summary       String
+  payloadJson   String   // serialized bundle: literature, trials, safety signals
+  pdfPath       String?
+  status        String   @default("draft") // draft | generated | published
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  project    Project?    @relation(fields: [projectId], references: [id])
+  hypothesis Hypothesis? @relation(fields: [hypothesisId], references: [id])
+  user       User?       @relation(fields: [userId], references: [id])
+}
+
+// ---------------------------------------------------------------------------
+// API KEYS (Developer platform)
+// ---------------------------------------------------------------------------
+
+model ApiKey {
+  id              String   @id @default(cuid())
+  organizationId  String
+  userId          String
+  name            String
+  hashedKey       String   // we store only the hash, never the raw key
+  prefix          String   // first 8 chars shown in UI for identification
+  lastUsedAt      DateTime?
+  revokedAt       DateTime?
+  createdAt       DateTime @default(now())
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  user         User         @relation(fields: [userId], references: [id])
+}
+
+// ---------------------------------------------------------------------------
+// NOTIFICATIONS & AUDIT
+// ---------------------------------------------------------------------------
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  type      String   // info | success | warning | error
+  title     String
+  body      String
+  readAt    DateTime?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  actorName  String
+  action     String   // login | logout | hypothesis_create | billing_change | admin_action
+  resource   String?
+  ip         String?
+  userAgent  String?
+  metadata   String   @default("{}") // JSON string
+  createdAt  DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([action])
+}
+
+// ---------------------------------------------------------------------------
+// WEBHOOKS
+// ---------------------------------------------------------------------------
+
+model WebhookEndpoint {
+  id              String   @id @default(cuid())
+  organizationId  String
+  url             String
+  secret          String
+  events          String   @default("*") // comma-separated event types
+  enabled         Boolean  @default(true)
+  lastTriggeredAt DateTime?
+  createdAt       DateTime @default(now())
+}

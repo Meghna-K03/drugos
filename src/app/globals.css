@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  /* DrugOS custom colors */
+  --color-drugos-primary: #5B4FCF;
+  --color-drugos-accent-green: #1D9E75;
+  --color-drugos-accent-orange: #D4853A;
+  --color-drugos-accent-red: #C0392B;
+  --color-drugos-bg: #F8F8FA;
+}
+
+:root {
+  --radius: 0.625rem;
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  /* DrugOS Light Theme - Primary #5B4FCF */
+  --background: #F8F8FA;
+  --foreground: #1A1A2E;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A2E;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A2E;
+  --primary: #5B4FCF;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F0EFF9;
+  --secondary-foreground: #3D3870;
+  --muted: #F0EFF9;
+  --muted-foreground: #6B6B80;
+  --accent: #F0EFF9;
+  --accent-foreground: #3D3870;
+  --destructive: #C0392B;
+  --border: #E2E1EA;
+  --input: #E2E1EA;
+  --ring: #5B4FCF;
+  --chart-1: #5B4FCF;
+  --chart-2: #1D9E75;
+  --chart-3: #D4853A;
+  --chart-4: #C0392B;
+  --chart-5: #8B5CF6;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1A2E;
+  --sidebar-primary: #5B4FCF;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F0EFF9;
+  --sidebar-accent-foreground: #3D3870;
+  --sidebar-border: #E2E1EA;
+  --sidebar-ring: #5B4FCF;
+}
+
+.dark {
+  --background: #0F0F1A;
+  --foreground: #E8E8F0;
+  --card: #1A1A2E;
+  --card-foreground: #E8E8F0;
+  --popover: #1A1A2E;
+  --popover-foreground: #E8E8F0;
+  --primary: #7B6FEF;
+  --primary-foreground: #FFFFFF;
+  --secondary: #252540;
+  --secondary-foreground: #C4C4D8;
+  --muted: #252540;
+  --muted-foreground: #8B8BA0;
+  --accent: #252540;
+  --accent-foreground: #C4C4D8;
+  --destructive: #E74C3C;
+  --border: #2D2D48;
+  --input: #2D2D48;
+  --ring: #7B6FEF;
+  --chart-1: #7B6FEF;
+  --chart-2: #2DD4A0;
+  --chart-3: #E8A04E;
+  --chart-4: #E74C3C;
+  --chart-5: #A78BFA;
+  --sidebar: #1A1A2E;
+  --sidebar-foreground: #E8E8F0;
+  --sidebar-primary: #7B6FEF;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #252540;
+  --sidebar-accent-foreground: #C4C4D8;
+  --sidebar-border: #2D2D48;
+  --sidebar-ring: #7B6FEF;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter);
+  }
+}
+
+/* Custom DrugOS scrollbar */
+@layer utilities {
+  .scrollbar-drugos::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-drugos::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-drugos::-webkit-scrollbar-thumb {
+    background: #C4C4D8;
+    border-radius: 3px;
+  }
+  .scrollbar-drugos::-webkit-scrollbar-thumb:hover {
+    background: #8B8BA0;
+  }
+}

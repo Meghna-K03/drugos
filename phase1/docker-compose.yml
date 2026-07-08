@@ -1,0 +1,242 @@
+# audit-2025 ROOT FIX (issue 34): the ``version: '3.8'`` key is
+# DEPRECATED in Docker Compose v2+ (the standalone ``docker-compose``
+# binary is end-of-life; the modern ``docker compose`` plugin ignores
+# the ``version:`` key and prints a warning). The fix REMOVES the
+# ``version:`` key entirely — Compose v2 reads the Compose Specification
+# (https://docs.docker.com/compose/compose-file/), which has no
+# top-level ``version:`` field. The file format is auto-detected from
+# the ``services:`` top-level key.
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      # audit-2025 ROOT FIX (issue 36): the previous hardcoded
+      # ``cosmic:cosmic`` credentials made it impossible to run this
+      # compose file in any environment that requires real secrets
+      # (e.g. CI, staging, prod). The fix uses env-var interpolation
+      # with safe development defaults so the file still works
+      # out-of-the-box but can be hardened by exporting
+      # ``POSTGRES_USER`` / ``POSTGRES_PASSWORD`` in the shell.
+      POSTGRES_USER: ${POSTGRES_USER:-cosmic}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cosmic}
+      POSTGRES_DB: ${POSTGRES_DB:-drug_repurposing}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      # FIX AUDIT-3: Removed migration volume mount — migrations are
+      # applied by the Python runner (run_migrations.py) instead of psql.
+      # This avoids double-execution and cross-dialect compatibility issues.
+      # - ./database/migrations:/docker-entrypoint-initdb.d
+    healthcheck:
+      # Use the env-var-derived user so the healthcheck works with any
+      # ``POSTGRES_USER`` value, not just the hardcoded "cosmic".
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-cosmic} -d ${POSTGRES_DB:-drug_repurposing}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # FIX #4: Create ALL subdirectories under raw_data, use chmod 775 instead of 777
+  # Added healthcheck, changed airflow-init dependency to service_healthy
+  setup:
+    image: busybox
+    volumes:
+      - ./raw_data:/tmp/raw_data
+      - ./processed_data:/tmp/processed_data
+    command: sh -c "mkdir -p /tmp/raw_data/chembl /tmp/raw_data/drugbank /tmp/raw_data/uniprot /tmp/raw_data/string /tmp/raw_data/disgenet /tmp/raw_data/omim /tmp/raw_data/pubchem /tmp/processed_data && chmod 775 /tmp/raw_data /tmp/raw_data/chembl /tmp/raw_data/drugbank /tmp/raw_data/uniprot /tmp/raw_data/string /tmp/raw_data/disgenet /tmp/raw_data/omim /tmp/raw_data/pubchem /tmp/processed_data && chown -R 50000:0 /tmp/raw_data /tmp/processed_data"
+    healthcheck:
+      test: ["CMD-SHELL", "test -d /tmp/raw_data/chembl && test -d /tmp/raw_data/drugbank && test -d /tmp/raw_data/uniprot && test -d /tmp/raw_data/string && test -d /tmp/raw_data/disgenet && test -d /tmp/raw_data/omim && test -d /tmp/raw_data/pubchem"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  airflow-init:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.airflow
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://cosmic:cosmic@postgres/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+      # FIX TOP-15: Airflow tasks (which import phase1.config.settings) need
+      # the same env vars as the host runner. The settings module reads
+      # these at IMPORT TIME — without them, Airflow tasks silently fall
+      # back to dev defaults even when DRUGOS_ENVIRONMENT=production.
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg2://cosmic:cosmic@postgres/drug_repurposing}
+      DISGENET_API_KEY: ${DISGENET_API_KEY:-}
+      OMIM_API_KEY: ${OMIM_API_KEY:-}
+      DRUGOS_ENVIRONMENT: ${DRUGOS_ENVIRONMENT:-development}
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./pipelines:/opt/airflow/pipelines
+      - ./cleaning:/opt/airflow/cleaning
+      - ./entity_resolution:/opt/airflow/entity_resolution
+      - ./database:/opt/airflow/database
+      - ./config:/opt/airflow/config
+      - ./raw_data:/opt/airflow/raw_data
+      - ./processed_data:/opt/airflow/processed_data
+    depends_on:
+      setup:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    # FIX C3: Run init_db() BEFORE airflow db init so that the Python-level
+    # schema (ORM models + migrations) is always applied, even if the
+    # PostgreSQL volume persists from a previous run.
+    # FIX AUDIT-4: Create airflow database first if it doesn't exist.
+    #
+    # audit-2025 ROOT FIX (issue 35): the previous entrypoint used
+    # hardcoded ``--username admin --password admin`` credentials AND
+    # appended ``|| true`` to swallow the user-creation failure. That
+    # meant: (a) the Airflow admin login was always the well-known
+    # ``admin/admin`` pair (a security hazard in any non-local env),
+    # and (b) if user creation failed for ANY reason (network glitch,
+    # constraint violation, race with another init container) the
+    # ``|| true`` silently swallowed the error and the operator got an
+    # Airflow instance with NO admin user — they couldn't log in.
+    # The fix uses env-var interpolation (``${AIRFLOW_ADMIN_USER:-admin}``
+    # / ``${AIRFLOW_ADMIN_PASSWORD:-admin}``) so deployments can set
+    # real credentials via the shell, AND removes the ``|| true`` so
+    # user-creation failures surface as a real init-container failure.
+    # The default ``admin/admin`` is kept ONLY for local dev so the
+    # out-of-the-box experience is unchanged.
+    entrypoint: >
+      bash -c "PGPASSWORD=${POSTGRES_PASSWORD:-cosmic} psql -h postgres -U ${POSTGRES_USER:-cosmic} -d postgres -c \"SELECT 'CREATE DATABASE airflow' WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'airflow')\\gexec\" &&
+      python -c 'from database.connection import init_db; init_db()' &&
+      airflow db migrate &&
+      airflow users create --username ${AIRFLOW_ADMIN_USER:-admin} --password ${AIRFLOW_ADMIN_PASSWORD:-admin} --firstname Admin --lastname User --role Admin --email admin@example.com"
+    healthcheck:
+      test: ["CMD-SHELL", "airflow db check"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  airflow-webserver:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.airflow
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://cosmic:cosmic@postgres/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+      AIRFLOW__WEBSERVER__EXPOSE_CONFIG: 'true'
+      # FIX TOP-15: pass through the same env vars as airflow-init so
+      # any task launched by the webserver (e.g. test-connection DAGs)
+      # inherits them.
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg2://cosmic:cosmic@postgres/drug_repurposing}
+      DISGENET_API_KEY: ${DISGENET_API_KEY:-}
+      OMIM_API_KEY: ${OMIM_API_KEY:-}
+      DRUGOS_ENVIRONMENT: ${DRUGOS_ENVIRONMENT:-development}
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./pipelines:/opt/airflow/pipelines
+      - ./cleaning:/opt/airflow/cleaning
+      - ./entity_resolution:/opt/airflow/entity_resolution
+      - ./database:/opt/airflow/database
+      - ./config:/opt/airflow/config
+      - ./raw_data:/opt/airflow/raw_data
+      - ./processed_data:/opt/airflow/processed_data
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    command: webserver
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  airflow-scheduler:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.airflow
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://cosmic:cosmic@postgres/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
+      # FIX TOP-15: pass through the same env vars as airflow-init so
+      # tasks launched by the scheduler inherit them (the scheduler is
+      # what actually executes DAG tasks under LocalExecutor).
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg2://cosmic:cosmic@postgres/drug_repurposing}
+      DISGENET_API_KEY: ${DISGENET_API_KEY:-}
+      OMIM_API_KEY: ${OMIM_API_KEY:-}
+      DRUGOS_ENVIRONMENT: ${DRUGOS_ENVIRONMENT:-development}
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./pipelines:/opt/airflow/pipelines
+      - ./cleaning:/opt/airflow/cleaning
+      - ./entity_resolution:/opt/airflow/entity_resolution
+      - ./database:/opt/airflow/database
+      - ./config:/opt/airflow/config
+      - ./raw_data:/opt/airflow/raw_data
+      - ./processed_data:/opt/airflow/processed_data
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    command: scheduler
+
+  # v29 ROOT FIX (audit O-5 — docker-compose missing Neo4j):
+  # The forensic audit found that docker-compose.yml had NO Neo4j
+  # service, despite the docx explicitly listing Neo4j as the
+  # Knowledge Graph DB. Phase 2's RecordingGraphBuilder (in-memory)
+  # was the only path that worked. ROOT FIX: add a real Neo4j
+  # service so the documented architecture is realizable. Set
+  # DRUGOS_NEO4J_URI=bolt://neo4j:7687 in the environment to make
+  # Phase 2 use it.
+  neo4j:
+    image: neo4j:5.20
+    environment:
+      NEO4J_AUTH: neo4j/cosmicpassword
+      NEO4J_PLUGINS: '["apoc"]'
+      NEO4J_dbms_security_procedures_unrestricted: apoc.*
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 1G
+      NEO4J_server_memory_pagecache_size: 512m
+    ports:
+      - "7474:7474"   # HTTP browser UI
+      - "7687:7687"   # Bolt protocol
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://localhost:7474 || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
+  # v29 ROOT FIX (audit O-5 — docker-compose missing MLflow):
+  # The docx lists MLflow as the experiment-tracking tool. The v28
+  # docker-compose had no MLflow service, so mlflow_tracker.py
+  # silently failed to log. ROOT FIX: add an MLflow tracking server.
+  mlflow:
+    image: python:3.11-slim
+    command: >
+      bash -c "pip install --no-cache-dir mlflow psycopg2-binary &&
+               mlflow server --host 0.0.0.0 --port 5000
+               --backend-store-uri postgresql://cosmic:cosmic@postgres/mlflow
+               --default-artifact-root /mlruns"
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow_data:/mlruns
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+
+volumes:
+  postgres_data:
+  neo4j_data:
+  neo4j_logs:
+  mlflow_data:

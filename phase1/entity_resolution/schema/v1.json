@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://drug-repurposing.team-cosmic.dev/schemas/entity-resolution/v1.json",
+  "title": "Entity Resolver State Dict (v1.0)",
+  "description": "JSON Schema for the to_state_dict() / from_state_dict() serialisation format used by DrugResolver and ProteinResolver. Audit D7-4 / D16-3.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "resolver_class",
+    "config",
+    "mapping",
+    "stats",
+    "exported_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0",
+      "description": "Schema version of the state-dict format. from_state_dict refuses to load mismatched versions (audit D12-4)."
+    },
+    "resolver_class": {
+      "type": "string",
+      "enum": ["DrugResolver", "ProteinResolver"],
+      "description": "Concrete resolver class that produced this state."
+    },
+    "config": {
+      "type": "object",
+      "description": "ResolverConfig fields, with pubchem_api_key masked to '<redacted>' if set.",
+      "properties": {
+        "collapse_stereoisomers": {"type": "boolean"},
+        "fuzzy_threshold": {"type": "number", "minimum": 0, "maximum": 1},
+        "fuzzy_max_candidates": {"type": "integer", "minimum": 1},
+        "pubchem_enabled": {"type": "boolean"},
+        "pubchem_rest_base": {"type": "string"},
+        "pubchem_call_delay": {"type": "number", "minimum": 0},
+        "pubchem_timeout": {"type": "number", "exclusiveMinimum": 0},
+        "pubchem_max_retries": {"type": "integer", "minimum": 0},
+        "pubchem_api_key": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string", "const": "<redacted>"}
+          ]
+        },
+        "pubchem_ca_bundle": {
+          "oneOf": [{"type": "null"}, {"type": "string"}]
+        },
+        "pubchem_cert_pem": {
+          "oneOf": [{"type": "null"}, {"type": "string"}]
+        },
+        "pubchem_key_pem": {
+          "oneOf": [{"type": "null"}, {"type": "string"}]
+        },
+        "pubchem_strict_salt_form": {"type": "boolean"},
+        "source_whitelist": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "array", "items": {"type": "string"}}
+          ]
+        },
+        "default_organism": {"type": "string"},
+        "mapping_schema_version": {"type": "string"}
+      }
+    },
+    "mapping": {
+      "type": "object",
+      "description": "Mapping from canonical key (InChIKey for drugs, UniProt accession for proteins) to canonical entry dict.",
+      "additionalProperties": {"type": "object"}
+    },
+    "inchikey_index": {
+      "type": "object",
+      "description": "DrugResolver only. Maps full InChIKey -> canonical_inchikey.",
+      "additionalProperties": {"type": "string"}
+    },
+    "name_index": {
+      "type": "object",
+      "description": "Maps normalized name -> canonical key.",
+      "additionalProperties": {"type": "string"}
+    },
+    "name_index_multi": {
+      "type": "object",
+      "description": "Multi-valued name index. Maps normalized name -> list of canonical keys (audit D8-5).",
+      "additionalProperties": {
+        "type": "array",
+        "items": {"type": "string"}
+      }
+    },
+    "connectivity_index": {
+      "type": "object",
+      "description": "DrugResolver only. Maps InChIKey first-block (14 chars) -> canonical_inchikey.",
+      "additionalProperties": {"type": "string"}
+    },
+    "connectivity_index_multi": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {"type": "string"}
+      }
+    },
+    "gene_index": {
+      "type": "array",
+      "description": "ProteinResolver only. List of {gene, organism, uniprot_id} objects.",
+      "items": {
+        "type": "object",
+        "required": ["gene", "organism", "uniprot_id"],
+        "properties": {
+          "gene": {"type": "string"},
+          "organism": {"type": "string"},
+          "uniprot_id": {"type": "string"}
+        }
+      }
+    },
+    "string_to_uniprot": {
+      "type": "object",
+      "description": "ProteinResolver only. Maps string_id -> uniprot_id.",
+      "additionalProperties": {"type": "string"}
+    },
+    "dead_letter": {
+      "type": "array",
+      "description": "Records that failed validation and were quarantined for inspection (audit D6-3).",
+      "items": {"type": "object"}
+    },
+    "audit_trail": {
+      "type": "object",
+      "description": "Per-canonical-key audit trail of merge events (audit D16-6).",
+      "additionalProperties": {
+        "type": "array",
+        "items": {"type": "object"}
+      }
+    },
+    "stats": {
+      "type": "object",
+      "description": "ResolverStats counter snapshot (audit D11-2).",
+      "additionalProperties": {"type": "integer"}
+    },
+    "exported_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 timestamp when the state was exported."
+    }
+  }
+}

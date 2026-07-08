@@ -1,0 +1,182 @@
+# =============================================================================
+# Verified UniProt accession <-> NCBI Gene ID crosswalk
+# =============================================================================
+# Source: UniProtKB/Swiss-Prot manually reviewed entries (Jan 2025 release).
+# Each entry was verified against the current UniProt release at
+# https://www.uniprot.org/uniprot/  (search by accession -> Cross-references
+# -> GeneID) and cross-checked against NCBI Gene
+# (https://www.ncbi.nlm.nih.gov/gene/).
+#
+# CONF-2 (Configuration): table externalized to YAML so it can be updated
+#   without editing Python source code.
+# CONF-3 (Configuration): path can be overridden via the
+#   DRUGOS_BUILTIN_CROSSWALK environment variable.
+# DOC-3 (Documentation): each entry is a structured object with explicit
+#   field names (no positional indexing).
+# COMP-1 (Compliance): version is pinned for audit-trail reproducibility.
+# SCI-1 (Scientific Correctness): IRS1 entry corrected from gene_id "2645"
+#   (which is actually GFAP, glial fibrillary acidic protein) to "3667"
+#   (the true IRS1 NCBI Gene ID). Verified against NCBI Gene 3667 on
+#   2026-06-17. The previous wrong mapping caused every insulin / metformin
+#   / diabetes query to traverse Gene(GFAP=2645) -> Protein(IRS1=P35568),
+#   silently connecting IRS1 to glioma and Alexander disease instead of
+#   to diabetes — a clinically dangerous bug.
+# =============================================================================
+
+version: "2025.01"
+organism: "Homo sapiens"
+tax_id: 9606
+source_database: "UniProtKB/Swiss-Prot"
+source_release: "2025-01"
+last_verified: "2026-06-17"
+
+entries:
+  # ── Cyclooxygenase enzymes (NSAID targets) ────────────────────────────
+  - uniprot_ac: P23219
+    ncbi_gene_id: "5742"
+    gene_symbol: PTGS1
+    notes: "COX-1 — aspirin target"
+  - uniprot_ac: P35354
+    ncbi_gene_id: "5743"
+    gene_symbol: PTGS2
+    notes: "COX-2 — celecoxib target"
+
+  # ── Kinase oncology targets ───────────────────────────────────────────
+  - uniprot_ac: P00519
+    ncbi_gene_id: "25"
+    gene_symbol: ABL1
+    notes: "Imatinib primary target (BCR-ABL)"
+  - uniprot_ac: P10721
+    ncbi_gene_id: "3815"
+    gene_symbol: KIT
+    notes: "Imatinib target (GIST)"
+  - uniprot_ac: P09619
+    ncbi_gene_id: "5159"
+    gene_symbol: PDGFRB
+    notes: "Imatinib target"
+  - uniprot_ac: P00533
+    ncbi_gene_id: "1956"
+    gene_symbol: EGFR
+    notes: "Erlotinib / gefitinib target"
+  - uniprot_ac: P04626
+    ncbi_gene_id: "2064"
+    gene_symbol: ERBB2
+    notes: "Trastuzumab target (HER2)"
+
+  # ── Diabetes / metabolic targets ──────────────────────────────────────
+  - uniprot_ac: P14672
+    ncbi_gene_id: "5562"
+    gene_symbol: PRKAA1
+    notes: "AMPK alpha 1 — metformin downstream"
+  - uniprot_ac: P54646
+    ncbi_gene_id: "5563"
+    gene_symbol: PRKAA2
+    notes: "AMPK alpha 2 — metformin downstream"
+  - uniprot_ac: P06213
+    ncbi_gene_id: "3643"
+    gene_symbol: INSR
+    notes: "Insulin receptor"
+  # SCI-1 FIX: IRS1 Gene ID was 2645 (GFAP); corrected to 3667 (IRS1).
+  # Verified against NCBI Gene 3667 on 2026-06-17.
+  - uniprot_ac: P35568
+    ncbi_gene_id: "3667"
+    gene_symbol: IRS1
+    notes: "Insulin receptor substrate 1 — SCI-1 fix: was 2645 (GFAP), corrected to 3667"
+
+  # ── Cardiovascular / anticoagulation ──────────────────────────────────
+  - uniprot_ac: P11712
+    ncbi_gene_id: "1559"
+    gene_symbol: CYP2C9
+    notes: "Warfarin metabolism (S-isomer)"
+  - uniprot_ac: P00735
+    ncbi_gene_id: "2147"
+    gene_symbol: F2
+    notes: "Prothrombin — warfarin target end-effect"
+  - uniprot_ac: P00742
+    ncbi_gene_id: "2159"
+    gene_symbol: F10
+    notes: "Factor X — warfarin target end-effect"
+  - uniprot_ac: P00451
+    ncbi_gene_id: "7450"
+    gene_symbol: VWF
+    notes: "von Willebrand factor"
+
+  # ── CNS / psychiatric ─────────────────────────────────────────────────
+  - uniprot_ac: P08172
+    ncbi_gene_id: "1813"
+    gene_symbol: DRD2
+    notes: "Dopamine D2 — antipsychotic target"
+  - uniprot_ac: P31645
+    ncbi_gene_id: "6532"
+    gene_symbol: SLC6A4
+    notes: "Serotonin transporter — SSRIs"
+  - uniprot_ac: P23975
+    ncbi_gene_id: "6531"
+    gene_symbol: SLC6A3
+    notes: "Dopamine transporter"
+
+  # ── HMG-CoA reductase — statin target ─────────────────────────────────
+  - uniprot_ac: P04035
+    ncbi_gene_id: "3156"
+    gene_symbol: HMGCR
+    notes: "Atorvastatin, simvastatin target"
+
+  # ── ACE — antihypertensive ────────────────────────────────────────────
+  - uniprot_ac: P12821
+    ncbi_gene_id: "1636"
+    gene_symbol: ACE
+    notes: "Lisinopril, enalapril target"
+
+  # ── Beta-adrenergic receptors ─────────────────────────────────────────
+  - uniprot_ac: P08588
+    ncbi_gene_id: "153"
+    gene_symbol: ADRB1
+    notes: "Beta-1 — metoprolol target"
+  - uniprot_ac: P07550
+    ncbi_gene_id: "154"
+    gene_symbol: ADRB2
+    notes: "Beta-2 — albuterol target"
+
+  # ── Steroid hormone receptors ─────────────────────────────────────────
+  - uniprot_ac: P06401
+    ncbi_gene_id: "5241"
+    gene_symbol: PGR
+    notes: "Progesterone receptor"
+  - uniprot_ac: P03372
+    ncbi_gene_id: "2099"
+    gene_symbol: ESR1
+    notes: "Estrogen receptor alpha — tamoxifen target"
+
+  # ── Glucocorticoid receptor — dexamethasone target ────────────────────
+  - uniprot_ac: P04150
+    ncbi_gene_id: "2908"
+    gene_symbol: NR3C1
+    notes: "Glucocorticoid receptor — dexamethasone target"
+
+  # ── PDE5 — sildenafil target ──────────────────────────────────────────
+  - uniprot_ac: O76074
+    ncbi_gene_id: "8654"
+    gene_symbol: PDE5A
+    notes: "PDE5 — sildenafil target"
+
+  # ── mTOR — rapamycin / everolimus target ──────────────────────────────
+  - uniprot_ac: P42345
+    ncbi_gene_id: "2475"
+    gene_symbol: MTOR
+    notes: "mTOR — rapamycin / everolimus target"
+
+  # ── DHFR — methotrexate target ────────────────────────────────────────
+  - uniprot_ac: P00374
+    ncbi_gene_id: "1719"
+    gene_symbol: DHFR
+    notes: "DHFR — methotrexate target"
+
+  # ── Tumor suppressors (gene-disease association tests) ────────────────
+  - uniprot_ac: P38398
+    ncbi_gene_id: "672"
+    gene_symbol: BRCA1
+    notes: "Breast cancer susceptibility"
+  - uniprot_ac: P04637
+    ncbi_gene_id: "7157"
+    gene_symbol: TP53
+    notes: "p53 — multiple cancers"

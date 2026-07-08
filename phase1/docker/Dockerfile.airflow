@@ -1,0 +1,22 @@
+# v29 ROOT FIX (audit O-6 — Dockerfile.airflow can't build):
+# The forensic audit found that ``apache/airflow:2.8.1`` ships Python 3.8,
+# but ``phase1/requirements.txt`` requires ``pandas>=2.1.4`` /
+# ``numpy>=1.26.3`` which require Python >= 3.9. The build failed
+# unresolvably. ROOT FIX: pin to ``apache/airflow:2.9.3-python3.11``
+# which ships Python 3.11 — compatible with all our requirements AND
+# with the latest Airflow 2.9.x security patches.
+FROM apache/airflow:2.9.3-python3.11
+USER root
+# SCI-FIX: Install postgresql-client (provides psql) which is needed by the
+# airflow-init entrypoint in docker-compose.yml to create the airflow database.
+# Previously only libpq-dev (headers) was installed, but psql binary was
+# missing, causing airflow-init to fail with "psql: command not found".
+# libpq-dev is kept for any source-build compatibility, though psycopg2-binary
+# (in requirements.txt) is a pre-built wheel and doesn't need it.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libpq-dev \
+    postgresql-client \
+    && rm -rf /var/lib/apt/lists/*
+USER airflow
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt

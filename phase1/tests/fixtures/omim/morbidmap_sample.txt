@@ -1,0 +1,26 @@
+# OMIM Morbidmap Sample File (test fixture)
+#
+# This is a synthetic morbidmap.txt fixture covering all 6 phenotype markers,
+# multi-gene rows, malformed rows, and the inheritance-annotation case.
+# Lines beginning with '#' are comments. The first non-# non-empty line is
+# a DATA row (BUG-3.1 regression test).
+#
+# Generated: 2024-06-15
+# Copyright (c) 1966-2024 Johns Hopkins University
+#
+Phenotype	Gene Symbols	MIM Number	Cyto Location
+Achondroplasia, 100800 (3)	FGFR3	134934	4p16.3
+Cystic fibrosis, 219700 (3), Autosomal recessive	CFTR	602421	7q31.2
+{Breast cancer, 114480 (3)}	BRCA1	113705	17q21.31
+[Some non-disease, 100100 (3)]	FANCE	603765	11p15.5
+?Provisional syndrome, 100200 (2)	SOMEGENE	100200	1p36.13
+*Gene locus example, 100300 (3)	MYGENE	100300	2q31.1
++Alt form example, 100400 (3)	ALTGENE	100400	3p21.3
+%Mendelian phenotype, 100500 (3)	MENDGENE	100500	4q35.1
+Testicular germ cell tumor, 273300 (4)	KIT	164920	4q12
+Hemochromatosis, 235200 (3)	HFE	235200	6p22.2
+Marfan syndrome, 154700 (3)	FBN1	134797	15q21.1
+Sickle cell anemia, 603903 (3)	HBB	141900	11p15.4
+Duchenne muscular dystrophy, 310200 (3), X-linked recessive	DMD	300377	Xp21.2
+Huntington disease, 143100 (3)	HTT	613004	4p16.3
+Testicular cancer, 273300 (3)	KIT,FGFR3	164920	4q12

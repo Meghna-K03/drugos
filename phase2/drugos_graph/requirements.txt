@@ -1,0 +1,52 @@
+# DrugOS Graph Module — Dependencies
+# Install with: pip install -r requirements.txt
+# For optional features, see the extras below.
+
+# Core dependencies
+neo4j>=5.0,<6.0
+pandas>=2.0,<3.0
+networkx>=3.0,<4.0
+numpy>=1.24,<3.0
+torch>=2.0,<3.0
+torch-geometric>=2.4,<3.0
+torch-scatter>=2.1,<3.0
+torch-sparse>=0.6,<1.0
+
+# ML & Training
+scikit-learn>=1.3,<2.0
+transformers>=4.30,<5.0
+
+# Experiment Tracking
+mlflow>=2.0,<3.0
+
+# Observability — Fixes audit issue 11.3 (Prometheus metrics in utils.py).
+# prometheus_client is REQUIRED for utils.py metrics; without it, metrics
+# silently fall back to no-op counters (module still imports fine).
+prometheus-client>=0.20,<1.0
+
+# Configuration — Fixes audit issue 12.1 (externalized label_map.yaml).
+# pyyaml is OPTIONAL for utils.py (Python dict fallback if YAML missing),
+# but REQUIRED for full label_map.yaml support.
+pyyaml>=6.0,<7.0
+
+# ─── DRKG loader v2.0 audit-fix dependencies ──────────────────────────────
+# (drkg_loader_repair_prompt.md — BUG 9.1, BUG 9.5, BUG 15.4, GAP 8.6)
+#
+# certifi — TLS certificate bundle for HTTPS downloads (BUG 9.1).
+#   Without it, the loader falls back to the system CA store, which may be
+#   outdated on some Linux distros.
+certifi>=2024.0
+
+# backports.tarfile — tarfile.extractall(filter="data") backport for
+#   Python < 3.12 (BUG 9.5). On Python 3.12+ the stdlib's native filter
+#   is used; this package is a no-op dependency.
+backports.tarfile; python_version < "3.12"
+
+# psutil — memory guard in build_networkx_graph (GAP 8.6). Without it,
+#   the guard is skipped (logged at DEBUG) and the loader will OOM on
+#   large DRKG variants instead of raising MemoryError with a helpful
+#   message.
+psutil>=5.9
+
+# Recommended: Molecular features
+# rdkit-pypi>=2023.3     # Morgan fingerprints — recommended for compound features

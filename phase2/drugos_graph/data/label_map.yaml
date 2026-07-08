@@ -1,0 +1,157 @@
+# DrugOS Graph — DRKG Type → Neo4j Label Mapping (Externalized Config)
+# ====================================================================
+# Fixes audit issue 12.1 — label map externalized for no-code schema updates.
+# Do not edit utils.py to add a type; edit this file instead.
+#
+# This file is the SINGLE SOURCE OF TRUTH for the label mapping. The
+# drugos_graph/utils.py module loads this file at startup (with a Python
+# fallback if the file is missing). Custom deployments can override the
+# path via the DRUGOS_LABEL_MAP_PATH environment variable.
+#
+# Format: YAML. Each entry has:
+#   neo4j_label: PascalCase Neo4j storage label
+#   ontology: Biomedical ontology name
+#   ontology_version: Ontology version string
+#   source: Data source(s) that populate this type
+#   deprecated: (optional, default false) — emits DeprecationWarning on use
+#   deprecation_replacement: (optional) — canonical replacement DRKG type
+
+version: "1.0.0"
+api_version: "1.0.0"
+schema_version: "1.0.0"
+drkg_version: "v2"
+last_updated: "2026-06-17"
+source: "config.py + forensic audit fixes (MASTER_PROMPT_fix_utils_py.md)"
+audit_report: "utils_py_forensic_audit.docx"
+
+entries:
+  Compound:
+    neo4j_label: Compound
+    ontology: "ChEMBL/DrugBank"
+    ontology_version: "ChEMBL_34"
+    source: "DRKG+ChEMBL"
+
+  Disease:
+    neo4j_label: Disease
+    ontology: "UMLS"
+    ontology_version: "2024AA"
+    source: "DRKG"
+
+  Gene:
+    neo4j_label: Gene
+    ontology: "NCBI Gene"
+    ontology_version: "current"
+    source: "DRKG"
+
+  # PATIENT SAFETY: Protein is UniProt-only (NOT in DRKG). It must be in
+  # the dict so kg_builder.create_constraints() creates a uniqueness
+  # constraint on Protein.id — otherwise MERGE creates duplicate Protein
+  # nodes on pipeline re-runs (audit issue 3.1 root cause).
+  Protein:
+    neo4j_label: Protein
+    ontology: "UniProt"
+    ontology_version: "2024_05"
+    source: "UniProt"
+
+  Anatomy:
+    neo4j_label: Anatomy
+    ontology: "Uberon"
+    ontology_version: "2024_05"
+    source: "DRKG"
+
+  Pharmacologic Class:
+    neo4j_label: PharmacologicClass
+    ontology: "DrugBank"
+    ontology_version: "current"
+    source: "DRKG"
+
+  # Fixes audit issue 3.6 — Side Effect deprecated; use MedDRA_Term.
+  # Kept for backward compat with existing graphs loaded before v1.0.
+  Side Effect:
+    neo4j_label: SideEffect
+    ontology: "MedDRA"
+    ontology_version: "26.0"
+    source: "SIDER"
+    deprecated: true
+    deprecation_replacement: "MedDRA_Term"
+
+  Symptom:
+    neo4j_label: Symptom
+    ontology: "UMLS"
+    ontology_version: "2024AA"
+    source: "DRKG"
+
+  Pathway:
+    neo4j_label: Pathway
+    ontology: "KEGG/Reactome"
+    ontology_version: "v28"
+    source: "DRKG"
+
+  Biological Process:
+    neo4j_label: BiologicalProcess
+    ontology: "GO"
+    ontology_version: "2024_05"
+    source: "DRKG"
+
+  Molecular Function:
+    neo4j_label: MolecularFunction
+    ontology: "GO"
+    ontology_version: "2024_05"
+    source: "DRKG"
+
+  Cellular Component:
+    neo4j_label: CellularComponent
+    ontology: "GO"
+    ontology_version: "2024_05"
+    source: "DRKG"
+
+  Taxonomy:
+    neo4j_label: Taxonomy
+    ontology: "NCBI Taxonomy"
+    ontology_version: "current"
+    source: "DRKG"
+
+  Gene Expression:
+    neo4j_label: GeneExpression
+    ontology: "GTEx"
+    ontology_version: "v8"
+    source: "DRKG"
+
+  # Fixes audit issue 3.7 — 'Atc' is DRKG's spelling; 'ATC' is WHO standard.
+  # Both map to the same 'Atc' Neo4j label (case alias).
+  Atc:
+    neo4j_label: Atc
+    ontology: "WHO ATC"
+    ontology_version: "2024"
+    source: "DRKG+DrugBank"
+
+  ATC:
+    neo4j_label: Atc
+    ontology: "WHO ATC"
+    ontology_version: "2024"
+    source: "DrugBank"
+
+  Tax:
+    neo4j_label: Tax
+    ontology: "NCBI Taxonomy"
+    ontology_version: "current"
+    source: "DRKG"
+
+  TAX:
+    neo4j_label: Tax
+    ontology: "NCBI Taxonomy"
+    ontology_version: "current"
+    source: "DrugBank"
+
+  # PATIENT SAFETY (audit issue 3.1): MedDRA_Term is the canonical SIDER
+  # adverse-event endpoint. Without this entry, SIDER's
+  # ('Compound', 'causes_adverse_event', 'MedDRA_Term') edges would
+  # create nodes under a fallback label, and the RL safety ranker would
+  # see ZERO adverse events for every drug — ranking dangerous drugs
+  # as 'green' (safe). This entry is the single most important line
+  # in this file for patient safety.
+  MedDRA_Term:
+    neo4j_label: MedDRATerm
+    ontology: "MedDRA"
+    ontology_version: "26.0"
+    source: "SIDER"

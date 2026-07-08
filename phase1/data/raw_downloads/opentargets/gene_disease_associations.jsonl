@@ -1,0 +1,540 @@
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005044", "disease_name": "hypertensive disorder", "score": 0.7418174049079957, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0017609", "disease_name": "renal tubular dysgenesis", "score": 0.7235763510024529, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0009970", "disease_name": "renal tubular dysgenesis of genetic origin", "score": 0.717799577799013, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0004995", "disease_name": "cardiovascular disorder", "score": 0.691621422942917, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005016", "disease_name": "diabetic kidney disease", "score": 0.6893077088041194, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005015", "disease_name": "diabetes mellitus", "score": 0.6554530952562713, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "HP_0000822", "disease_name": "Hypertension", "score": 0.6230542468897323, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005252", "disease_name": "heart failure", "score": 0.6168173370248584, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005009", "disease_name": "congestive heart failure", "score": 0.6124832343630002, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005068", "disease_name": "myocardial infarction", "score": 0.6117982256049286, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005010", "disease_name": "coronary artery disorder", "score": 0.6015932611698072, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005098", "disease_name": "stroke disorder", "score": 0.5776155537347881, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0001134", "disease_name": "essential hypertension", "score": 0.5647558274634822, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005559", "disease_name": "neurodegenerative disease", "score": 0.5636048585017478, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0001106", "disease_name": "kidney failure", "score": 0.5539751918315781, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005148", "disease_name": "type 2 diabetes mellitus", "score": 0.538916444481606, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0004975", "disease_name": "Alzheimer disease", "score": 0.5305785527719876, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005266", "disease_name": "diabetic retinopathy", "score": 0.46868180909361434, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0005554", "disease_name": "rheumatic disorder", "score": 0.4635258443352859, "source": "OpenTargets"}
+{"gene_symbol": "ACE", "disease_id": "MONDO_0019719", "disease_name": "congenital anomaly of kidney and urinary tract", "score": 0.43696039764764716, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0005044", "disease_name": "hypertensive disorder", "score": 0.7471015717041927, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0004995", "disease_name": "cardiovascular disorder", "score": 0.7138392656202733, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0005068", "disease_name": "myocardial infarction", "score": 0.6240223456772374, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "HP_0000822", "disease_name": "Hypertension", "score": 0.6144271284598578, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0005252", "disease_name": "heart failure", "score": 0.609435892244075, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0005338", "disease_name": "open-angle glaucoma", "score": 0.6058805615472129, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0006875", "disease_name": "ocular hypertension", "score": 0.6058296449395875, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0005041", "disease_name": "glaucoma", "score": 0.6051416866996236, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "EFO_0003913", "disease_name": "angina pectoris", "score": 0.6042216444304118, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0005277", "disease_name": "migraine disorder", "score": 0.6027396740273837, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0005009", "disease_name": "congestive heart failure", "score": 0.5984719071528551, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0004979", "disease_name": "asthma", "score": 0.5983738009733574, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0001134", "disease_name": "essential hypertension", "score": 0.5926606442447109, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "EFO_0004278", "disease_name": "sudden cardiac arrest", "score": 0.5881742294041162, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0005098", "disease_name": "stroke disorder", "score": 0.58491155963135, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "HP_0004308", "disease_name": "Ventricular arrhythmia", "score": 0.5837994067744684, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "HP_0012531", "disease_name": "Pain", "score": 0.5834344245768782, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "HP_0100806", "disease_name": "Sepsis", "score": 0.5811602621769651, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0005468", "disease_name": "hypotensive disorder", "score": 0.5785492518657791, "source": "OpenTargets"}
+{"gene_symbol": "ADRB1", "disease_id": "MONDO_0005961", "disease_name": "sinusitis", "score": 0.5758173118439065, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0004979", "disease_name": "asthma", "score": 0.6340624501506094, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0005002", "disease_name": "chronic obstructive pulmonary disease", "score": 0.6326348048158152, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0005338", "disease_name": "open-angle glaucoma", "score": 0.623525617921706, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0005044", "disease_name": "hypertensive disorder", "score": 0.6185442258844168, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0005041", "disease_name": "glaucoma", "score": 0.6173792149432523, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0005068", "disease_name": "myocardial infarction", "score": 0.6122565461943316, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0006875", "disease_name": "ocular hypertension", "score": 0.6061058999937398, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0005252", "disease_name": "heart failure", "score": 0.6043600789308253, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0005277", "disease_name": "migraine disorder", "score": 0.6027870435538704, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0005098", "disease_name": "stroke disorder", "score": 0.602411451987327, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "HP_0006536", "disease_name": "Airway obstruction", "score": 0.6017669978142495, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0005009", "disease_name": "congestive heart failure", "score": 0.5992659307366514, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0004995", "disease_name": "cardiovascular disorder", "score": 0.5953358714628929, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "HP_0000822", "disease_name": "Hypertension", "score": 0.5933509508525646, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0004849", "disease_name": "pulmonary emphysema", "score": 0.5931634125064654, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "EFO_0004278", "disease_name": "sudden cardiac arrest", "score": 0.5885592084194129, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "HP_0100806", "disease_name": "Sepsis", "score": 0.5871104820058907, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "HP_0012531", "disease_name": "Pain", "score": 0.5829920249334526, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0005961", "disease_name": "sinusitis", "score": 0.5758173118439065, "source": "OpenTargets"}
+{"gene_symbol": "ADRB2", "disease_id": "MONDO_0005607", "disease_name": "chronic bronchitis", "score": 0.5745262852463835, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0017609", "disease_name": "renal tubular dysgenesis", "score": 0.7499717923935151, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0005044", "disease_name": "hypertensive disorder", "score": 0.7409239554872237, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0009970", "disease_name": "renal tubular dysgenesis of genetic origin", "score": 0.7172259985603914, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0001134", "disease_name": "essential hypertension", "score": 0.715922172939872, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "HP_0000822", "disease_name": "Hypertension", "score": 0.6297216027077168, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0005252", "disease_name": "heart failure", "score": 0.6191484365767236, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0005068", "disease_name": "myocardial infarction", "score": 0.6164828111472387, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0007781", "disease_name": "essential hypertension, genetic", "score": 0.6131751478430785, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0005009", "disease_name": "congestive heart failure", "score": 0.6088483717614063, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0005240", "disease_name": "kidney disorder", "score": 0.6070452562146326, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0005098", "disease_name": "stroke disorder", "score": 0.6001440372287754, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0005015", "disease_name": "diabetes mellitus", "score": 0.595012361177443, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0005016", "disease_name": "diabetic kidney disease", "score": 0.5930042227925686, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0004995", "disease_name": "cardiovascular disorder", "score": 0.5869435113012765, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0005300", "disease_name": "chronic kidney disease", "score": 0.5771396283038738, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "HP_0000093", "disease_name": "Proteinuria", "score": 0.5661375859457011, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0005148", "disease_name": "type 2 diabetes mellitus", "score": 0.5641546928050634, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "MONDO_0005342", "disease_name": "IgA glomerulonephritis", "score": 0.5462314503984889, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "EFO_0003913", "disease_name": "angina pectoris", "score": 0.5117940311909812, "source": "OpenTargets"}
+{"gene_symbol": "AGTR1", "disease_id": "EFO_0006834", "disease_name": "septic shock", "score": 0.44612805547556317, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0019154", "disease_name": "androgen insensitivity syndrome", "score": 0.844554379006743, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0010720", "disease_name": "partial androgen insensitivity syndrome", "score": 0.8190056905875258, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0008315", "disease_name": "prostate cancer", "score": 0.8026045909519542, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0010735", "disease_name": "Kennedy disease", "score": 0.7424409439078037, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0005159", "disease_name": "prostate carcinoma", "score": 0.7355895026336221, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0005070", "disease_name": "neoplasm", "score": 0.6805485186913741, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0002146", "disease_name": "hypogonadism", "score": 0.6795004620905458, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0005082", "disease_name": "prostate adenocarcinoma", "score": 0.6685375488342614, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "Orphanet_1331", "disease_name": "Familial prostate cancer", "score": 0.6181899392423515, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0018555", "disease_name": "hypogonadotropic hypogonadism", "score": 0.617678661384712, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0011438", "disease_name": "acne", "score": 0.5904704391873098, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0006882", "disease_name": "orchitis", "score": 0.5805707016580218, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0006823", "disease_name": "Klinefelter syndrome", "score": 0.5705837936081624, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0007254", "disease_name": "breast cancer", "score": 0.5591311194543099, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0021259", "disease_name": "prostate neoplasm", "score": 0.555808603121659, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0005372", "disease_name": "male infertility", "score": 0.5529087233252497, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0005133", "disease_name": "endometriosis", "score": 0.5346220655332843, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "EFO_0004714", "disease_name": "sexual dysfunction", "score": 0.5243661317213366, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0005298", "disease_name": "osteoporosis", "score": 0.4893511774495845, "source": "OpenTargets"}
+{"gene_symbol": "AR", "disease_id": "MONDO_0004956", "disease_name": "metastatic prostate carcinoma", "score": 0.48862021081355367, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0007254", "disease_name": "breast cancer", "score": 0.7356631572956897, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0004989", "disease_name": "breast carcinoma", "score": 0.7110829209205298, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0005298", "disease_name": "osteoporosis", "score": 0.7101805380073309, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0005133", "disease_name": "endometriosis", "score": 0.6676172245306173, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0021100", "disease_name": "breast neoplasm", "score": 0.6601486367162668, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0005070", "disease_name": "neoplasm", "score": 0.6595230948841362, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "EFO_0009042", "disease_name": "Estrogen resistance syndrome", "score": 0.6574558017792145, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0011438", "disease_name": "acne", "score": 0.6105452552312747, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0002146", "disease_name": "hypogonadism", "score": 0.6033020860883008, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "GO_0042697", "disease_name": "menopause", "score": 0.6008856724870295, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "HP_0008209", "disease_name": "Premature ovarian insufficiency", "score": 0.6007647962573952, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0008487", "disease_name": "polycystic ovary syndrome", "score": 0.5989163612553737, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0005387", "disease_name": "primary ovarian failure", "score": 0.596260144144489, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "EFO_1000096", "disease_name": "Atrophy", "score": 0.5920059375748489, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0008159", "disease_name": "postmenopausal osteoporosis", "score": 0.5879984436419416, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "HP_0030016", "disease_name": "Dyspareunia", "score": 0.585948775286197, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "EFO_0009520", "disease_name": "contraception", "score": 0.5810395909744756, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0005047", "disease_name": "infertility disorder", "score": 0.5739852303213829, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0004988", "disease_name": "breast adenocarcinoma", "score": 0.5669761402429788, "source": "OpenTargets"}
+{"gene_symbol": "ESR1", "disease_id": "MONDO_0021124", "disease_name": "female infertility", "score": 0.5573571650756121, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0005133", "disease_name": "endometriosis", "score": 0.6685961212692121, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "HP_0000789", "disease_name": "Infertility", "score": 0.5967049846703019, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "EFO_0009520", "disease_name": "contraception", "score": 0.5966574646273075, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0011438", "disease_name": "acne", "score": 0.5966427879546021, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "HP_0100607", "disease_name": "Dysmenorrhea", "score": 0.5779629658573248, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0007254", "disease_name": "breast cancer", "score": 0.575579011498303, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MP_0001914", "disease_name": "hemorrhage", "score": 0.5753727811486253, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "HP_0000131", "disease_name": "Uterine leiomyoma", "score": 0.5731762630016893, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "HP_0000132", "disease_name": "Menorrhagia", "score": 0.5679021633026857, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "HP_0002039", "disease_name": "Anorexia", "score": 0.559160470724517, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0001836", "disease_name": "amenorrhea", "score": 0.5488679698218094, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0001572", "disease_name": "leiomyoma", "score": 0.5291801916703437, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0007886", "disease_name": "uterine corpus leiomyoma", "score": 0.5212667822163191, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0006096", "disease_name": "atypical endometrial hyperplasia", "score": 0.5086013765192258, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0003778", "disease_name": "inborn error of immunity", "score": 0.5039631962908891, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "HP_0004326", "disease_name": "Cachexia", "score": 0.5004249510607784, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0005070", "disease_name": "neoplasm", "score": 0.4921113352748937, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0018912", "disease_name": "Cushing syndrome", "score": 0.46929003561293636, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0005043", "disease_name": "hyperplasia", "score": 0.46555756845874563, "source": "OpenTargets"}
+{"gene_symbol": "PGR", "disease_id": "MONDO_0005298", "disease_name": "osteoporosis", "score": 0.4441745404829242, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0009509", "disease_name": "Landau-Kleffner syndrome", "score": 0.8396284927893759, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "Orphanet_1945", "disease_name": "Rolandic epilepsy", "score": 0.7150851573823888, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0017325", "disease_name": "early-onset epileptic encephalopathy and intellectual disability due to GRIN2A mutation", "score": 0.6710802080073469, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0002009", "disease_name": "major depressive disorder", "score": 0.6572299085165305, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0005180", "disease_name": "Parkinson disease", "score": 0.6244160545749026, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0007295", "disease_name": "self-limited epilepsy with centrotemporal spikes", "score": 0.6222438675366821, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0004975", "disease_name": "Alzheimer disease", "score": 0.6167557992426852, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "HP_0001250", "disease_name": "Seizure", "score": 0.6107100553022144, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0002050", "disease_name": "depressive disorder", "score": 0.6050356357008013, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "HP_0012735", "disease_name": "Cough", "score": 0.6046842713310236, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "HP_0001742", "disease_name": "Nasal congestion", "score": 0.604143964006997, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0005709", "disease_name": "common cold", "score": 0.6040236319519341, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "HP_0002315", "disease_name": "Headache", "score": 0.6031769892462117, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "EFO_0000544", "disease_name": "infection", "score": 0.5993526848152294, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0005324", "disease_name": "seasonal allergic rhinitis", "score": 0.5980796144822393, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0005812", "disease_name": "influenza", "score": 0.5969670190245584, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "HP_0001945", "disease_name": "Fever", "score": 0.5969030778732289, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0002258", "disease_name": "pharyngitis", "score": 0.5956988586923563, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0800501", "disease_name": "developmental and/or epileptic encephalopathy with spike-wave activation in sleep", "score": 0.588612105490311, "source": "OpenTargets"}
+{"gene_symbol": "GRIN2A", "disease_id": "MONDO_0005090", "disease_name": "schizophrenia", "score": 0.588248419896492, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0002009", "disease_name": "major depressive disorder", "score": 0.7364452295198479, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0005090", "disease_name": "schizophrenia", "score": 0.7329871510763829, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0004985", "disease_name": "bipolar disorder", "score": 0.7101876164928885, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0002050", "disease_name": "depressive disorder", "score": 0.6574930030028271, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0007661", "disease_name": "Tourette syndrome", "score": 0.6462933892679626, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0005180", "disease_name": "Parkinson disease", "score": 0.6326349736862866, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0005260", "disease_name": "autism", "score": 0.632540217167985, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0005258", "disease_name": "autism spectrum disorder", "score": 0.6271702322797332, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0005485", "disease_name": "psychotic disorder", "score": 0.6178744929731024, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0005084", "disease_name": "mental disorder", "score": 0.6124925274118068, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "EFO_0009963", "disease_name": "bipolar I disorder", "score": 0.604348032549544, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "HP_0000713", "disease_name": "Agitation", "score": 0.6009100964691818, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0005391", "disease_name": "restless legs syndrome", "score": 0.6001204813319561, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0005487", "disease_name": "schizoaffective disorder", "score": 0.5997944116316325, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "EFO_0003015", "disease_name": "aggressive behavior", "score": 0.5996745212343436, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0005804", "disease_name": "hyperprolactinemia", "score": 0.5840495576126059, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "HP_0002018", "disease_name": "Nausea", "score": 0.5691167161784368, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "HP_0002017", "disease_name": "Nausea and vomiting", "score": 0.5661675294234375, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "EFO_0004888", "disease_name": "post operative nausea and vomiting", "score": 0.562056199847446, "source": "OpenTargets"}
+{"gene_symbol": "DRD2", "disease_id": "MONDO_0007079", "disease_name": "alcohol dependence", "score": 0.5616012418972631, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "HP_0003124", "disease_name": "Hypercholesterolemia", "score": 0.739979095664531, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0021187", "disease_name": "hyperlipidemia", "score": 0.7348935320072427, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0005010", "disease_name": "coronary artery disorder", "score": 0.7206030708568983, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0005439", "disease_name": "familial hypercholesterolemia", "score": 0.7023217960201397, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0005098", "disease_name": "stroke disorder", "score": 0.6825867940409579, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0004995", "disease_name": "cardiovascular disorder", "score": 0.6676418176456681, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0957270", "disease_name": "muscular dystrophy, limb-girdle, autosomal recessive 28", "score": 0.6564647110879546, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0005148", "disease_name": "type 2 diabetes mellitus", "score": 0.6347277284140685, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0005068", "disease_name": "myocardial infarction", "score": 0.6155055298712874, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "EFO_0003913", "disease_name": "angina pectoris", "score": 0.6075773204242394, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0005009", "disease_name": "congestive heart failure", "score": 0.6048989661771307, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "HP_0003119", "disease_name": "Abnormal circulating lipid concentration", "score": 0.6007584109825959, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0005044", "disease_name": "hypertensive disorder", "score": 0.5939240881852537, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0005301", "disease_name": "multiple sclerosis", "score": 0.5897050122930482, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0005311", "disease_name": "atherosclerosis", "score": 0.5867492713023519, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0004975", "disease_name": "Alzheimer disease", "score": 0.5851965451585686, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0001336", "disease_name": "familial hyperlipidemia", "score": 0.5835354306505076, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0002525", "disease_name": "inherited lipid metabolism disorder", "score": 0.579469333420262, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "MONDO_0005559", "disease_name": "neurodegenerative disease", "score": 0.5701966555893736, "source": "OpenTargets"}
+{"gene_symbol": "HMGCR", "disease_id": "HP_0000822", "disease_name": "Hypertension", "score": 0.5474630559108093, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0005109", "disease_name": "HIV infectious disease", "score": 0.6025404830630439, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "EFO_0000180", "disease_name": "HIV-1 infection", "score": 0.5819899118401751, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0005231", "disease_name": "hepatitis C virus infection", "score": 0.5702743250862254, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0005354", "disease_name": "chronic hepatitis C virus infection", "score": 0.5697800666270574, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "EFO_0000544", "disease_name": "infection", "score": 0.47285456513931723, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0100096", "disease_name": "COVID-19", "score": 0.41992009025058175, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "HP_0001394", "disease_name": "Cirrhosis", "score": 0.4056701561520894, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "Orphanet_93160", "disease_name": "Hypocalcemic vitamin D-resistant rickets", "score": 0.4026068660444854, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0005108", "disease_name": "viral infectious disease", "score": 0.37110200723796316, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0005559", "disease_name": "neurodegenerative disease", "score": 0.3695798546847018, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0005344", "disease_name": "hepatitis B virus infection", "score": 0.3427292502866693, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0018076", "disease_name": "tuberculosis", "score": 0.3408072535660644, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0005439", "disease_name": "familial hypercholesterolemia", "score": 0.3385082221731184, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0007256", "disease_name": "hepatocellular carcinoma", "score": 0.2908775387518322, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0005136", "disease_name": "malaria", "score": 0.2893628306366682, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0005789", "disease_name": "hepatitis D virus infection", "score": 0.2853977766731864, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0005812", "disease_name": "influenza", "score": 0.2647890720241214, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0021187", "disease_name": "hyperlipidemia", "score": 0.2620330966629266, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0100163", "disease_name": "COVID-19\u2013associated multisystem inflammatory syndrome in children", "score": 0.25870589827929125, "source": "OpenTargets"}
+{"gene_symbol": "CYP3A4", "disease_id": "MONDO_0005055", "disease_name": "Kaposi's sarcoma", "score": 0.20433146215880454, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "EFO_0022041", "disease_name": "response to tramadol", "score": 0.5455830990355471, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "EFO_0009161", "disease_name": "debrisoquine, poor metabolism of", "score": 0.4868290635834234, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "HP_0000924", "disease_name": "Abnormality of the skeletal system", "score": 0.3336380338737734, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "HP_0032141", "disease_name": "Precordial pain", "score": 0.2962446521663643, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0002070", "disease_name": "ventricular septal defect", "score": 0.25877724475497305, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "EFO_0004337", "disease_name": "intelligence", "score": 0.23626799438481932, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0005090", "disease_name": "schizophrenia", "score": 0.2146283121074558, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0013600", "disease_name": "insomnia", "score": 0.1917486740899226, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "EFO_0004875", "disease_name": "mathematical ability", "score": 0.1867995896817686, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0004985", "disease_name": "bipolar disorder", "score": 0.15473128275757175, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "EFO_0004350", "disease_name": "reasoning", "score": 0.15395853740457185, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0002009", "disease_name": "major depressive disorder", "score": 0.13407833646077866, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0005258", "disease_name": "autism spectrum disorder", "score": 0.13094011013233006, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0007743", "disease_name": "attention deficit-hyperactivity disorder", "score": 0.1220257679175192, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0008114", "disease_name": "obsessive-compulsive disorder", "score": 0.11495641695839706, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0005351", "disease_name": "anorexia nervosa", "score": 0.11295452607885492, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0007661", "disease_name": "Tourette syndrome", "score": 0.11203057644214316, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0004989", "disease_name": "breast carcinoma", "score": 0.11092239754393658, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0007254", "disease_name": "breast cancer", "score": 0.1108230490688465, "source": "OpenTargets"}
+{"gene_symbol": "CYP2D6", "disease_id": "MONDO_0005180", "disease_name": "Parkinson disease", "score": 0.10863550531365268, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0008383", "disease_name": "rheumatoid arthritis", "score": 0.6346037000101795, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0005393", "disease_name": "gout", "score": 0.6311309361062495, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0005277", "disease_name": "migraine disorder", "score": 0.630741241112424, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0005178", "disease_name": "osteoarthritis", "score": 0.6225702350740303, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "HP_0002315", "disease_name": "Headache", "score": 0.6184588421810262, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0005101", "disease_name": "ulcerative colitis", "score": 0.6134168668425478, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "HP_0100607", "disease_name": "Dysmenorrhea", "score": 0.6124893754567161, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "HP_0001643", "disease_name": "Patent ductus arteriosus", "score": 0.6098350680284003, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "HP_0012531", "disease_name": "Pain", "score": 0.6093899784262191, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "HP_0001945", "disease_name": "Fever", "score": 0.609256218732299, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0005306", "disease_name": "ankylosing spondylitis", "score": 0.6090546088440965, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0011429", "disease_name": "juvenile idiopathic arthritis", "score": 0.6074851034922994, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0005068", "disease_name": "myocardial infarction", "score": 0.605985668937291, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0005578", "disease_name": "arthritic joint disease", "score": 0.604845655318368, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0002258", "disease_name": "pharyngitis", "score": 0.6045561174488081, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0005709", "disease_name": "common cold", "score": 0.6036603739722447, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MONDO_0005554", "disease_name": "rheumatic disorder", "score": 0.602796347411322, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "HP_0001742", "disease_name": "Nasal congestion", "score": 0.6027210068519734, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "HP_0012735", "disease_name": "Cough", "score": 0.6012207202384957, "source": "OpenTargets"}
+{"gene_symbol": "PTGS2", "disease_id": "MP_0001845", "disease_name": "inflammation", "score": 0.5994767039955174, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MP_0001914", "disease_name": "hemorrhage", "score": 0.6272966735643905, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0008383", "disease_name": "rheumatoid arthritis", "score": 0.6169700335405854, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0005178", "disease_name": "osteoarthritis", "score": 0.6126820908983684, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0005393", "disease_name": "gout", "score": 0.610765127165024, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0005101", "disease_name": "ulcerative colitis", "score": 0.6103030130383368, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "HP_0012531", "disease_name": "Pain", "score": 0.6080676691068805, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "HP_0100607", "disease_name": "Dysmenorrhea", "score": 0.607347436949143, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0005277", "disease_name": "migraine disorder", "score": 0.6069686211679806, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "HP_0002315", "disease_name": "Headache", "score": 0.6065261382443021, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "HP_0001945", "disease_name": "Fever", "score": 0.6063679411834905, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0011429", "disease_name": "juvenile idiopathic arthritis", "score": 0.6052812874441519, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0005306", "disease_name": "ankylosing spondylitis", "score": 0.6047509344223789, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0005709", "disease_name": "common cold", "score": 0.6045329930735837, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "HP_0001742", "disease_name": "Nasal congestion", "score": 0.6041969619233992, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "HP_0012735", "disease_name": "Cough", "score": 0.6001119806744417, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0002258", "disease_name": "pharyngitis", "score": 0.5993143365869973, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0005554", "disease_name": "rheumatic disorder", "score": 0.5986143573208934, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0005578", "disease_name": "arthritic joint disease", "score": 0.5980874959362993, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "MONDO_0005068", "disease_name": "myocardial infarction", "score": 0.59757643299359, "source": "OpenTargets"}
+{"gene_symbol": "PTGS1", "disease_id": "HP_0003418", "disease_name": "Back pain", "score": 0.5970049821380473, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0004975", "disease_name": "Alzheimer disease", "score": 0.6337418358916311, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0001627", "disease_name": "dementia", "score": 0.6262705288318436, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0005180", "disease_name": "Parkinson disease", "score": 0.6163549514664721, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0009688", "disease_name": "myasthenia gravis", "score": 0.6053446268767747, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0005041", "disease_name": "glaucoma", "score": 0.5456849885604054, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0005559", "disease_name": "neurodegenerative disease", "score": 0.5349092331529156, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0029000", "disease_name": "poisoning", "score": 0.5059730181321181, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0002268", "disease_name": "dyspepsia", "score": 0.4937767788861509, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "HP_0000924", "disease_name": "Abnormality of the skeletal system", "score": 0.4772113118815989, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "EFO_0010282", "disease_name": "gastrointestinal disease", "score": 0.46308355791993133, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0004648", "disease_name": "vascular dementia", "score": 0.3919566027589042, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "HP_0100543", "disease_name": "Cognitive impairment", "score": 0.38750451053390667, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0002009", "disease_name": "major depressive disorder", "score": 0.378555985533668, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0002050", "disease_name": "depressive disorder", "score": 0.3780838115435963, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0045057", "disease_name": "delirium", "score": 0.37707394603506905, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0005338", "disease_name": "open-angle glaucoma", "score": 0.37394490075174036, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "HP_0003270", "disease_name": "Abdominal distention", "score": 0.3695798546847018, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "EFO_0009846", "disease_name": "muscle cramp", "score": 0.3695798546847018, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0002898", "disease_name": "skin cancer", "score": 0.3475513549594873, "source": "OpenTargets"}
+{"gene_symbol": "ACHE", "disease_id": "MONDO_0007488", "disease_name": "Lewy body dementia", "score": 0.3446694891071691, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0010379", "disease_name": "Brunner syndrome", "score": 0.7720082336830786, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "Orphanet_3057", "disease_name": "Monoamine oxidase A deficiency", "score": 0.7220023352639782, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0002009", "disease_name": "major depressive disorder", "score": 0.6058022493530195, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0002050", "disease_name": "depressive disorder", "score": 0.5440634769884213, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0003847", "disease_name": "hereditary disease", "score": 0.45044406939292186, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0005084", "disease_name": "mental disorder", "score": 0.37515735840394526, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "HP_0000822", "disease_name": "Hypertension", "score": 0.37160762254133206, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0005044", "disease_name": "hypertensive disorder", "score": 0.3715960731708731, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0002444", "disease_name": "melancholia", "score": 0.3695798546847018, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0005260", "disease_name": "autism", "score": 0.34418017291613673, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "HP_0001249", "disease_name": "Intellectual disability", "score": 0.31023110948282917, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "HP_0002307", "disease_name": "Drooling", "score": 0.25870589827929125, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0018899", "disease_name": "posterior cortical atrophy", "score": 0.11161727564064393, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0004975", "disease_name": "Alzheimer disease", "score": 0.1096668685993378, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0008315", "disease_name": "prostate cancer", "score": 0.10547769454997027, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0007743", "disease_name": "attention deficit-hyperactivity disorder", "score": 0.1023092234075591, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0005233", "disease_name": "non-small cell lung carcinoma", "score": 0.1022291601431391, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0004992", "disease_name": "cancer", "score": 0.10222662331860768, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "MONDO_0005070", "disease_name": "neoplasm", "score": 0.10105638388239294, "source": "OpenTargets"}
+{"gene_symbol": "MAOA", "disease_id": "EFO_0005762", "disease_name": "neuropathic pain", "score": 0.10060784933083547, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0008114", "disease_name": "obsessive-compulsive disorder", "score": 0.6839338232106171, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0002009", "disease_name": "major depressive disorder", "score": 0.6365996724008511, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0002050", "disease_name": "depressive disorder", "score": 0.6323590630925072, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0005383", "disease_name": "panic disorder", "score": 0.6046419050202719, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0005546", "disease_name": "fibromyalgia", "score": 0.6035084042788954, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0005618", "disease_name": "anxiety disorder", "score": 0.5961092841873606, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0005146", "disease_name": "post-traumatic stress disorder", "score": 0.5894188026394368, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0001247", "disease_name": "social phobia", "score": 0.5860462872295754, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0007743", "disease_name": "attention deficit-hyperactivity disorder", "score": 0.5836114023588967, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0004985", "disease_name": "bipolar disorder", "score": 0.5782263821731044, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0011122", "disease_name": "obesity disorder", "score": 0.5771109651719807, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0001942", "disease_name": "generalized anxiety disorder", "score": 0.5723188498470035, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "EFO_0005762", "disease_name": "neuropathic pain", "score": 0.5723109416963039, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "HP_0010992", "disease_name": "Stress urinary incontinence", "score": 0.5467847472769465, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0006626", "disease_name": "diabetic neuropathy", "score": 0.5467351622013745, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "EFO_0002970", "disease_name": "muscular disease", "score": 0.5409211817593593, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "HP_0012531", "disease_name": "Pain", "score": 0.520973725617069, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "EFO_0009963", "disease_name": "bipolar I disorder", "score": 0.5199475250060025, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "HP_0001513", "disease_name": "Obesity", "score": 0.5188196567434894, "source": "OpenTargets"}
+{"gene_symbol": "SLC6A4", "disease_id": "MONDO_0021667", "disease_name": "neuralgia", "score": 0.5147364490549482, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0014328", "disease_name": "developmental and epileptic encephalopathy, 19", "score": 0.7595636119376826, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0009696", "disease_name": "juvenile myoclonic epilepsy", "score": 0.7425449800347174, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0005027", "disease_name": "epilepsy", "score": 0.7396909483311539, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0002009", "disease_name": "major depressive disorder", "score": 0.6700672809648817, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "HP_0001250", "disease_name": "Seizure", "score": 0.625578529007769, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0013600", "disease_name": "insomnia", "score": 0.6105101269926633, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0005277", "disease_name": "migraine disorder", "score": 0.606139460196581, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0005383", "disease_name": "panic disorder", "score": 0.6042819520024548, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "HP_0000713", "disease_name": "Agitation", "score": 0.602909562119802, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0005618", "disease_name": "anxiety disorder", "score": 0.6026619330861483, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0007079", "disease_name": "alcohol dependence", "score": 0.5968752846132148, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "HP_0000739", "disease_name": "Anxiety", "score": 0.595254634036021, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0016532", "disease_name": "Lennox-Gastaut syndrome", "score": 0.5822675676944429, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0010826", "disease_name": "childhood absence epilepsy", "score": 0.5811024094335617, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0005929", "disease_name": "postpartum depression", "score": 0.5807809605407986, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0005579", "disease_name": "idiopathic generalized epilepsy", "score": 0.5776146238490577, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "EFO_0008526", "disease_name": "status epilepticus", "score": 0.574434039792529, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "HP_0012531", "disease_name": "Pain", "score": 0.5672028847595528, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0001942", "disease_name": "generalized anxiety disorder", "score": 0.5629429181408085, "source": "OpenTargets"}
+{"gene_symbol": "GABRA1", "disease_id": "MONDO_0008491", "disease_name": "stiff-person syndrome", "score": 0.5395362197518301, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0011001", "disease_name": "Brugada syndrome 1", "score": 0.8447910828387365, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0011377", "disease_name": "long QT syndrome 3", "score": 0.8444711521849899, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0007240", "disease_name": "progressive familial heart block, type 1A", "score": 0.8014151431834265, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0013530", "disease_name": "atrial fibrillation, familial, 10", "score": 0.7979738765522384, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0015263", "disease_name": "Brugada syndrome", "score": 0.7940777112267731, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0011003", "disease_name": "dilated cardiomyopathy 1E", "score": 0.7931105581475114, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "Orphanet_871", "disease_name": "Familial progressive cardiac conduction defect", "score": 0.7866913795218735, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "EFO_0004269", "disease_name": "cardiac arrhythmia", "score": 0.7863374052930366, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0024562", "disease_name": "sick sinus syndrome 1", "score": 0.7750539206272449, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "EFO_0005303", "disease_name": "sudden infant death syndrome", "score": 0.7741684205067247, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0004981", "disease_name": "atrial fibrillation", "score": 0.7699904350630399, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "EFO_0004138", "disease_name": "bundle branch block", "score": 0.7547839051374045, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0011376", "disease_name": "ventricular fibrillation, paroxysmal familial, type 1", "score": 0.744185321906498, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "Orphanet_101016", "disease_name": "Romano-Ward syndrome", "score": 0.7081499408870794, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0019171", "disease_name": "familial long QT syndrome", "score": 0.6838111468654717, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "HP_0001657", "disease_name": "Prolonged QT interval", "score": 0.6762651275372479, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0700335", "disease_name": "familial isolated dilated cardiomyopathy", "score": 0.6738223102350241, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0005021", "disease_name": "dilated cardiomyopathy", "score": 0.6398538782788302, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0005277", "disease_name": "migraine disorder", "score": 0.6186848837392309, "source": "OpenTargets"}
+{"gene_symbol": "SCN5A", "disease_id": "MONDO_0005027", "disease_name": "epilepsy", "score": 0.6130649492095293, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "Orphanet_101016", "disease_name": "Romano-Ward syndrome", "score": 0.8574912853740262, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "Orphanet_51083", "disease_name": "Familial short QT syndrome", "score": 0.778058707142432, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "MONDO_0004981", "disease_name": "atrial fibrillation", "score": 0.7328896133006544, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "EFO_0004269", "disease_name": "cardiac arrhythmia", "score": 0.7316321053934379, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "HP_0001657", "disease_name": "Prolonged QT interval", "score": 0.7127547515677695, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "MONDO_0019171", "disease_name": "familial long QT syndrome", "score": 0.6800111066370382, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "MONDO_0000190", "disease_name": "ventricular fibrillation", "score": 0.6795678885973767, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "MONDO_0005477", "disease_name": "ventricular tachycardia", "score": 0.6195959127386951, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "MONDO_0005310", "disease_name": "atrial flutter", "score": 0.6012719832500333, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "MONDO_0005301", "disease_name": "multiple sclerosis", "score": 0.5901536536518559, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "HP_0004308", "disease_name": "Ventricular arrhythmia", "score": 0.5751539883440954, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "HP_0001626", "disease_name": "Abnormality of the cardiovascular system", "score": 0.5748714311445281, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "EFO_0020094", "disease_name": "Lambert-Eaton myasthenic syndrome", "score": 0.562288779551985, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "MONDO_0009688", "disease_name": "myasthenia gravis", "score": 0.5574294485819572, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "MONDO_0018940", "disease_name": "congenital myasthenic syndrome", "score": 0.491201398586485, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "Orphanet_590", "disease_name": "Congenital myasthenic syndromes", "score": 0.4910987375157392, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "MONDO_0000453", "disease_name": "short QT syndrome", "score": 0.4643196844308429, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "HP_0001324", "disease_name": "Muscle weakness", "score": 0.4619748183558772, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "MONDO_0005559", "disease_name": "neurodegenerative disease", "score": 0.4559737064325869, "source": "OpenTargets"}
+{"gene_symbol": "KCNH2", "disease_id": "MONDO_0005044", "disease_name": "hypertensive disorder", "score": 0.39750210075407544, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0009061", "disease_name": "cystic fibrosis", "score": 0.9182039330240603, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0010178", "disease_name": "congenital bilateral aplasia of vas deferens from CFTR mutation", "score": 0.824196836883739, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0008185", "disease_name": "hereditary chronic pancreatitis", "score": 0.7176705212967741, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0008887", "disease_name": "bronchiectasis with or without elevated sweat chloride 1", "score": 0.6974181697318506, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0018801", "disease_name": "congenital bilateral absence of vas deferens", "score": 0.5958758005516537, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0004822", "disease_name": "bronchiectasis", "score": 0.5581835491312821, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "HP_0002014", "disease_name": "Diarrhea", "score": 0.5532979474133285, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0015796", "disease_name": "acute lung injury", "score": 0.5425588796387346, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "HP_0011962", "disease_name": "Obstructive azoospermia", "score": 0.5381454434079411, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0001751", "disease_name": "cholestasis", "score": 0.46691531278878945, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0018453", "disease_name": "familial atypical multiple mole melanoma syndrome", "score": 0.4255712026694341, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0004982", "disease_name": "pancreatitis", "score": 0.4091480369280854, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0015607", "disease_name": "partial chromosome Y deletion", "score": 0.406537840153172, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0005308", "disease_name": "ciliopathy", "score": 0.38415143232166127, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0003847", "disease_name": "hereditary disease", "score": 0.37601286583777366, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0005087", "disease_name": "respiratory system disorder", "score": 0.37280321782445525, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "EFO_0801077", "disease_name": "cystic fibrosis-related diabetes", "score": 0.36608751998559375, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "HP_0040270", "disease_name": "Impaired glucose tolerance", "score": 0.35486020770010535, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "MONDO_0005240", "disease_name": "kidney disorder", "score": 0.3476880547174585, "source": "OpenTargets"}
+{"gene_symbol": "CFTR", "disease_id": "HP_0100027", "disease_name": "Recurrent pancreatitis", "score": 0.3425517612841143, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0005233", "disease_name": "non-small cell lung carcinoma", "score": 0.8525670184292347, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0005061", "disease_name": "lung adenocarcinoma", "score": 0.7744435748658476, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0004992", "disease_name": "cancer", "score": 0.7369034999647346, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0010150", "disease_name": "head and neck squamous cell carcinoma", "score": 0.7252247263598263, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0008903", "disease_name": "lung cancer", "score": 0.7173634187423739, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0007254", "disease_name": "breast cancer", "score": 0.6799410311283155, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0005008", "disease_name": "colorectal adenocarcinoma", "score": 0.675449292365748, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0018177", "disease_name": "glioblastoma", "score": 0.654417479113579, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0005070", "disease_name": "neoplasm", "score": 0.651158663595823, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0014481", "disease_name": "inflammatory skin and bowel disease, neonatal, 2", "score": 0.6421270511949738, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0005627", "disease_name": "head and neck cancer", "score": 0.6220521826972458, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0005575", "disease_name": "colorectal cancer", "score": 0.6160586709948555, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0015277", "disease_name": "medullary thyroid gland carcinoma", "score": 0.5958441811946065, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0004986", "disease_name": "urinary bladder carcinoma", "score": 0.5938546241810287, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0004989", "disease_name": "breast carcinoma", "score": 0.5767023573820216, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "EFO_0022194", "disease_name": "EGFR-related lung cancer", "score": 0.5675723626131711, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0024331", "disease_name": "colorectal carcinoma", "score": 0.5653529737045094, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0001187", "disease_name": "urinary bladder cancer", "score": 0.5617081298331923, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "EFO_0009170", "disease_name": "response to tyrosine kinase inhibitor", "score": 0.5526604215349816, "source": "OpenTargets"}
+{"gene_symbol": "EGFR", "disease_id": "MONDO_0005096", "disease_name": "squamous cell carcinoma", "score": 0.5504960733104916, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0005233", "disease_name": "non-small cell lung carcinoma", "score": 0.7794787474875552, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0004992", "disease_name": "cancer", "score": 0.7752610727348844, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0001056", "disease_name": "gastric cancer", "score": 0.728973167678001, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0004989", "disease_name": "breast carcinoma", "score": 0.69693769402704, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0005036", "disease_name": "gastric adenocarcinoma", "score": 0.6899093257092311, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0005070", "disease_name": "neoplasm", "score": 0.6777823289371014, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0001187", "disease_name": "urinary bladder cancer", "score": 0.6626946161667948, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0005061", "disease_name": "lung adenocarcinoma", "score": 0.6418818985148245, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0007254", "disease_name": "breast cancer", "score": 0.634856436522079, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0006244", "disease_name": "HER2 positive breast carcinoma", "score": 0.6204388725651202, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0021100", "disease_name": "breast neoplasm", "score": 0.6191635586858045, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0004986", "disease_name": "urinary bladder carcinoma", "score": 0.6115173817805877, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0004988", "disease_name": "breast adenocarcinoma", "score": 0.5941947458829814, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0008903", "disease_name": "lung cancer", "score": 0.5874543351005233, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0021085", "disease_name": "gastric neoplasm", "score": 0.5874106326914756, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0015277", "disease_name": "medullary thyroid gland carcinoma", "score": 0.5536856328827073, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0005575", "disease_name": "colorectal cancer", "score": 0.5531796798104587, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0030399", "disease_name": "visceral neuropathy, familial, 2, autosomal recessive", "score": 0.5394473417845774, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0008170", "disease_name": "ovarian cancer", "score": 0.518839838962137, "source": "OpenTargets"}
+{"gene_symbol": "ERBB2", "disease_id": "MONDO_0021042", "disease_name": "glioma", "score": 0.5049252044794001, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0015280", "disease_name": "cardiofaciocutaneous syndrome", "score": 0.8769922233616118, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0018997", "disease_name": "Noonan syndrome", "score": 0.8380641899091844, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0005105", "disease_name": "melanoma", "score": 0.819548256089721, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0007265", "disease_name": "cardiofaciocutaneous syndrome 1", "score": 0.7639605113176462, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0013379", "disease_name": "Noonan syndrome 7", "score": 0.7587662323717277, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0013380", "disease_name": "LEOPARD syndrome 3", "score": 0.7560260597552768, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0007893", "disease_name": "Noonan syndrome with multiple lentigines", "score": 0.7506936691638292, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0005575", "disease_name": "colorectal cancer", "score": 0.7488506995796542, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0004992", "disease_name": "cancer", "score": 0.7102891648125937, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0008903", "disease_name": "lung cancer", "score": 0.7047932949547688, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0005233", "disease_name": "non-small cell lung carcinoma", "score": 0.699946789425869, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0005061", "disease_name": "lung adenocarcinoma", "score": 0.6879675706650702, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0007256", "disease_name": "hepatocellular carcinoma", "score": 0.6697010953505885, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0005062", "disease_name": "lymphoma", "score": 0.6517802465767676, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0005070", "disease_name": "neoplasm", "score": 0.6434472730406618, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0005086", "disease_name": "renal cell carcinoma", "score": 0.6268772241352615, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0005008", "disease_name": "colorectal adenocarcinoma", "score": 0.6246492875577463, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0015447", "disease_name": "differentiated thyroid carcinoma", "score": 0.6233005594253311, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0021637", "disease_name": "low grade glioma", "score": 0.6227511418716382, "source": "OpenTargets"}
+{"gene_symbol": "BRAF", "disease_id": "MONDO_0009026", "disease_name": "Costello syndrome", "score": 0.6191159828015852, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0018997", "disease_name": "Noonan syndrome", "score": 0.8335596693339207, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0012371", "disease_name": "Noonan syndrome 3", "score": 0.8289370225629306, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0014112", "disease_name": "cardiofaciocutaneous syndrome 2", "score": 0.8215703552237353, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0015280", "disease_name": "cardiofaciocutaneous syndrome", "score": 0.8161317445014307, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0005233", "disease_name": "non-small cell lung carcinoma", "score": 0.803548887170282, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0001056", "disease_name": "gastric cancer", "score": 0.7683306344975595, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0018874", "disease_name": "acute myeloid leukemia", "score": 0.7492709863151713, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0008097", "disease_name": "linear nevus sebaceous syndrome", "score": 0.7419245697430973, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0010854", "disease_name": "Toriello-Lacassie-Droste syndrome", "score": 0.7397670716208318, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "Orphanet_2612", "disease_name": "Linear nevus sebaceus syndrome", "score": 0.7343089034254375, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "Orphanet_268114", "disease_name": "RAS-associated autoimmune leukoproliferative disease", "score": 0.7220803572137094, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0013767", "disease_name": "autoimmune lymphoproliferative syndrome type 4", "score": 0.7219245177083174, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0005061", "disease_name": "lung adenocarcinoma", "score": 0.7028458143314119, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0001187", "disease_name": "urinary bladder cancer", "score": 0.7016638163046455, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0011908", "disease_name": "juvenile myelomonocytic leukemia", "score": 0.6929917810537858, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0005008", "disease_name": "colorectal adenocarcinoma", "score": 0.6880651497263842, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0021060", "disease_name": "RASopathy", "score": 0.6772572542862003, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0015278", "disease_name": "familial pancreatic carcinoma", "score": 0.6730284606140795, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0004992", "disease_name": "cancer", "score": 0.6598183193079582, "source": "OpenTargets"}
+{"gene_symbol": "KRAS", "disease_id": "MONDO_0008903", "disease_name": "lung cancer", "score": 0.6462258826390475, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0018875", "disease_name": "Li-Fraumeni syndrome", "score": 0.8763216350824885, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0007256", "disease_name": "hepatocellular carcinoma", "score": 0.7969945948908966, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0010150", "disease_name": "head and neck squamous cell carcinoma", "score": 0.7771072193728089, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0009837", "disease_name": "choroid plexus papilloma", "score": 0.7664749612489613, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0005575", "disease_name": "colorectal cancer", "score": 0.7500093310828934, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0013876", "disease_name": "basal cell carcinoma, susceptibility to, 7", "score": 0.7399301084212958, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0016419", "disease_name": "hereditary breast carcinoma", "score": 0.7397299728646042, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "Orphanet_227535", "disease_name": "Hereditary breast cancer", "score": 0.7397103332801827, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0007576", "disease_name": "esophageal cancer", "score": 0.7285916368925005, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0005061", "disease_name": "lung adenocarcinoma", "score": 0.7264658008794671, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0006639", "disease_name": "adrenal cortex carcinoma", "score": 0.723241587182002, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0018874", "disease_name": "acute myeloid leukemia", "score": 0.722568310468185, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0016718", "disease_name": "choroid plexus carcinoma", "score": 0.7222300623130677, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0008734", "disease_name": "adrenocortical carcinoma, hereditary", "score": 0.7140266043979061, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0002629", "disease_name": "bone osteosarcoma", "score": 0.7130931445114106, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0004988", "disease_name": "breast adenocarcinoma", "score": 0.708668830779595, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0001187", "disease_name": "urinary bladder cancer", "score": 0.7041924192986854, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0000159", "disease_name": "bone marrow failure syndrome", "score": 0.6979094866864607, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0018177", "disease_name": "glioblastoma", "score": 0.6978680564507822, "source": "OpenTargets"}
+{"gene_symbol": "TP53", "disease_id": "MONDO_0015278", "disease_name": "familial pancreatic carcinoma", "score": 0.697159125037454, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0007254", "disease_name": "breast cancer", "score": 0.8390422150884005, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "Orphanet_145", "disease_name": "Hereditary breast and ovarian cancer syndrome", "score": 0.8278129212540785, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0054748", "disease_name": "Fanconi anemia, complementation group S", "score": 0.8173531116391729, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0008170", "disease_name": "ovarian cancer", "score": 0.8106717678060035, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0021100", "disease_name": "breast neoplasm", "score": 0.7998733941854641, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0011450", "disease_name": "breast-ovarian cancer, familial, susceptibility to, 1", "score": 0.7989577750326409, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0004992", "disease_name": "cancer", "score": 0.7789700175292048, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0004989", "disease_name": "breast carcinoma", "score": 0.7385477452592677, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0003582", "disease_name": "hereditary breast ovarian cancer syndrome", "score": 0.7148939226695633, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "EFO_0009044", "disease_name": "Fanconi anemia complementation group A", "score": 0.7120126944087469, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0005070", "disease_name": "neoplasm", "score": 0.691080809366534, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0700268", "disease_name": "BRCA1-related cancer predisposition", "score": 0.6784774362132665, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0016419", "disease_name": "hereditary breast carcinoma", "score": 0.6652576491359055, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "Orphanet_227535", "disease_name": "Hereditary breast cancer", "score": 0.6619214107884822, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0013685", "disease_name": "pancreatic cancer, susceptibility to, 4", "score": 0.6599563138848515, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0012186", "disease_name": "Fanconi anemia complementation group I", "score": 0.6593860630177066, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0005140", "disease_name": "ovarian carcinoma", "score": 0.6474609948914644, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0015278", "disease_name": "familial pancreatic carcinoma", "score": 0.6279437132048813, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "MONDO_0021068", "disease_name": "ovarian neoplasm", "score": 0.6184555389872309, "source": "OpenTargets"}
+{"gene_symbol": "BRCA1", "disease_id": "EFO_0009580", "disease_name": "prophylactic surgery", "score": 0.5949681090508243, "source": "OpenTargets"}

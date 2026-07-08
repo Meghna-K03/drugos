@@ -1,0 +1,308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://drug-repurposing.team-cosmic.dev/schemas/pipelines/v1.json",
+  "title": "Pipelines Output Schema v2.0",
+  "description": "JSON Schema for the 8 CSV output files produced by the pipelines package. Each pipeline's clean() method returns a pandas DataFrame; the DataFrame is persisted to CSV in the PROCESSED_DATA_DIR. This schema documents the column contracts so downstream consumers (Phase 2 Neo4j graph builder, Phase 3 Graph Transformer) can validate inputs. Audit findings INT-8, INT-9, LIN-4. P1-21 ROOT FIX: chembl_activities_clean.csv (the 8th CSV, emitted by ChEMBLPipeline.clean_activities()) is now declared here — previously it was emitted but undocumented, so downstream consumers could not validate its column contract.",
+  "type": "object",
+  "properties": {
+    "drugs.csv": {
+      "type": "object",
+      "description": "ChEMBL output: small-molecule bioactive compounds. Produced by ChEMBLPipeline.clean() (chembl_pipeline.py).",
+      "properties": {
+        "inchikey": {
+          "type": "string",
+          "pattern": "^[A-Z]{14}-[A-Z]{10}-[A-Z]$",
+          "description": "Canonical 27-char InChIKey. Primary key."
+        },
+        "name": {"type": "string", "description": "Preferred compound name."},
+        "smiles": {"type": "string", "description": "Canonical SMILES."},
+        "molecular_weight": {"type": "number", "minimum": 0},
+        "drug_type": {"type": "string"},
+        "mechanism_of_action": {"type": ["string", "null"]},
+        "max_phase": {"type": ["integer", "null"], "minimum": 0, "maximum": 4}
+      },
+      "required": ["inchikey"]
+    },
+    "chembl_activities_clean.csv": {
+      "type": "object",
+      "description": "ChEMBL output: cleaned bioactivity measurements (drug-target pharmacology). Produced by ChEMBLPipeline.clean_activities() (chembl_pipeline.py). Each row is ONE measurement on ONE subunit of a (possibly multi-subunit) target — multi-subunit complexes are exploded so each subunit's UniProt accession is a separate row. activity_value is normalized to nM (S13). The downstream load() step aggregates by (drug, protein, activity_type) using the median activity_value to produce one DPI per pair. P1-21 ROOT FIX: this entry was missing from the original schema, so the file was emitted but its column contract was undocumented.",
+      "properties": {
+        "activity_id": {
+          "type": "string",
+          "pattern": "^\\d+$",
+          "description": "ChEMBL activity_id (integer as string). Primary key per measurement."
+        },
+        "molecule_chembl_id": {
+          "type": "string",
+          "pattern": "^CHEMBL\\d+$",
+          "description": "ChEMBL molecule ID. Foreign key to drugs.csv.chembl_id (filtered to the in-memory drug set during clean_activities())."
+        },
+        "target_chembl_id": {
+          "type": "string",
+          "pattern": "^CHEMBL\\d+$",
+          "description": "ChEMBL target ID. May be a single protein or a multi-subunit complex."
+        },
+        "target_accession": {
+          "type": "string",
+          "pattern": "^([OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2})$",
+          "description": "UniProt accession resolved from target_chembl_id via ChEMBL /target.json. For multi-subunit complexes, the row is exploded so each accession is a separate row."
+        },
+        "target_pref_name": {
+          "type": ["string", "null"],
+          "description": "ChEMBL preferred target name (for observability; not used downstream)."
+        },
+        "activity_type": {
+          "type": "string",
+          "enum": ["IC50", "Ki", "Kd", "EC50"],
+          "description": "Standardised activity type (case-sensitive). Filtered to CHEMBL_ACTIVITY_TYPES during clean_activities()."
+        },
+        "activity_value": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Activity value normalised to nM (S13). NULL when normalisation failed (e.g. unsupported source unit)."
+        },
+        "activity_units": {
+          "type": ["string", "null"],
+          "enum": ["nM", null],
+          "description": "Always 'nM' after normalisation. NULL when normalisation failed."
+        },
+        "pchembl_value": {
+          "type": ["number", "null"],
+          "description": "-log10(activity_value in M). Preserved from ChEMBL API (S14)."
+        },
+        "assay_id": {
+          "type": ["string", "null"],
+          "pattern": "^CHEMBL\\d+$",
+          "description": "ChEMBL assay_chembl_id (foreign key to the assay)."
+        },
+        "standard_relation": {
+          "type": ["string", "null"],
+          "enum": ["=", ">", "<", "~", ">=", "<=", null],
+          "description": "Relation between activity_value and the true value. audit-2025 ROOT FIX (issue 5): the previous description claimed all 6 relations pass through, but the pipeline's CHEMBL_STANDARD_RELATIONS filter defaults to {'='} only. The enum is kept for forward-compat (operators can widen the filter via DRUGOS_CHEMBL_STANDARD_RELATIONS env var), but the DEFAULT output contains only '='. This was a dead contract — the schema listed values that never appeared in the output."
+        },
+        "assay_type": {
+          "type": ["string", "null"],
+          "enum": ["B", "F", "U", "A", "P", "T", null],
+          "description": "ChEMBL assay type (B=Binding, F=Functional, U=Unclassified, A=ADME, P=Physicochemical, T=Toxicity)."
+        }
+      },
+      "required": ["activity_id", "molecule_chembl_id", "target_chembl_id", "target_accession", "activity_type"],
+      "additionalProperties": false
+    },
+    "drugbank_drugs.csv": {
+      "type": "object",
+      "description": "DrugBank output: FDA-approved drug metadata. Produced by DrugBankPipeline.clean() (drugbank_pipeline.py). audit-2025 ROOT FIX (issue 6): the previous schema listed only 6 columns but the actual CSV has 35 columns. The missing 29 columns include patient-safety-critical fields (is_withdrawn, clinical_status, groups) and enrichment fields (mechanism_of_action, smiles, molecular_weight, max_phase, drug_type, chembl_id, pubchem_cid) that downstream Phase 2 consumers NEED. The schema was lying about the output contract.",
+      "properties": {
+        "drugbank_id": {"type": "string", "description": "DrugBank ID (e.g. DB00001). Primary key."},
+        "name": {"type": "string", "description": "Preferred drug name."},
+        "inchikey": {"type": ["string", "null"], "pattern": "^[A-Z]{14}-[A-Z]{10}-[A-Z]$", "description": "Canonical 27-char InChIKey. NULL for biologics without a calculable InChIKey."},
+        "smiles": {"type": ["string", "null"], "description": "Canonical SMILES."},
+        "molecular_weight": {"type": ["number", "null"], "minimum": 0},
+        "molecular_formula": {"type": ["string", "null"]},
+        "is_fda_approved": {"type": "boolean", "description": "True if FDA-approved."},
+        "is_withdrawn": {"type": ["boolean", "null"], "description": "PATIENT SAFETY: True if the drug has been withdrawn from the market. RL ranker must NOT recommend withdrawn drugs."},
+        "clinical_status": {"type": ["string", "null"], "description": "Clinical status (approved, investigational, withdrawn, etc.)."},
+        "groups": {"type": ["string", "null"], "description": "Pipe-separated DrugBank groups (e.g. 'approved|withdrawn')."},
+        "mechanism_of_action": {"type": ["string", "null"], "description": "Free-text mechanism of action."},
+        "indication": {"type": ["string", "null"], "description": "Free-text indication (used for DrugBank-OMIM disease matching)."},
+        "description": {"type": ["string", "null"]},
+        "cas_number": {"type": ["string", "null"]},
+        "logp": {"type": ["number", "null"]},
+        "tpsa": {"type": ["number", "null"]},
+        "h_bond_donor_count": {"type": ["integer", "null"]},
+        "h_bond_acceptor_count": {"type": ["integer", "null"]},
+        "rotatable_bond_count": {"type": ["integer", "null"]},
+        "heavy_atom_count": {"type": ["integer", "null"]},
+        "complexity": {"type": ["number", "null"]},
+        "inchikey_source": {"type": ["string", "null"], "description": "How the InChIKey was obtained (rdkit, drugbank_xml, synthetic, etc.)."},
+        "_inchikey_source": {"type": ["string", "null"], "description": "Lineage: internal InChIKey source flag."},
+        "_smiles_used_for_recovery": {"type": ["string", "null"], "description": "Lineage: SMILES used for InChIKey recovery."},
+        "_inchikey_recovery_failed": {"type": ["boolean", "null"], "description": "Lineage: True if InChIKey recovery failed."},
+        "_inchikey_recovery_error": {"type": ["string", "null"], "description": "Lineage: error message from InChIKey recovery."},
+        "_is_fda_approved_was_filled": {"type": ["boolean", "null"], "description": "Lineage: True if is_fda_approved was filled from a fallback."},
+        "_mechanism_of_action_was_filled": {"type": ["boolean", "null"], "description": "Lineage: True if mechanism_of_action was filled from a fallback."},
+        "_molecular_formula_was_filled": {"type": ["boolean", "null"], "description": "Lineage: True if molecular_formula was filled from a fallback."},
+        "_smiles_was_filled": {"type": ["boolean", "null"], "description": "Lineage: True if smiles was filled from a fallback."},
+        "chembl_id": {"type": ["string", "null"], "pattern": "^CHEMBL\\d+$", "description": "Cross-reference to ChEMBL ID."},
+        "pubchem_cid": {"type": ["integer", "null"], "description": "Cross-reference to PubChem CID."},
+        "max_phase": {"type": ["integer", "null"], "minimum": 0, "maximum": 4, "description": "Maximum clinical trial phase reached."},
+        "drug_type": {"type": ["string", "null"], "description": "Drug type (small_molecule, biologic, etc.)."},
+        "completeness_score": {"type": ["number", "null"], "minimum": 0, "maximum": 1, "description": "Fraction of non-null fields."}
+      },
+      "required": ["drugbank_id"],
+      "additionalProperties": false
+    },
+    "proteins.csv": {
+      "type": "object",
+      "description": "UniProt output: reviewed human protein sequences. Produced by UniProtPipeline.clean() (uniprot_pipeline.py).",
+      "properties": {
+        "uniprot_id": {"type": "string", "pattern": "^([OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2})$"},
+        "gene_symbol": {"type": ["string", "null"]},
+        "gene_name": {"type": ["string", "null"]},
+        "protein_name": {"type": ["string", "null"]},
+        "organism": {"type": "string"},
+        "length": {"type": "integer", "minimum": 1},
+        "sequence": {"type": "string"}
+      },
+      "required": ["uniprot_id"]
+    },
+    "protein_protein_interactions.csv": {
+      "type": "object",
+      "description": "STRING output: protein-protein interaction network. Produced by StringPipeline.clean() (string_pipeline.py).",
+      "properties": {
+        "string_id_a": {"type": "string"},
+        "string_id_b": {"type": "string"},
+        "combined_score": {"type": "integer", "minimum": 0, "maximum": 1000},
+        "uniprot_id_a": {"type": ["string", "null"]},
+        "uniprot_id_b": {"type": ["string", "null"]}
+      },
+      "required": ["string_id_a", "string_id_b", "combined_score"]
+    },
+    "gene_disease_associations.csv": {
+      "type": "object",
+      "description": "DisGeNET output: curated gene-disease associations. Produced by DisGeNETPipeline.clean() (disgenet_pipeline.py). Schema extended (v2.0) to declare all institutional-grade columns as optional; existing required columns (gene_id, disease_id, score) are preserved. pmid_list is a semicolon-separated string of 7-8 digit integer PMIDs, sorted most-recent-first, deduped, capped at DISGENET_PMID_CAP. Score is the DisGeNET Disease-Specific Genomic Profile (DSGP) per Piñero et al. 2020, in [0, 1]; sub-weak evidence (score in [0.06, 0.1)) is preserved by default and tagged confidence_tier='weak'. Output is written with csv.QUOTE_ALL, UTF-8 encoding, and Unix line endings (\\n).",
+      "properties": {
+        "gene_id": {"type": ["integer", "null"]},
+        "gene_symbol": {"type": ["string", "null"]},
+        "disease_id": {"type": "string"},
+        "disease_name": {"type": ["string", "null"]},
+        "disease_type": {"type": ["string", "null"]},
+        "disease_id_type": {"type": ["string", "null"]},
+        "disease_class": {"type": ["string", "null"]},
+        "disease_class_source": {"type": ["string", "null"]},
+        "score": {"type": "number", "minimum": 0, "maximum": 1},
+        "normalized_score": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "confidence_tier": {"type": ["string", "null"]},
+        "evidence_strength": {"type": ["string", "null"]},
+        "source_id": {"type": ["string", "null"]},
+        "source": {"type": ["string", "null"]},
+        "source_format": {"type": ["string", "null"]},
+        "source_version": {"type": ["string", "null"]},
+        "source_url": {"type": ["string", "null"]},
+        "pmid_list": {"type": ["string", "null"]},
+        "year_initial": {"type": ["integer", "null"]},
+        "year_final": {"type": ["integer", "null"]},
+        "association_type": {"type": ["string", "null"]},
+        "uniprot_id": {"type": ["string", "null"]},
+        "score_type": {"type": ["string", "null"]},
+        "score_method": {"type": ["string", "null"]},
+        "confidence_tier_method": {"type": ["string", "null"]},
+        "resolution_method": {"type": ["string", "null"]},
+        "gene_to_uniprot_map_version": {"type": ["string", "null"]},
+        "original_pmid_count": {"type": ["integer", "null"]},
+        "schema_version": {"type": ["string", "null"]},
+        "snapshot_tag": {"type": ["string", "null"]},
+        "download_date": {"type": ["string", "null"]},
+        "download_method": {"type": ["string", "null"]},
+        "dedup_strategy": {"type": ["string", "null"]},
+        "_score_was_clipped": {"type": ["boolean", "null"]},
+        "_original_score": {"type": ["number", "null"]},
+        "_score_was_coerced_nan": {"type": ["boolean", "null"]},
+        "_score_direction": {"type": ["string", "null"]},
+        "_disease_name_was_filled": {"type": ["boolean", "null"]},
+        "_association_type_was_filled": {"type": ["boolean", "null"]},
+        "_pmid_list_was_capped": {"type": ["boolean", "null"]}
+      },
+      "required": ["disease_id", "score"],
+      "additionalProperties": false
+    },
+    "omim_gene_disease_associations.csv": {
+      "type": "object",
+      "description": "OMIM output: Mendelian gene-phenotype mappings (mapping_key in OMIM_MAPPING_KEYS_INCLUDE, default [3,4]). Produced by OMIMPipeline.clean() (omim_pipeline.py) — institutional-grade rewrite per OMIM_PIPELINE_MASTER_FIX_PROMPT.md.",
+      "properties": {
+        "gene_symbol": {"type": ["string", "null"], "description": "HGNC-approved gene symbol, uppercased"},
+        "uniprot_id": {"type": ["string", "null"], "description": "UniProt ID (populated by load())"},
+        "gene_mim": {"type": ["string", "null"], "description": "OMIM gene MIM number"},
+        "disease_id": {"type": ["string", "null"], "description": "Format: OMIM:{int} where 100100 <= int <= 999999"},
+        "disease_id_type": {"type": ["string", "null"], "enum": ["omim", null]},
+        "disease_name": {"type": ["string", "null"], "description": "Normalized phenotype name (markers stripped)"},
+        "association_type": {"type": ["string", "null"], "enum": ["causal", "susceptibility", "non_disease", "provisional", "gene_locus", "mendelian_phenotype", "unknown", null]},
+        "association_modifier": {"type": ["string", "null"], "enum": ["?", "{}", "[]", "*", "+", "%", null]},
+        "is_susceptibility": {"type": ["boolean", "null"]},
+        "inheritance_pattern": {"type": ["string", "null"]},
+        "mapping_key": {"type": ["integer", "null"], "enum": [1, 2, 3, 4, null]},
+        "cyto_location": {"type": ["string", "null"]},
+        "cyto_location_valid": {"type": ["boolean", "null"]},
+        "source": {"type": ["string", "null"], "enum": ["omim", null]},
+        "source_id": {"type": ["string", "null"], "pattern": "^OMIM:\\d+_\\d+$"},
+        "source_version": {"type": ["string", "null"]},
+        "source_url": {"type": ["string", "null"]},
+        "source_format": {"type": ["string", "null"], "enum": ["morbidmap_txt", "api_json", null]},
+        "download_method": {"type": ["string", "null"], "enum": ["morbidmap", "api", null]},
+        "download_date": {"type": ["string", "null"]},
+        "schema_version": {"type": ["string", "null"]},
+        "score": {"type": ["number", "null"], "minimum": 0.0, "maximum": 1.0},
+        "score_type": {"type": ["string", "null"], "enum": ["omim_mapping_key", null]},
+        "score_method": {"type": ["string", "null"]},
+        "confidence_tier": {"type": ["string", "null"], "enum": ["weak", "moderate", "strong", null]},
+        "confidence_tier_method": {"type": ["string", "null"]},
+        "evidence_strength": {
+          "type": ["string", "null"],
+          "enum": ["robust", "moderate", "limited", "unsupported", null],
+          "description": "FORENSIC Chain 3 root fix: evidence_strength is a STRING label (one of 'robust'/'moderate'/'limited'/'unsupported'), NOT a number. The ORM (models.py:1322) declares it as String(20) with a CHECK constraint enforcing these four values, and DisGeNET's _compute_evidence_strength emits these labels. The previous schema declaration 'number' caused INSERT failures on PostgreSQL for any OMIM row with non-NULL evidence_strength (type/check error). On SQLite the mismatch was silently coerced, so tests passed but production failed."
+        },
+        "normalized_score": {"type": ["number", "null"], "minimum": 0.0, "maximum": 1.0},
+        "pmid_list": {"type": ["string", "null"]},
+        "original_pmid_count": {"type": ["integer", "null"]},
+        "pmid_list_was_capped": {"type": ["boolean", "null"]},
+        "dedup_strategy": {"type": ["string", "null"]},
+        "canonical_gene_id": {"type": ["string", "null"]},
+        "canonical_disease_id": {"type": ["string", "null"]},
+        "input_checksum": {"type": ["string", "null"]},
+        "pipeline_run_id": {"type": ["integer", "null"]},
+        "as_of_date": {"type": ["string", "null"]},
+        "hgnc_snapshot_version": {"type": ["string", "null"]},
+        "source_record_id": {"type": ["string", "null"]},
+        "source_line_number": {"type": ["integer", "null"]},
+        "transformations": {"type": ["string", "null"]}
+      },
+      "required": ["disease_id", "score"],
+      "additionalProperties": true
+    },
+    "pubchem_enrichment.csv": {
+      "type": "object",
+      "description": "PubChem output: compound structural enrichment data. Produced by PubChemPipeline.clean() (pubchem_pipeline.py) — institutional-grade rewrite per PUBCHEM_PIPELINE_MASTER_FIX_PROMPT.md. All 15+ physicochemical properties fetched from PubChem PUG REST are persisted (previously 11 were silently dropped). Stereochemistry is preserved via separate canonical_smiles (no stereo) and isomeric_smiles (with stereo, isotopes, charge) columns. Predicted-vs-measured provenance is flagged via xlogp_source and tpsa_source. Empty strings from PubChem become SQL NULL (not ''). molecular_weight and exact_mass use Decimal precision. Output is written with csv.QUOTE_MINIMAL (P1-26 ROOT FIX — was QUOTE_NONNUMERIC; the asymmetry with the QUOTE_MINIMAL read path caused NaN to round-trip as empty strings), UTF-8 encoding, Unix line endings (\\n), and SHA-256 + run-context sidecars by BasePipeline._persist_cleaned_data. Column order is fixed by COLUMN_ORDER in pubchem_pipeline.py.",
+      "properties": {
+        "inchikey": {
+          "type": "string",
+          "pattern": "^[A-Z]{14}-[A-Z]{10}-[A-Z]$",
+          "description": "InChIKey requested from PubChem (verified to match response InChIKey before storage)."
+        },
+        "pubchem_cid": {"type": ["integer", "null"], "minimum": 1, "description": "PubChem Compound ID (parent / standardized). Two different salt forms of the same drug share the same parent CID."},
+        "molecular_formula": {"type": ["string", "null"], "description": "PubChem MolecularFormula, e.g. 'C9H8O4' for aspirin."},
+        "molecular_weight": {"type": ["number", "null"], "minimum": 0, "description": "Average MW using natural-abundance atomic weights (C=12.011, H=1.008). Decimal precision (NUMERIC(12,6))."},
+        "exact_mass": {"type": ["number", "null"], "minimum": 0, "description": "Monoisotopic mass (Da) — uses most-abundant isotope (C=12.000, H=1.0078). Use this for mass-spectrometry-based drug discovery."},
+        "canonical_smiles": {"type": ["string", "null"], "description": "PubChem CanonicalSMILES — no stereochemistry. NEVER coalesce with isomeric_smiles."},
+        "isomeric_smiles": {"type": ["string", "null"], "description": "PubChem IsomericSMILES — with stereochemistry, isotopes, formal charges. The Graph Transformer's molecular fingerprinting MUST use this. For chiral drugs the '@' token distinguishes enantiomers — life-safety-critical."},
+        "inchi": {"type": ["string", "null"], "description": "Full InChI string (structural + stereo + isotopes + charge)."},
+        "iupac_name": {"type": ["string", "null"], "description": "PubChem IUPACName — may be PIN or non-PIN. See iupac_name_type for source attribution."},
+        "cas_number": {"type": ["string", "null"], "pattern": "^\\d{2,7}-\\d{2}-\\d$", "description": "CAS Registry Number from PubChem synonyms endpoint (when PUBCHEM_PIPELINE_FETCH_CAS=true). Cross-validated against drugs.cas_number (DrugBank)."},
+        "xlogp": {"type": ["number", "null"], "description": "PubChem XLogP3 PREDICTION (not experimental). Group-contribution QSAR model — experimental logP can differ by 1+ log unit. See xlogp_source."},
+        "xlogp_source": {"type": ["string", "null"], "enum": ["pubchem_xlogp3", null], "description": "Provenance flag — always 'pubchem_xlogp3' for fetched rows."},
+        "tpsa": {"type": ["number", "null"], "minimum": 0, "description": "PubChem-calculated Topological Polar Surface Area (not measured)."},
+        "tpsa_source": {"type": ["string", "null"], "enum": ["pubchem_calculated", null], "description": "Provenance flag — always 'pubchem_calculated' for fetched rows."},
+        "complexity": {"type": ["number", "null"], "minimum": 0, "description": "PubChem Bertz complexity metric."},
+        "h_bond_donor_count": {"type": ["integer", "null"], "minimum": 0, "description": "Lipinski-style H-bond donor count (N-H + O-H bonds). Approximate — for pharmacophore modeling recompute from SMILES with RDKit."},
+        "h_bond_acceptor_count": {"type": ["integer", "null"], "minimum": 0, "description": "Lipinski-style H-bond acceptor count (N + O atoms). Approximate."},
+        "rotatable_bond_count": {"type": ["integer", "null"], "minimum": 0},
+        "heavy_atom_count": {"type": ["integer", "null"], "minimum": 1, "description": "PubChem heavy-atom count — EXCLUDES hydrogen (PubChem convention). For total atom count, compute from molecular_formula."},
+        "formal_charge": {"type": ["integer", "null"], "description": "Formal charge parsed from isomeric_smiles (RDKit authoritative; SMILES token heuristic as fallback)."},
+        "isotope_info": {"type": ["string", "null"], "description": "JSON dict of isotope labels parsed from isomeric_smiles, e.g. '{\"F\": 18, \"C\": 11}' for a PET tracer. NULL when no isotopes."},
+        "salt_form": {"type": ["string", "null"], "enum": ["neutral", "protonated", "deprotonated", "zwitterion", "salt_form", null], "description": "V19 ROOT FIX (PS-1 / SW-2): derived from the full InChI string (multiple disconnected components combined with non-zero formal charge). Returns one of {neutral, protonated, deprotonated, zwitterion, salt_form} or None when the InChI is unavailable. The V18 N/M/P/S single-char mapping (which mis-labeled plain neutral molecules like aspirin as 'S=salt_form' because real InChIKeys almost always end in 'S'=Standard) is REMOVED — see pubchem_pipeline.py::_extract_salt_form."},
+        "protonation_state": {"type": ["string", "null"], "enum": ["neutral", "protonated", "deprotonated", "zwitterion", "salt_form", null], "description": "V19 ROOT FIX (PS-1 / SW-2): protonation state derived from the full InChI string's /p and /q layers (NOT the InChIKey's last char, which is a 2-value version flag S/N — not a 4-state protonation flag). Returns one of {neutral, protonated, deprotonated, zwitterion, salt_form} or None when the InChI is unavailable. The V18 N/M/P/S enum is REMOVED — see pubchem_pipeline.py::_extract_protonation_state."},
+        "source": {"type": ["string", "null"], "enum": ["pubchem", null], "description": "Source name — always 'pubchem'."},
+        "source_id": {"type": ["string", "null"], "pattern": "^pubchem:CID:\\d+$", "description": "Stable source identifier: 'pubchem:CID:<cid>'."},
+        "source_version": {"type": ["string", "null"], "description": "Source version from get_source_version(): 'pubchem_pug_rest_as_of_<ISO 8601 UTC>'."},
+        "download_date": {"type": ["string", "null"], "description": "ISO 8601 UTC download timestamp."},
+        "download_method": {"type": ["string", "null"], "enum": ["pug_rest_batch", "pug_rest_single", null], "description": "Fetch method: 'pug_rest_batch' for normal fetches, 'pug_rest_single' for split-retry."},
+        "pipeline_run_id": {"type": ["string", "null"], "description": "UUID4 of the pipeline run that produced this row."},
+        "input_checksum": {"type": ["string", "null"], "description": "SHA-256 of inchikeys_to_lookup.txt. Identical inputs produce identical checksums — supports reproducibility audits."},
+        "transformations": {"type": ["string", "null"], "description": "Semicolon-joined list of transformations applied (validated_inchikey_format; fetched_pubchem_properties; verified_response_inchikey_matches_request; sanitized_empty_strings_to_null; converted_molecular_weight_to_decimal; validated_ranges; deduplicated_by_inchikey_lowest_cid; extracted_protonation_state; extracted_isotope_info; computed_formal_charge)."},
+        "as_of_date": {"type": ["string", "null"], "description": "Point-in-time requested by the caller (PubChem PUG REST does not support point-in-time queries — the value is recorded for traceability but ignored by the API)."}
+      },
+      "required": ["inchikey"],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

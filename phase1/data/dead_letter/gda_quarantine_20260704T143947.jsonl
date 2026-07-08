@@ -1,0 +1,2 @@
+{"reason": "null_or_empty_gene_symbol", "timestamp": "20260704T143947", "row": {"gene_symbol": "", "uniprot_id": "P23219", "disease_id": "C0001", "disease_name": "Test", "source": "test", "score": "0.5", "association_type": "unknown", "pmid_list": null}}
+{"reason": "null_or_empty_gene_symbol", "timestamp": "20260704T143947", "row": {"gene_symbol": "", "uniprot_id": "P23219", "disease_id": "C0001", "disease_name": "Test", "source": "test", "score": "0.6", "association_type": "unknown", "pmid_list": null}}

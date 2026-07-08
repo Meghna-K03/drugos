@@ -1,0 +1,79 @@
+[
+  {
+    "mimNumber": 134934,
+    "geneSymbols": "FGFR3",
+    "approvedGeneSymbol": "FGFR3",
+    "cytoLocation": "4p16.3",
+    "phenotypeMapList": [
+      {
+        "phenotypeMap": {
+          "phenotype": "Achondroplasia, 100800 (3)",
+          "phenotypeMimNumber": 100800,
+          "phenotypeMappingKey": 3,
+          "pubmedIDList": ["12345", "67890"]
+        }
+      }
+    ]
+  },
+  {
+    "mimNumber": 602421,
+    "geneSymbols": "CFTR",
+    "approvedGeneSymbol": "CFTR",
+    "cytoLocation": "7q31.2",
+    "phenotypeMapList": [
+      {
+        "phenotypeMap": {
+          "phenotype": "Cystic fibrosis, 219700 (3), Autosomal recessive",
+          "phenotypeMimNumber": 219700,
+          "phenotypeMappingKey": 3,
+          "pubmedIDList": ["11111"]
+        }
+      }
+    ]
+  },
+  {
+    "mimNumber": 113705,
+    "geneSymbols": "BRCA1",
+    "approvedGeneSymbol": "BRCA1",
+    "cytoLocation": "17q21.31",
+    "phenotypeMapList": [
+      {
+        "phenotypeMap": {
+          "phenotype": "{Breast cancer, 114480 (3)}",
+          "phenotypeMimNumber": 114480,
+          "phenotypeMappingKey": 3
+        }
+      }
+    ]
+  },
+  {
+    "mimNumber": 164920,
+    "geneSymbols": "KIT",
+    "approvedGeneSymbol": "KIT",
+    "cytoLocation": "4q12",
+    "phenotypeMapList": [
+      {
+        "phenotypeMap": {
+          "phenotype": "Testicular germ cell tumor, 273300 (4)",
+          "phenotypeMimNumber": 273300,
+          "phenotypeMappingKey": 4
+        }
+      }
+    ]
+  },
+  {
+    "mimNumber": 235200,
+    "geneSymbols": "HFE",
+    "approvedGeneSymbol": "HFE",
+    "cytoLocation": "6p22.2",
+    "phenotypeMapList": [
+      {
+        "phenotypeMap": {
+          "phenotype": "Hemochromatosis, 235200 (3)",
+          "phenotypeMimNumber": 235200,
+          "phenotypeMappingKey": 3
+        }
+      }
+    ]
+  }
+]

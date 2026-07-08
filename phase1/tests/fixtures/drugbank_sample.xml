@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Schema-accurate DrugBank XML test fixture (T1).
+
+  This fixture is deliberately minimal but mirrors the real DrugBank 5.x
+  XML structure documented at https://docs.drugbank.com/xml. It exercises
+  every XPath branch in DrugBankPipeline._parse_drug_element /
+  _extract_properties / _extract_interactors:
+
+  1. DB00645 - approved small-molecule drug (Aspirin-like).
+  2. DB00463 - Baycol (cerivastatin) - WITHDRAWN killer drug, retains
+     the 'approved' tag. Must come out is_fda_approved=False (S3).
+  3. DB00011 - insulin-like biologic - NO InChIKey, NO SMILES. Must
+     get a SYNTH-DB00011 key (S7). Must NOT be dropped.
+  4. DB00001 - drug with BOTH target AND enzyme on same UniProt ID
+     P00734 (thrombin). source_id must be distinct (S22).
+  5. DB00002 - drug with multi-action target (agonist|positive
+     modulator). Both actions captured (S2, S10).
+  6. DB00003 - drug with non-human (E. coli) target. Must be filtered
+     by default organism=Humans config (S9).
+  7. DB00004 - drug with experimental MW="180.16 g/mol" (units in
+     value). MW must parse as 180.16 float (S11). Also has calculated
+     MW=180.15 - experimental wins (S18).
+  8. DB00005 - drug with <mechanism-of-action> containing <paragraph>
+     children. All text captured (S4).
+  9. DBXXXX - drug with invalid DrugBank ID format (not DB\d{5}).
+     Must be skipped (DQ4).
+ 10. DB00006 - drug with no <drugbank-id primary="true">. Must fall
+     back to first drugbank-id (DQ5 partial coverage).
+ 11. DB00007 - drug with <name>A</name> (1 char). Must be renamed to
+     Unknown-DB00007 (DQ3).
+ 12. DB00008 - drug with MW=-50 (impossible). Must be set to None (DQ2).
+-->
+<drugbank xmlns="http://drugbank.ca" version="5.1.10">
+  <!-- 1. Approved small-molecule drug -->
+  <drug type="small molecule" created="2005-06-13">
+    <drugbank-id primary="true">DB00645</drugbank-id>
+    <drugbank-id>DB00646</drugbank-id>
+    <name>Aspirin</name>
+    <description>Aspirin is an analgesic and antipyretic drug.</description>
+    <cas-number>50-78-2</cas-number>
+    <groups>
+      <group>approved</group>
+    </groups>
+    <calculated-properties>
+      <property>
+        <kind>InChIKey</kind>
+        <value>BSYNRYMUTXBXSQ-UHFFFAOYSA-N</value>
+      </property>
+      <property>
+        <kind>SMILES</kind>
+        <value>CC(=O)Oc1ccccc1C(=O)O</value>
+      </property>
+      <property>
+        <kind>Molecular Formula</kind>
+        <value>C9H8O4</value>
+      </property>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>180.16</value>
+      </property>
+      <property>
+        <kind>LogP</kind>
+        <value>1.19</value>
+      </property>
+      <property>
+        <kind>TPSA</kind>
+        <value>63.6</value>
+      </property>
+      <property>
+        <kind>H-bond Donor Count</kind>
+        <value>1</value>
+      </property>
+      <property>
+        <kind>H-bond Acceptor Count</kind>
+        <value>4</value>
+      </property>
+      <property>
+        <kind>Rotatable Bond Count</kind>
+        <value>3</value>
+      </property>
+    </calculated-properties>
+    <mechanism-of-action>
+      Aspirin inhibits COX-1 and COX-2 enzymes.
+    </mechanism-of-action>
+    <targets>
+      <target>
+        <id>BE0000015</id>
+        <name>Prostaglandin G/H synthase 1</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>inhibitor</action>
+        </actions>
+        <known-action>yes</known-action>
+        <polypeptide id="P23219" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P23219</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+  </drug>
+
+  <!-- 2. WITHDRAWN killer drug (Baycol / cerivastatin) - retains 'approved' tag -->
+  <drug type="small molecule" created="2005-06-13">
+    <drugbank-id primary="true">DB00463</drugbank-id>
+    <name>Cerivastatin</name>
+    <description>Cerivastatin was withdrawn from the US market in 2001.</description>
+    <cas-number>143201-11-0</cas-number>
+    <groups>
+      <group>approved</group>
+      <group>withdrawn</group>
+    </groups>
+    <calculated-properties>
+      <property>
+        <kind>InChIKey</kind>
+        <value>SEERZQRQVMJYFQ-UHFFFAOYSA-N</value>
+      </property>
+      <property>
+        <kind>SMILES</kind>
+        <value>CC(C)C1C(C2CC2)C3=CC=CC=C3C1C(C)=CC(=O)OC</value>
+      </property>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>459.55</value>
+      </property>
+    </calculated-properties>
+    <mechanism-of-action>Cerivastatin is an HMG-CoA reductase inhibitor.</mechanism-of-action>
+    <targets>
+      <target>
+        <id>BE0000016</id>
+        <name>HMG-CoA reductase</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>inhibitor</action>
+        </actions>
+        <known-action>yes</known-action>
+        <polypeptide id="P04035" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P04035</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+  </drug>
+
+  <!-- 3. Biologic (insulin-like) - NO InChIKey, NO SMILES -->
+  <drug type="biotech" created="2005-06-13">
+    <drugbank-id primary="true">DB00011</drugbank-id>
+    <name>Insulin</name>
+    <description>Insulin is a peptide hormone that regulates glucose.</description>
+    <cas-number>11061-68-0</cas-number>
+    <groups>
+      <group>approved</group>
+    </groups>
+    <experimental-properties>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>5808</value>
+      </property>
+    </experimental-properties>
+    <mechanism-of-action>Insulin binds to the insulin receptor.</mechanism-of-action>
+    <targets>
+      <target>
+        <id>BE0000028</id>
+        <name>Insulin receptor</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>agonist</action>
+        </actions>
+        <known-action>yes</known-action>
+        <polypeptide id="P06213" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P06213</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+  </drug>
+
+  <!-- 4. Drug with BOTH target AND enzyme on same UniProt ID P00734 -->
+  <drug type="small molecule" created="2005-06-13">
+    <drugbank-id primary="true">DB00001</drugbank-id>
+    <name>DrugWithDualRole</name>
+    <description>A drug that targets and is metabolized by the same protein.</description>
+    <cas-number>12345-67-8</cas-number>
+    <groups>
+      <group>approved</group>
+    </groups>
+    <calculated-properties>
+      <property>
+        <kind>InChIKey</kind>
+        <value>GPQVOUYQAQHVKE-UHFFFAOYSA-N</value>
+      </property>
+      <property>
+        <kind>SMILES</kind>
+        <value>CC(=O)Oc1ccccc1C(=O)O</value>
+      </property>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>180.16</value>
+      </property>
+    </calculated-properties>
+    <mechanism-of-action>Dual-role drug action.</mechanism-of-action>
+    <targets>
+      <target>
+        <id>BE0001594</id>
+        <name>Thrombin</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>inhibitor</action>
+        </actions>
+        <known-action>yes</known-action>
+        <polypeptide id="P00734" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P00734</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+    <enzymes>
+      <enzyme>
+        <id>BE0001595</id>
+        <name>Thrombin (enzyme role)</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>substrate</action>
+        </actions>
+        <known-action>no</known-action>
+        <polypeptide id="P00734" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P00734</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </enzyme>
+    </enzymes>
+  </drug>
+
+  <!-- 5. Drug with multi-action target -->
+  <drug type="small molecule" created="2005-06-13">
+    <drugbank-id primary="true">DB00002</drugbank-id>
+    <name>MultiActionDrug</name>
+    <description>A drug with multiple actions on the same target.</description>
+    <cas-number>23456-78-9</cas-number>
+    <groups>
+      <group>approved</group>
+    </groups>
+    <calculated-properties>
+      <property>
+        <kind>InChIKey</kind>
+        <value>GPQVOUYQAQHVKE-UHFFFAOYSA-N</value>
+      </property>
+      <property>
+        <kind>SMILES</kind>
+        <value>CC(=O)Oc1ccccc1C(=O)O</value>
+      </property>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>180.16</value>
+      </property>
+    </calculated-properties>
+    <mechanism-of-action>Multi-action drug.</mechanism-of-action>
+    <targets>
+      <target>
+        <id>BE0000029</id>
+        <name>GABA receptor</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>agonist</action>
+          <action>positive modulator</action>
+        </actions>
+        <known-action>yes</known-action>
+        <polypeptide id="P14867" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P14867</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+  </drug>
+
+  <!-- 6. Drug with non-human (E. coli) target - must be filtered -->
+  <drug type="small molecule" created="2005-06-13">
+    <drugbank-id primary="true">DB00003</drugbank-id>
+    <name>AntibioticDrug</name>
+    <description>An antibiotic with bacterial targets.</description>
+    <cas-number>34567-89-0</cas-number>
+    <groups>
+      <group>approved</group>
+    </groups>
+    <calculated-properties>
+      <property>
+        <kind>InChIKey</kind>
+        <value>GPQVOUYQAQHVKE-UHFFFAOYSA-N</value>
+      </property>
+      <property>
+        <kind>SMILES</kind>
+        <value>CC(=O)Oc1ccccc1C(=O)O</value>
+      </property>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>180.16</value>
+      </property>
+    </calculated-properties>
+    <mechanism-of-action>Antibiotic action.</mechanism-of-action>
+    <targets>
+      <target>
+        <id>BE0000030</id>
+        <name>E. coli ribosomal protein</name>
+        <organism>E. coli</organism>
+        <actions>
+          <action>inhibitor</action>
+        </actions>
+        <known-action>yes</known-action>
+        <polypeptide id="P0A7J6" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P0A7J6</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+      <target>
+        <id>BE0000031</id>
+        <name>Human target (kept)</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>inhibitor</action>
+        </actions>
+        <known-action>yes</known-action>
+        <polypeptide id="P08133" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P08133</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+  </drug>
+
+  <!-- 7. Drug with experimental MW containing units (unique InChIKey) -->
+  <drug type="small molecule" created="2005-06-13">
+    <drugbank-id primary="true">DB00004</drugbank-id>
+    <name>DrugWithUnitMW</name>
+    <description>Drug with experimental MW containing units.</description>
+    <cas-number>45678-90-1</cas-number>
+    <groups>
+      <group>approved</group>
+    </groups>
+    <calculated-properties>
+      <property>
+        <kind>InChIKey</kind>
+        <value>AAAAAAAAAAAAAA-UHFFFAOYSA-N</value>
+      </property>
+      <property>
+        <kind>SMILES</kind>
+        <value>CC(=O)Oc1ccccc1C(=O)O</value>
+      </property>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>180.15</value>
+      </property>
+    </calculated-properties>
+    <experimental-properties>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>180.16 g/mol</value>
+      </property>
+    </experimental-properties>
+    <mechanism-of-action>Drug with unit MW.</mechanism-of-action>
+    <targets>
+      <target>
+        <id>BE0000032</id>
+        <name>Some human target</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>inhibitor</action>
+        </actions>
+        <known-action>yes</known-action>
+        <polypeptide id="P23219" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P23219</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+  </drug>
+
+  <!-- 8. Drug with multi-paragraph MOA (unique InChIKey) -->
+  <drug type="small molecule" created="2005-06-13">
+    <drugbank-id primary="true">DB00005</drugbank-id>
+    <name>DrugWithParagraphMOA</name>
+    <description>Drug with multi-paragraph MOA.</description>
+    <cas-number>56789-01-2</cas-number>
+    <groups>
+      <group>approved</group>
+    </groups>
+    <calculated-properties>
+      <property>
+        <kind>InChIKey</kind>
+        <value>DDDDDDDDDDDDDD-UHFFFAOYSA-N</value>
+      </property>
+      <property>
+        <kind>SMILES</kind>
+        <value>CC(=O)Oc1ccccc1C(=O)O</value>
+      </property>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>180.16</value>
+      </property>
+    </calculated-properties>
+    <mechanism-of-action>
+      <paragraph>This is the first paragraph of the MOA.</paragraph>
+      <paragraph>This is the second paragraph of the MOA.</paragraph>
+    </mechanism-of-action>
+    <targets>
+      <target>
+        <id>BE0000033</id>
+        <name>Another human target</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>agonist</action>
+        </actions>
+        <known-action>yes</known-action>
+        <polypeptide id="P08133" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P08133</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+  </drug>
+
+  <!-- 9. Invalid DrugBank ID format - must be skipped -->
+  <drug type="small molecule" created="2005-06-13">
+    <drugbank-id primary="true">DBXXXX</drugbank-id>
+    <name>InvalidIdDrug</name>
+    <description>This drug has an invalid DrugBank ID.</description>
+    <groups>
+      <group>approved</group>
+    </groups>
+    <calculated-properties>
+      <property>
+        <kind>InChIKey</kind>
+        <value>GPQVOUYQAQHVKE-UHFFFAOYSA-N</value>
+      </property>
+    </calculated-properties>
+    <targets>
+      <target>
+        <id>BE0000034</id>
+        <name>Some target</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>inhibitor</action>
+        </actions>
+        <polypeptide id="P23219" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P23219</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+  </drug>
+
+  <!-- 10. Drug with 1-char name - must be renamed to Unknown-DB00007 (unique InChIKey) -->
+  <drug type="small molecule" created="2005-06-13">
+    <drugbank-id primary="true">DB00007</drugbank-id>
+    <name>A</name>
+    <description>Drug with too-short name.</description>
+    <cas-number>67890-12-3</cas-number>
+    <groups>
+      <group>approved</group>
+    </groups>
+    <calculated-properties>
+      <property>
+        <kind>InChIKey</kind>
+        <value>CCCCCCCCCCCCCC-UHFFFAOYSA-N</value>
+      </property>
+      <property>
+        <kind>SMILES</kind>
+        <value>CC(=O)Oc1ccccc1C(=O)O</value>
+      </property>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>180.16</value>
+      </property>
+    </calculated-properties>
+    <mechanism-of-action>Drug with short name.</mechanism-of-action>
+    <targets>
+      <target>
+        <id>BE0000035</id>
+        <name>Some target</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>inhibitor</action>
+        </actions>
+        <polypeptide id="P23219" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P23219</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+  </drug>
+
+  <!-- 11. Drug with impossible MW=-50 - must be set to None (unique InChIKey) -->
+  <drug type="small molecule" created="2005-06-13">
+    <drugbank-id primary="true">DB00008</drugbank-id>
+    <name>DrugWithImpossibleMW</name>
+    <description>Drug with impossible molecular weight.</description>
+    <cas-number>78901-23-4</cas-number>
+    <groups>
+      <group>approved</group>
+    </groups>
+    <calculated-properties>
+      <property>
+        <kind>InChIKey</kind>
+        <value>BBBBBBBBBBBBBB-UHFFFAOYSA-N</value>
+      </property>
+      <property>
+        <kind>SMILES</kind>
+        <value>CC(=O)Oc1ccccc1C(=O)O</value>
+      </property>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>-50</value>
+      </property>
+    </calculated-properties>
+    <mechanism-of-action>Drug with impossible MW.</mechanism-of-action>
+    <targets>
+      <target>
+        <id>BE0000036</id>
+        <name>Some target</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>inhibitor</action>
+        </actions>
+        <polypeptide id="P23219" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P23219</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+  </drug>
+
+  <!-- 12. Drug with CSV-injection-triggering MOA (=...) -->
+  <drug type="small molecule" created="2005-06-13">
+    <drugbank-id primary="true">DB00009</drugbank-id>
+    <name>DrugWithCsvInjectionMOA</name>
+    <description>Drug with CSV-injection-triggering MOA.</description>
+    <cas-number>89012-34-5</cas-number>
+    <groups>
+      <group>approved</group>
+    </groups>
+    <calculated-properties>
+      <property>
+        <kind>InChIKey</kind>
+        <value>GPQVOUYQAQHVKE-UHFFFAOYSA-N</value>
+      </property>
+      <property>
+        <kind>SMILES</kind>
+        <value>CC(=O)Oc1ccccc1C(=O)O</value>
+      </property>
+      <property>
+        <kind>Molecular Weight</kind>
+        <value>180.16</value>
+      </property>
+    </calculated-properties>
+    <mechanism-of-action>=CMD|calc /c calc.exe!A1</mechanism-of-action>
+    <targets>
+      <target>
+        <id>BE0000037</id>
+        <name>Some target</name>
+        <organism>Humans</organism>
+        <actions>
+          <action>inhibitor</action>
+        </actions>
+        <polypeptide id="P23219" source="Swiss-Prot">
+          <external-identifiers>
+            <external-identifier>
+              <resource>UniProtKB</resource>
+              <identifier>P23219</identifier>
+            </external-identifier>
+          </external-identifiers>
+        </polypeptide>
+      </target>
+    </targets>
+  </drug>
+</drugbank>

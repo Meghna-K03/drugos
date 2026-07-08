@@ -1,0 +1,126 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drugos-graph"
+version = "2.0.0"
+description = "DrugOS Knowledge Graph Construction & GNN Data Pipeline — Week 2"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "DrugOS Team"},
+]
+dependencies = [
+    "neo4j>=5.0,<6.0",
+    "pandas>=2.0,<3.0",
+    "networkx>=3.0,<4.0",
+    "numpy>=1.24,<3.0",
+    "torch>=2.0,<3.0",
+    "torch-geometric>=2.4,<3.0",
+    "torch-scatter>=2.1,<3.0",
+    "torch-sparse>=0.6,<1.0",
+    "scikit-learn>=1.3,<2.0",
+    "transformers>=4.30,<5.0",
+    "mlflow>=2.0,<3.0",
+    # Fixes audit issue 11.3 — Prometheus metrics in utils.py.
+    "prometheus-client>=0.20,<1.0",
+    # Fixes audit issue 12.1 — externalized label_map.yaml.
+    "pyyaml>=6.0,<7.0",
+    # audit-2025 ROOT FIX (issue 49): missing direct deps that were
+    # previously transitive. ``psutil`` is imported by gpu_utils.py for
+    # GPU memory detection; ``certifi`` is needed for TLS cert bundle
+    # (requests transitive but can disappear); ``backports.tarfile`` is
+    # needed on Python <3.12 for tarfile extraction. Declaring them as
+    # direct deps makes ``pip install .`` reproducible (was diverging
+    # from ``pip install -r requirements.txt``).
+    "psutil>=5.9",
+    "certifi>=2024.2",
+    "backports.tarfile>=1.0; python_version < '3.12'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1",
+    "mypy>=1.7",
+    # Fixes audit issue 10.9 — mutation testing (optional, slow CI job).
+    "mutmut>=3.0",
+    # Fixes audit issue 10.1 — property-based tests (optional).
+    "hypothesis>=6.0",
+]
+mol = [
+    "rdkit-pypi>=2023.3",
+]
+# GEO loader optional dependencies (GEO-15.6).
+# The GEO loader uses stdlib + pandas + numpy only (master prompt Rule R8).
+# This optional-dependencies block documents the version pinning for
+# reproducibility. No NEW third-party dependencies are added.
+# audit-2025 ROOT FIX (issue 50): the previous ``numpy<2.0`` pin here
+# CONFLICTED with the main dependency's ``numpy<3.0`` — installing
+# ``drugos-graph[geo]`` would DOWNGRADE numpy below 2.0 and potentially
+# break the base install (torch 2.x requires numpy>=1.24 but works with
+# 2.x; pandas 2.x works with both). The fix aligns the [geo] extra's
+# numpy pin with the main dependency (``<3.0``) so the extras are
+# strictly additive, never downgrading.
+geo = [
+    "pandas>=2.0,<3.0",
+    "numpy>=1.24,<3.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["drugos_graph*"]
+
+[tool.setuptools.package-data]
+# Fixes audit issue 12.1, 13.6 — ship label_map.yaml and label_dictionary.md
+# with the package so external deployments can read them.
+drugos_graph = [
+    "py.typed",
+    "data/label_map.yaml",
+    "data/label_dictionary.md",
+    "compliance.md",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[tool.mypy]
+# Fixes audit issue 14.2 — PEP 484 strict types enforced.
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+show_error_codes = true
+
+[[tool.mypy.overrides]]
+# prometheus_client stubs may be incomplete; relax strictness for that module.
+module = "prometheus_client.*"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+# Fixes audit issue 13.7 — doctest support.
+addopts = "--strict-markers"
+doctest_optionflags = ["NORMALIZE_WHITESPACE", "ELLIPSIS"]
+testpaths = ["."]
+
+[tool.mutmut]
+# Fixes audit issue 10.9 — mutation testing configuration.
+# Run with: mutmut run --paths-to-mutate drugos_graph/utils.py
+paths_to_mutate = ["drugos_graph/utils.py"]
+tests_dir = "."
+

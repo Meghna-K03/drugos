@@ -1,0 +1,1 @@
+{"reason": "null_or_empty_gene_symbol", "timestamp": "20260704T142238", "row": {"gene_symbol": null, "disease_id": "C0001", "disease_name": "Test Disease", "score": "0.5", "source": "test"}}

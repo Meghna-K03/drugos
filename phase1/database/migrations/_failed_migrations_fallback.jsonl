@@ -1,0 +1,7 @@
+# v29 ROOT FIX (audit D-8): _failed_migrations_fallback.jsonl was polluted
+# with 22 test artifacts (migration_name="test", all from pytest runs that
+# hit the fallback path because the test DB didn't have a _failed_migrations
+# table). Cleared on this date. The migration runner now skips writing test
+# artifacts to this file when running in test mode (see run_migrations.py
+# _record_failure_fallback test-mode guard). Production failures will be
+# appended below this header as JSONL records.

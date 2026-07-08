@@ -1,0 +1,333 @@
+{"target_chembl_id": "CHEMBL2714", "target_type": "SINGLE PROTEIN", "pref_name": "Pepsin A", "organism": "Sus scrofa", "uniprot_accessions": ["P00791"], "gene_symbol": "PGA"}
+{"target_chembl_id": "CHEMBL2991", "target_type": "SINGLE PROTEIN", "pref_name": "Dihydroorotate dehydrogenase (quinone), mitochondrial", "organism": "Mus musculus", "uniprot_accessions": ["O35435"], "gene_symbol": "Dhodh"}
+{"target_chembl_id": "CHEMBL1812", "target_type": "SINGLE PROTEIN", "pref_name": "Pancreatic triacylglycerol lipase", "organism": "Homo sapiens", "uniprot_accessions": ["P16233"], "gene_symbol": "PNLIP"}
+{"target_chembl_id": "CHEMBL612545", "target_type": "UNCHECKED", "pref_name": "Unchecked", "organism": null, "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2334", "target_type": "SINGLE PROTEIN", "pref_name": "Caspase-3", "organism": "Homo sapiens", "uniprot_accessions": ["P42574"], "gene_symbol": "CASP3"}
+{"target_chembl_id": "CHEMBL2093872", "target_type": "PROTEIN COMPLEX GROUP", "pref_name": "GABA-A receptor; anion channel", "organism": "Homo sapiens", "uniprot_accessions": ["P14867", "P47870", "P18507", "P28472", "P48169", "Q99928", "Q9UN88", "P34903", "O00591", "O14764", "Q8N1C3", "P18505", "P78334", "P47869", "P31644", "Q16445"], "gene_symbol": "GABRA6"}
+{"target_chembl_id": "CHEMBL4235", "target_type": "SINGLE PROTEIN", "pref_name": "11-beta-hydroxysteroid dehydrogenase 1", "organism": "Homo sapiens", "uniprot_accessions": ["P28845"], "gene_symbol": "HSD11B1"}
+{"target_chembl_id": "CHEMBL209", "target_type": "SINGLE PROTEIN", "pref_name": "Serine protease 1", "organism": "Homo sapiens", "uniprot_accessions": ["P07477"], "gene_symbol": "PRSS1"}
+{"target_chembl_id": "CHEMBL2094134", "target_type": "PROTEIN FAMILY", "pref_name": "Tubulin", "organism": "Bos taurus", "uniprot_accessions": ["Q6B856", "Q862L2", "Q862F3"], "gene_symbol": "TUBB2B"}
+{"target_chembl_id": "CHEMBL3735", "target_type": "SINGLE PROTEIN", "pref_name": "Vascular cell adhesion protein 1", "organism": "Homo sapiens", "uniprot_accessions": ["P19320"], "gene_symbol": "VCAM1"}
+{"target_chembl_id": "CHEMBL4321", "target_type": "SINGLE PROTEIN", "pref_name": "Prostaglandin G/H synthase 2", "organism": "Mus musculus", "uniprot_accessions": ["Q05769"], "gene_symbol": "Ptgs2"}
+{"target_chembl_id": "CHEMBL2093864", "target_type": "PROTEIN FAMILY", "pref_name": "Adrenergic receptor alpha-2", "organism": "Rattus norvegicus", "uniprot_accessions": ["P22086", "P19328", "P22909"], "gene_symbol": "Adra2a"}
+{"target_chembl_id": "CHEMBL4073", "target_type": "SINGLE PROTEIN", "pref_name": "Matrilysin", "organism": "Homo sapiens", "uniprot_accessions": ["P09237"], "gene_symbol": "MMP7"}
+{"target_chembl_id": "CHEMBL2093871", "target_type": "PROTEIN COMPLEX GROUP", "pref_name": "Glutamate receptor ionotropic, AMPA", "organism": "Rattus norvegicus", "uniprot_accessions": ["P19491", "P19492", "P19493", "P19490"], "gene_symbol": "Gria1"}
+{"target_chembl_id": "CHEMBL3354", "target_type": "SINGLE PROTEIN", "pref_name": "Glutathionylspermidine synthase", "organism": "Crithidia fasciculata", "uniprot_accessions": ["P90518"], "gene_symbol": "GSP"}
+{"target_chembl_id": "CHEMBL2093865", "target_type": "PROTEIN FAMILY", "pref_name": "Histone deacetylase", "organism": "Homo sapiens", "uniprot_accessions": ["Q13547", "O15379", "Q9UBN7", "Q92769", "Q9UQL6", "Q8WUI4", "Q9BY41", "Q96DB2", "P56524", "Q9UKV0", "Q969S8"], "gene_symbol": "HDAC10"}
+{"target_chembl_id": "CHEMBL259", "target_type": "SINGLE PROTEIN", "pref_name": "Melanocortin receptor 4", "organism": "Homo sapiens", "uniprot_accessions": ["P32245"], "gene_symbol": "MC4R"}
+{"target_chembl_id": "CHEMBL2167", "target_type": "SINGLE PROTEIN", "pref_name": "GTPase HRas", "organism": "Homo sapiens", "uniprot_accessions": ["P01112"], "gene_symbol": "HRAS"}
+{"target_chembl_id": "CHEMBL4800", "target_type": "SINGLE PROTEIN", "pref_name": "Caspase-1", "organism": "Mus musculus", "uniprot_accessions": ["P29452"], "gene_symbol": "Casp1"}
+{"target_chembl_id": "CHEMBL4840", "target_type": "SINGLE PROTEIN", "pref_name": "Metallo-beta-lactamase type 2", "organism": "Bacteroides fragilis", "uniprot_accessions": ["P25910"], "gene_symbol": "ccrA"}
+{"target_chembl_id": "CHEMBL2111337", "target_type": "PROTEIN FAMILY", "pref_name": "Atrial natriuretic peptide receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P20594", "P16066", "P17342"], "gene_symbol": "NPR3"}
+{"target_chembl_id": "CHEMBL3799", "target_type": "SINGLE PROTEIN", "pref_name": "Neuromedin-K receptor", "organism": "Cavia porcellus", "uniprot_accessions": ["P30098"], "gene_symbol": "TACR3"}
+{"target_chembl_id": "CHEMBL614516", "target_type": "CELL-LINE", "pref_name": "A498", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL1902", "target_type": "SINGLE PROTEIN", "pref_name": "Peptidyl-prolyl cis-trans isomerase FKBP1A", "organism": "Homo sapiens", "uniprot_accessions": ["P62942"], "gene_symbol": "FKBP1A"}
+{"target_chembl_id": "CHEMBL1907610", "target_type": "PROTEIN FAMILY", "pref_name": "Adrenergic receptor alpha-1", "organism": "Rattus norvegicus", "uniprot_accessions": ["P15823", "P23944", "P43140"], "gene_symbol": "Adra1a"}
+{"target_chembl_id": "CHEMBL385", "target_type": "CELL-LINE", "pref_name": "K562", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3994", "target_type": "SINGLE PROTEIN", "pref_name": "Enoyl-[acyl-carrier-protein] reductase [NADPH] FabI", "organism": "Staphylococcus aureus", "uniprot_accessions": ["Q6GI75"], "gene_symbol": "fabI"}
+{"target_chembl_id": "CHEMBL1926", "target_type": "SINGLE PROTEIN", "pref_name": "Dihydrofolate reductase", "organism": "Pneumocystis carinii", "uniprot_accessions": ["P16184"], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3795", "target_type": "SINGLE PROTEIN", "pref_name": "Melanocyte-stimulating hormone receptor", "organism": "Homo sapiens", "uniprot_accessions": ["Q01726"], "gene_symbol": "MC1R"}
+{"target_chembl_id": "CHEMBL1913", "target_type": "SINGLE PROTEIN", "pref_name": "Platelet-derived growth factor receptor beta", "organism": "Homo sapiens", "uniprot_accessions": ["P09619"], "gene_symbol": "PDGFRB"}
+{"target_chembl_id": "CHEMBL1792", "target_type": "SINGLE PROTEIN", "pref_name": "Somatostatin receptor type 5", "organism": "Homo sapiens", "uniprot_accessions": ["P35346"], "gene_symbol": "SSTR5"}
+{"target_chembl_id": "CHEMBL4588", "target_type": "SINGLE PROTEIN", "pref_name": "Neutrophil collagenase", "organism": "Homo sapiens", "uniprot_accessions": ["P22894"], "gene_symbol": "MMP8"}
+{"target_chembl_id": "CHEMBL4176", "target_type": "SINGLE PROTEIN", "pref_name": "Tissue alpha-L-fucosidase", "organism": "Homo sapiens", "uniprot_accessions": ["P04066"], "gene_symbol": "FUCA1"}
+{"target_chembl_id": "CHEMBL4464", "target_type": "SINGLE PROTEIN", "pref_name": "Sterol O-acyltransferase 1", "organism": "Mus musculus", "uniprot_accessions": ["Q61263"], "gene_symbol": "Soat1"}
+{"target_chembl_id": "CHEMBL2524", "target_type": "SINGLE PROTEIN", "pref_name": "Alpha-galactosidase A", "organism": "Homo sapiens", "uniprot_accessions": ["P06280"], "gene_symbol": "GLA"}
+{"target_chembl_id": "CHEMBL614213", "target_type": "CELL-LINE", "pref_name": "OVCAR-3", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2034", "target_type": "SINGLE PROTEIN", "pref_name": "Glucocorticoid receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P04150"], "gene_symbol": "NR3C1"}
+{"target_chembl_id": "CHEMBL612558", "target_type": "ADMET", "pref_name": "ADMET", "organism": null, "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL612267", "target_type": "CELL-LINE", "pref_name": "L929", "organism": "Mus musculus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL612262", "target_type": "CELL-LINE", "pref_name": "SW-620", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3356", "target_type": "SINGLE PROTEIN", "pref_name": "Cytochrome P450 1A2", "organism": "Homo sapiens", "uniprot_accessions": ["P05177"], "gene_symbol": "CYP1A2"}
+{"target_chembl_id": "CHEMBL2095150", "target_type": "PROTEIN FAMILY", "pref_name": "Phosphodiesterase 1", "organism": "Homo sapiens", "uniprot_accessions": ["P54750", "Q01064", "Q14123"], "gene_symbol": "PDE1C"}
+{"target_chembl_id": "CHEMBL233", "target_type": "SINGLE PROTEIN", "pref_name": "Mu-type opioid receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P35372"], "gene_symbol": "OPRM1"}
+{"target_chembl_id": "CHEMBL4106", "target_type": "SINGLE PROTEIN", "pref_name": "Cathepsin D", "organism": "Bos taurus", "uniprot_accessions": ["P80209"], "gene_symbol": "CTSD"}
+{"target_chembl_id": "CHEMBL2096973", "target_type": "PROTEIN FAMILY", "pref_name": "Peptide N-myristoyltransferase", "organism": "Homo sapiens", "uniprot_accessions": ["P30419", "O60551"], "gene_symbol": "NMT2"}
+{"target_chembl_id": "CHEMBL3635", "target_type": "SINGLE PROTEIN", "pref_name": "Neutral alpha-glucosidase C", "organism": "Mus musculus", "uniprot_accessions": ["Q8BVW0"], "gene_symbol": "Ganc"}
+{"target_chembl_id": "CHEMBL335", "target_type": "SINGLE PROTEIN", "pref_name": "Tyrosine-protein phosphatase non-receptor type 1", "organism": "Homo sapiens", "uniprot_accessions": ["P18031"], "gene_symbol": "PTPN1"}
+{"target_chembl_id": "CHEMBL2622", "target_type": "SINGLE PROTEIN", "pref_name": "Aldo-keto reductase family 1 member B1", "organism": "Rattus norvegicus", "uniprot_accessions": ["P07943"], "gene_symbol": "Akr1b1"}
+{"target_chembl_id": "CHEMBL1855", "target_type": "SINGLE PROTEIN", "pref_name": "Gonadotropin-releasing hormone receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P30968"], "gene_symbol": "GNRHR"}
+{"target_chembl_id": "CHEMBL614295", "target_type": "CELL-LINE", "pref_name": "EVSA-T", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2095156", "target_type": "SELECTIVITY GROUP", "pref_name": "Opioid receptors; mu & kappa", "organism": "Homo sapiens", "uniprot_accessions": ["P41145", "P35372"], "gene_symbol": "OPRM1"}
+{"target_chembl_id": "CHEMBL263", "target_type": "SINGLE PROTEIN", "pref_name": "Type-1 angiotensin II receptor B", "organism": "Rattus norvegicus", "uniprot_accessions": ["P29089"], "gene_symbol": "Agtr1b"}
+{"target_chembl_id": "CHEMBL364", "target_type": "ORGANISM", "pref_name": "Plasmodium falciparum", "organism": "Plasmodium falciparum", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3027", "target_type": "SINGLE PROTEIN", "pref_name": "Neurotensin receptor type 1", "organism": "Rattus norvegicus", "uniprot_accessions": ["P20789"], "gene_symbol": "Ntsr1"}
+{"target_chembl_id": "CHEMBL321", "target_type": "SINGLE PROTEIN", "pref_name": "Matrix metalloproteinase-9", "organism": "Homo sapiens", "uniprot_accessions": ["P14780"], "gene_symbol": "MMP9"}
+{"target_chembl_id": "CHEMBL1790", "target_type": "SINGLE PROTEIN", "pref_name": "Vasopressin V2 receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P30518"], "gene_symbol": "AVPR2"}
+{"target_chembl_id": "CHEMBL298", "target_type": "SINGLE PROTEIN", "pref_name": "Gastrin/cholecystokinin type B receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P32239"], "gene_symbol": "CCKBR"}
+{"target_chembl_id": "CHEMBL2095166", "target_type": "PROTEIN FAMILY", "pref_name": "Adrenergic receptor beta", "organism": "Rattus norvegicus", "uniprot_accessions": ["P18090", "P10608", "P26255"], "gene_symbol": "Adrb3"}
+{"target_chembl_id": "CHEMBL1949", "target_type": "SINGLE PROTEIN", "pref_name": "Peptidyl-prolyl cis-trans isomerase A", "organism": "Homo sapiens", "uniprot_accessions": ["P62937"], "gene_symbol": "PPIA"}
+{"target_chembl_id": "CHEMBL3766", "target_type": "SINGLE PROTEIN", "pref_name": "Vasopressin V2 receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["Q00788"], "gene_symbol": "Avpr2"}
+{"target_chembl_id": "CHEMBL614641", "target_type": "CELL-LINE", "pref_name": "Ehrlich", "organism": "Mus musculus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL1853", "target_type": "SINGLE PROTEIN", "pref_name": "Somatostatin receptor type 4", "organism": "Homo sapiens", "uniprot_accessions": ["P31391"], "gene_symbol": "SSTR4"}
+{"target_chembl_id": "CHEMBL3471", "target_type": "SINGLE PROTEIN", "pref_name": "Human immunodeficiency virus type 1 integrase", "organism": "Human immunodeficiency virus 1", "uniprot_accessions": ["Q7ZJM1"], "gene_symbol": "pol"}
+{"target_chembl_id": "CHEMBL3815", "target_type": "SINGLE PROTEIN", "pref_name": "Squalene synthase", "organism": "Rattus norvegicus", "uniprot_accessions": ["Q02769"], "gene_symbol": "Fdft1"}
+{"target_chembl_id": "CHEMBL2721", "target_type": "SINGLE PROTEIN", "pref_name": "Excitatory amino acid transporter 3", "organism": "Homo sapiens", "uniprot_accessions": ["P43005"], "gene_symbol": "SLC1A1"}
+{"target_chembl_id": "CHEMBL221", "target_type": "SINGLE PROTEIN", "pref_name": "Prostaglandin G/H synthase 1", "organism": "Homo sapiens", "uniprot_accessions": ["P23219"], "gene_symbol": "PTGS1"}
+{"target_chembl_id": "CHEMBL371", "target_type": "ORGANISM", "pref_name": "Human betaherpesvirus 5", "organism": "Human betaherpesvirus 5", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL395", "target_type": "CELL-LINE", "pref_name": "HepG2", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL1907599", "target_type": "PROTEIN COMPLEX", "pref_name": "Integrin alpha-4/beta-1", "organism": "Homo sapiens", "uniprot_accessions": ["P05556", "P13612"], "gene_symbol": "ITGA4"}
+{"target_chembl_id": "CHEMBL4611", "target_type": "SINGLE PROTEIN", "pref_name": "Complement C1r subcomponent", "organism": "Homo sapiens", "uniprot_accessions": ["P00736"], "gene_symbol": "C1R"}
+{"target_chembl_id": "CHEMBL4110", "target_type": "SINGLE PROTEIN", "pref_name": "Alpha-galactosidase A", "organism": "Rattus norvegicus", "uniprot_accessions": ["D3ZJF9"], "gene_symbol": "Gla"}
+{"target_chembl_id": "CHEMBL1917", "target_type": "SINGLE PROTEIN", "pref_name": "Somatostatin receptor type 1", "organism": "Homo sapiens", "uniprot_accessions": ["P30872"], "gene_symbol": "SSTR1"}
+{"target_chembl_id": "CHEMBL2094119", "target_type": "PROTEIN COMPLEX GROUP", "pref_name": "Glutamate receptor ionotropic, kainate", "organism": "Rattus norvegicus", "uniprot_accessions": ["P22756", "Q01812", "P42260", "P42264", "Q63273"], "gene_symbol": "Grik5"}
+{"target_chembl_id": "CHEMBL613984", "target_type": "CELL-LINE", "pref_name": "IGROV-1", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL613134", "target_type": "ORGANISM", "pref_name": "Cytomegalovirus", "organism": "Cytomegalovirus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL287", "target_type": "SINGLE PROTEIN", "pref_name": "Sigma non-opioid intracellular receptor 1", "organism": "Homo sapiens", "uniprot_accessions": ["Q99720"], "gene_symbol": "SIGMAR1"}
+{"target_chembl_id": "CHEMBL386", "target_type": "CELL-LINE", "pref_name": "L1210", "organism": "Mus musculus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2061", "target_type": "SINGLE PROTEIN", "pref_name": "Retinoic acid receptor RXR-alpha", "organism": "Homo sapiens", "uniprot_accessions": ["P19793"], "gene_symbol": "RXRA"}
+{"target_chembl_id": "CHEMBL283", "target_type": "SINGLE PROTEIN", "pref_name": "Stromelysin-1", "organism": "Homo sapiens", "uniprot_accessions": ["P08254"], "gene_symbol": "MMP3"}
+{"target_chembl_id": "CHEMBL388", "target_type": "CELL-LINE", "pref_name": "MT4", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL4753", "target_type": "SINGLE PROTEIN", "pref_name": "Beta-galactosidase", "organism": "Aspergillus niger", "uniprot_accessions": ["P29853"], "gene_symbol": "lacA"}
+{"target_chembl_id": "CHEMBL258", "target_type": "SINGLE PROTEIN", "pref_name": "Tyrosine-protein kinase Lck", "organism": "Homo sapiens", "uniprot_accessions": ["P06239"], "gene_symbol": "LCK"}
+{"target_chembl_id": "CHEMBL3369", "target_type": "SINGLE PROTEIN", "pref_name": "Neprilysin", "organism": "Rattus norvegicus", "uniprot_accessions": ["P07861"], "gene_symbol": "Mme"}
+{"target_chembl_id": "CHEMBL1914", "target_type": "SINGLE PROTEIN", "pref_name": "Cholinesterase", "organism": "Homo sapiens", "uniprot_accessions": ["P06276"], "gene_symbol": "BCHE"}
+{"target_chembl_id": "CHEMBL614647", "target_type": "CELL-LINE", "pref_name": "WiDr", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL1785", "target_type": "SINGLE PROTEIN", "pref_name": "Endothelin receptor type B", "organism": "Homo sapiens", "uniprot_accessions": ["P24530"], "gene_symbol": "EDNRB"}
+{"target_chembl_id": "CHEMBL2649", "target_type": "SINGLE PROTEIN", "pref_name": "Prostaglandin G/H synthase 1", "organism": "Mus musculus", "uniprot_accessions": ["P22437"], "gene_symbol": "Ptgs1"}
+{"target_chembl_id": "CHEMBL3910", "target_type": "SINGLE PROTEIN", "pref_name": "11-beta-hydroxysteroid dehydrogenase 1", "organism": "Mus musculus", "uniprot_accessions": ["P50172"], "gene_symbol": "Hsd11b1"}
+{"target_chembl_id": "CHEMBL340", "target_type": "SINGLE PROTEIN", "pref_name": "Cytochrome P450 3A4", "organism": "Homo sapiens", "uniprot_accessions": ["P08684"], "gene_symbol": "CYP3A4"}
+{"target_chembl_id": "CHEMBL3066", "target_type": "SINGLE PROTEIN", "pref_name": "Gonadotropin-releasing hormone receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["P30969"], "gene_symbol": "Gnrhr"}
+{"target_chembl_id": "CHEMBL3332", "target_type": "SINGLE PROTEIN", "pref_name": "Disintegrin and metalloproteinase domain-containing protein 17", "organism": "Sus scrofa", "uniprot_accessions": ["O77636"], "gene_symbol": "ADAM17"}
+{"target_chembl_id": "CHEMBL3402", "target_type": "SINGLE PROTEIN", "pref_name": "Alkaline phosphatase, germ cell type", "organism": "Homo sapiens", "uniprot_accessions": ["P10696"], "gene_symbol": "ALPG"}
+{"target_chembl_id": "CHEMBL398", "target_type": "CELL-LINE", "pref_name": "KB", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL614309", "target_type": "CELL-LINE", "pref_name": "T-cell", "organism": null, "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL205", "target_type": "SINGLE PROTEIN", "pref_name": "Carbonic anhydrase 2", "organism": "Homo sapiens", "uniprot_accessions": ["P00918"], "gene_symbol": "CA2"}
+{"target_chembl_id": "CHEMBL2998", "target_type": "SINGLE PROTEIN", "pref_name": "P2X purinoceptor 3", "organism": "Homo sapiens", "uniprot_accessions": ["P56373"], "gene_symbol": "P2RX3"}
+{"target_chembl_id": "CHEMBL614019", "target_type": "CELL-LINE", "pref_name": "M19-MEL", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL339", "target_type": "SINGLE PROTEIN", "pref_name": "D(2) dopamine receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["P61169"], "gene_symbol": "Drd2"}
+{"target_chembl_id": "CHEMBL2652", "target_type": "SINGLE PROTEIN", "pref_name": "cGMP-dependent 3',5'-cyclic phosphodiesterase", "organism": "Homo sapiens", "uniprot_accessions": ["O00408"], "gene_symbol": "PDE2A"}
+{"target_chembl_id": "CHEMBL1801", "target_type": "SINGLE PROTEIN", "pref_name": "Plasminogen", "organism": "Homo sapiens", "uniprot_accessions": ["P00747"], "gene_symbol": "PLG"}
+{"target_chembl_id": "CHEMBL2857", "target_type": "SINGLE PROTEIN", "pref_name": "Human rhinovirus A protease", "organism": "Human rhinovirus sp.", "uniprot_accessions": ["Q4U254"], "gene_symbol": "protease"}
+{"target_chembl_id": "CHEMBL252", "target_type": "SINGLE PROTEIN", "pref_name": "Endothelin-1 receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P25101"], "gene_symbol": "EDNRA"}
+{"target_chembl_id": "CHEMBL614069", "target_type": "CELL-LINE", "pref_name": "A-431", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL4426", "target_type": "SINGLE PROTEIN", "pref_name": "Phospholipase A2", "organism": "Homo sapiens", "uniprot_accessions": ["P04054"], "gene_symbol": "PLA2G1B"}
+{"target_chembl_id": "CHEMBL243", "target_type": "SINGLE PROTEIN", "pref_name": "Human immunodeficiency virus type 1 protease", "organism": "Human immunodeficiency virus 1", "uniprot_accessions": ["Q72874"], "gene_symbol": "pol"}
+{"target_chembl_id": "CHEMBL2093863", "target_type": "PROTEIN FAMILY", "pref_name": "Phosphodiesterase 4", "organism": "Homo sapiens", "uniprot_accessions": ["P27815", "Q08499", "Q07343", "Q08493"], "gene_symbol": "PDE4C"}
+{"target_chembl_id": "CHEMBL1907607", "target_type": "PROTEIN COMPLEX GROUP", "pref_name": "GABA-A receptor; anion channel", "organism": "Rattus norvegicus", "uniprot_accessions": ["O09028", "P15431", "P18506", "P18508", "P19969", "P20236", "P23574", "P23576", "P28471", "P28473", "P30191", "P62813", "P63079", "P63138", "Q91ZM7", "Q9ES14"], "gene_symbol": "Gabre"}
+{"target_chembl_id": "CHEMBL345", "target_type": "NUCLEIC-ACID", "pref_name": "Nucleic Acid", "organism": null, "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL217", "target_type": "SINGLE PROTEIN", "pref_name": "D(2) dopamine receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P14416"], "gene_symbol": "DRD2"}
+{"target_chembl_id": "CHEMBL3944", "target_type": "SINGLE PROTEIN", "pref_name": "Vasopressin V2 receptor", "organism": "Sus scrofa", "uniprot_accessions": ["P32307"], "gene_symbol": "AVPR2"}
+{"target_chembl_id": "CHEMBL389", "target_type": "CELL-LINE", "pref_name": "P388", "organism": "Mus musculus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL614163", "target_type": "CELL-LINE", "pref_name": "SK-N-MC", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3622", "target_type": "SINGLE PROTEIN", "pref_name": "Cytochrome P450 2C19", "organism": "Homo sapiens", "uniprot_accessions": ["P33261"], "gene_symbol": "CYP2C19"}
+{"target_chembl_id": "CHEMBL612710", "target_type": "ORGANISM", "pref_name": "Arabidopsis thaliana", "organism": "Arabidopsis thaliana", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL399", "target_type": "CELL-LINE", "pref_name": "HeLa", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3869", "target_type": "SINGLE PROTEIN", "pref_name": "Matrix metalloproteinase-14", "organism": "Homo sapiens", "uniprot_accessions": ["P50281"], "gene_symbol": "MMP14"}
+{"target_chembl_id": "CHEMBL2336", "target_type": "SINGLE PROTEIN", "pref_name": "Mitogen-activated protein kinase 14", "organism": "Mus musculus", "uniprot_accessions": ["P47811"], "gene_symbol": "Mapk14"}
+{"target_chembl_id": "CHEMBL2135", "target_type": "SINGLE PROTEIN", "pref_name": "P2X purinoceptor 2", "organism": "Rattus norvegicus", "uniprot_accessions": ["P49653"], "gene_symbol": "P2rx2"}
+{"target_chembl_id": "CHEMBL237", "target_type": "SINGLE PROTEIN", "pref_name": "Kappa-type opioid receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P41145"], "gene_symbol": "OPRK1"}
+{"target_chembl_id": "CHEMBL220", "target_type": "SINGLE PROTEIN", "pref_name": "Acetylcholinesterase", "organism": "Homo sapiens", "uniprot_accessions": ["P22303"], "gene_symbol": "ACHE"}
+{"target_chembl_id": "CHEMBL3798", "target_type": "SINGLE PROTEIN", "pref_name": "Calcitonin gene-related peptide type 1 receptor", "organism": "Homo sapiens", "uniprot_accessions": ["Q16602"], "gene_symbol": "CALCRL"}
+{"target_chembl_id": "CHEMBL614245", "target_type": "CELL-LINE", "pref_name": "THP-1", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3301", "target_type": "SINGLE PROTEIN", "pref_name": "Prolyl 4-hydroxylase subunit alpha-1", "organism": "Rattus norvegicus", "uniprot_accessions": ["P54001"], "gene_symbol": "P4ha1"}
+{"target_chembl_id": "CHEMBL2461", "target_type": "SINGLE PROTEIN", "pref_name": "Prolyl endopeptidase", "organism": "Sus scrofa", "uniprot_accessions": ["P23687"], "gene_symbol": "PREP"}
+{"target_chembl_id": "CHEMBL3568", "target_type": "SINGLE PROTEIN", "pref_name": "Nitric oxide synthase 1", "organism": "Homo sapiens", "uniprot_accessions": ["P29475"], "gene_symbol": "NOS1"}
+{"target_chembl_id": "CHEMBL318", "target_type": "SINGLE PROTEIN", "pref_name": "Adenosine receptor A1", "organism": "Rattus norvegicus", "uniprot_accessions": ["P25099"], "gene_symbol": "Adora1"}
+{"target_chembl_id": "CHEMBL2111393", "target_type": "PROTEIN COMPLEX", "pref_name": "Farnesyltransferase", "organism": "Saccharomyces cerevisiae S288c", "uniprot_accessions": ["P29703", "P22007"], "gene_symbol": "RAM1"}
+{"target_chembl_id": "CHEMBL5136", "target_type": "SINGLE PROTEIN", "pref_name": "Platelet-activating factor receptor", "organism": "Cavia porcellus", "uniprot_accessions": ["P21556"], "gene_symbol": "PTAFR"}
+{"target_chembl_id": "CHEMBL3416", "target_type": "SINGLE PROTEIN", "pref_name": "Capsid scaffolding protein", "organism": "Human herpesvirus 2 (strain HG52) (HHV-2) (Human herpes simplex virus2)", "uniprot_accessions": ["P89449"], "gene_symbol": "UL26"}
+{"target_chembl_id": "CHEMBL4035", "target_type": "SINGLE PROTEIN", "pref_name": "Prolyl endopeptidase", "organism": "Rattus norvegicus", "uniprot_accessions": ["O70196"], "gene_symbol": "Prep"}
+{"target_chembl_id": "CHEMBL244", "target_type": "SINGLE PROTEIN", "pref_name": "Coagulation factor X", "organism": "Homo sapiens", "uniprot_accessions": ["P00742"], "gene_symbol": "F10"}
+{"target_chembl_id": "CHEMBL2104", "target_type": "SINGLE PROTEIN", "pref_name": "P2X purinoceptor 4", "organism": "Homo sapiens", "uniprot_accessions": ["Q99571"], "gene_symbol": "P2RX4"}
+{"target_chembl_id": "CHEMBL2096971", "target_type": "PROTEIN FAMILY", "pref_name": "Carbonic anhydrase", "organism": "Bos taurus", "uniprot_accessions": ["P00921", "Q95323", "P18915", "Q3SZX4"], "gene_symbol": "CA3"}
+{"target_chembl_id": "CHEMBL254", "target_type": "SINGLE PROTEIN", "pref_name": "3',5'-cyclic-AMP phosphodiesterase 4A", "organism": "Homo sapiens", "uniprot_accessions": ["P27815"], "gene_symbol": "PDE4A"}
+{"target_chembl_id": "CHEMBL2028", "target_type": "SINGLE PROTEIN", "pref_name": "Somatostatin receptor type 3", "organism": "Homo sapiens", "uniprot_accessions": ["P32745"], "gene_symbol": "SSTR3"}
+{"target_chembl_id": "CHEMBL2127", "target_type": "SINGLE PROTEIN", "pref_name": "Hepatic triacylglycerol lipase", "organism": "Homo sapiens", "uniprot_accessions": ["P11150"], "gene_symbol": "LIPC"}
+{"target_chembl_id": "CHEMBL614822", "target_type": "CELL-LINE", "pref_name": "NIH3T3", "organism": "Mus musculus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL613075", "target_type": "ORGANISM", "pref_name": "Lacticaseibacillus casei", "organism": "Lacticaseibacillus casei", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2615", "target_type": "SINGLE PROTEIN", "pref_name": "Renin-1", "organism": "Mus musculus", "uniprot_accessions": ["P06281"], "gene_symbol": "Ren1"}
+{"target_chembl_id": "CHEMBL2008", "target_type": "SINGLE PROTEIN", "pref_name": "Retinoic acid receptor beta", "organism": "Homo sapiens", "uniprot_accessions": ["P10826"], "gene_symbol": "RARB"}
+{"target_chembl_id": "CHEMBL2094125", "target_type": "PROTEIN FAMILY", "pref_name": "Phosphodiesterase 3", "organism": "Homo sapiens", "uniprot_accessions": ["Q14432", "Q13370"], "gene_symbol": "PDE3B"}
+{"target_chembl_id": "CHEMBL5219", "target_type": "SINGLE PROTEIN", "pref_name": "IMI-1", "organism": "Enterobacter cloacae", "uniprot_accessions": ["Q46991"], "gene_symbol": "imiA"}
+{"target_chembl_id": "CHEMBL3047", "target_type": "SINGLE PROTEIN", "pref_name": "Transmembrane prolyl 4-hydroxylase", "organism": "Homo sapiens", "uniprot_accessions": ["Q9NXG6"], "gene_symbol": "P4HTM"}
+{"target_chembl_id": "CHEMBL2096984", "target_type": "PROTEIN FAMILY", "pref_name": "Pancreatic elastase", "organism": "Sus scrofa", "uniprot_accessions": ["P08419", "P00772"], "gene_symbol": "CELA1"}
+{"target_chembl_id": "CHEMBL260", "target_type": "SINGLE PROTEIN", "pref_name": "Mitogen-activated protein kinase 14", "organism": "Homo sapiens", "uniprot_accessions": ["Q16539"], "gene_symbol": "MAPK14"}
+{"target_chembl_id": "CHEMBL3199", "target_type": "SINGLE PROTEIN", "pref_name": "Acetylcholinesterase", "organism": "Rattus norvegicus", "uniprot_accessions": ["P37136"], "gene_symbol": "Ache"}
+{"target_chembl_id": "CHEMBL3070", "target_type": "SINGLE PROTEIN", "pref_name": "Intercellular adhesion molecule 1", "organism": "Homo sapiens", "uniprot_accessions": ["P05362"], "gene_symbol": "ICAM1"}
+{"target_chembl_id": "CHEMBL3048", "target_type": "SINGLE PROTEIN", "pref_name": "Nitric oxide synthase 1", "organism": "Rattus norvegicus", "uniprot_accessions": ["P29476"], "gene_symbol": "Nos1"}
+{"target_chembl_id": "CHEMBL2094112", "target_type": "PROTEIN FAMILY", "pref_name": "Angiotensin II receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["P29089", "P25095", "P35351"], "gene_symbol": "Agtr2"}
+{"target_chembl_id": "CHEMBL3314", "target_type": "SINGLE PROTEIN", "pref_name": "Chymotrypsinogen A", "organism": "Bos taurus", "uniprot_accessions": ["P00766"], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL330", "target_type": "SINGLE PROTEIN", "pref_name": "Glutamate receptor ionotropic, NMDA 1", "organism": "Rattus norvegicus", "uniprot_accessions": ["P35439"], "gene_symbol": "Grin1"}
+{"target_chembl_id": "CHEMBL4561", "target_type": "SINGLE PROTEIN", "pref_name": "Neuropeptide Y receptor type 5", "organism": "Homo sapiens", "uniprot_accessions": ["Q15761"], "gene_symbol": "NPY5R"}
+{"target_chembl_id": "CHEMBL2095185", "target_type": "PROTEIN FAMILY", "pref_name": "Cholecystokinin receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P32239", "P32238"], "gene_symbol": "CCKAR"}
+{"target_chembl_id": "CHEMBL4354", "target_type": "SINGLE PROTEIN", "pref_name": "Mu-type opioid receptor", "organism": "Cavia porcellus", "uniprot_accessions": ["P97266"], "gene_symbol": "OPRM1"}
+{"target_chembl_id": "CHEMBL280", "target_type": "SINGLE PROTEIN", "pref_name": "Collagenase 3", "organism": "Homo sapiens", "uniprot_accessions": ["P45452"], "gene_symbol": "MMP13"}
+{"target_chembl_id": "CHEMBL3769", "target_type": "SINGLE PROTEIN", "pref_name": "Serine protease 1", "organism": "Bos taurus", "uniprot_accessions": ["P00760"], "gene_symbol": "PRSS1"}
+{"target_chembl_id": "CHEMBL394", "target_type": "CELL-LINE", "pref_name": "HCT-116", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2383", "target_type": "SINGLE PROTEIN", "pref_name": "Dihydroorotate dehydrogenase (quinone), mitochondrial", "organism": "Rattus norvegicus", "uniprot_accessions": ["Q63707"], "gene_symbol": "Dhodh"}
+{"target_chembl_id": "CHEMBL396", "target_type": "CELL-LINE", "pref_name": "NCI-H460", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL1929", "target_type": "SINGLE PROTEIN", "pref_name": "Xanthine dehydrogenase/oxidase", "organism": "Homo sapiens", "uniprot_accessions": ["P47989"], "gene_symbol": "XDH"}
+{"target_chembl_id": "CHEMBL279", "target_type": "SINGLE PROTEIN", "pref_name": "Vascular endothelial growth factor receptor 2", "organism": "Homo sapiens", "uniprot_accessions": ["P35968"], "gene_symbol": "KDR"}
+{"target_chembl_id": "CHEMBL255", "target_type": "SINGLE PROTEIN", "pref_name": "Adenosine receptor A2b", "organism": "Homo sapiens", "uniprot_accessions": ["P29275"], "gene_symbol": "ADORA2B"}
+{"target_chembl_id": "CHEMBL614935", "target_type": "CELL-LINE", "pref_name": "SNU-638", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2093869", "target_type": "PROTEIN COMPLEX", "pref_name": "Integrin alpha-IIb/beta-3", "organism": "Homo sapiens", "uniprot_accessions": ["P05106", "P08514"], "gene_symbol": "ITGA2B"}
+{"target_chembl_id": "CHEMBL247", "target_type": "SINGLE PROTEIN", "pref_name": "Human immunodeficiency virus type 1 reverse transcriptase", "organism": "Human immunodeficiency virus 1", "uniprot_accessions": ["Q72547"], "gene_symbol": "pol"}
+{"target_chembl_id": "CHEMBL227", "target_type": "SINGLE PROTEIN", "pref_name": "Type-1 angiotensin II receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P30556"], "gene_symbol": "AGTR1"}
+{"target_chembl_id": "CHEMBL374", "target_type": "ORGANISM", "pref_name": "Oryctolagus cuniculus", "organism": "Oryctolagus cuniculus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3879801", "target_type": "NON-MOLECULAR", "pref_name": "NON-PROTEIN TARGET", "organism": null, "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2093867", "target_type": "PROTEIN FAMILY", "pref_name": "Protein kinase C (PKC)", "organism": "Homo sapiens", "uniprot_accessions": ["O94806", "P41743", "P17252", "P05129", "Q05655", "P05771", "Q05513", "Q02156", "P24723", "Q15139", "Q04759"], "gene_symbol": "PRKCQ"}
+{"target_chembl_id": "CHEMBL3996", "target_type": "SINGLE PROTEIN", "pref_name": "Oxytocin receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["P70536"], "gene_symbol": "Oxtr"}
+{"target_chembl_id": "CHEMBL3891", "target_type": "SINGLE PROTEIN", "pref_name": "Calpain-1 catalytic subunit", "organism": "Homo sapiens", "uniprot_accessions": ["P07384"], "gene_symbol": "CAPN1"}
+{"target_chembl_id": "CHEMBL4481", "target_type": "SINGLE PROTEIN", "pref_name": "Nitric oxide synthase, inducible", "organism": "Homo sapiens", "uniprot_accessions": ["P35228"], "gene_symbol": "NOS2"}
+{"target_chembl_id": "CHEMBL2425", "target_type": "SINGLE PROTEIN", "pref_name": "Bifunctional dihydrofolate reductase-thymidylate synthase", "organism": "Toxoplasma gondii", "uniprot_accessions": ["Q07422"], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL1787", "target_type": "SINGLE PROTEIN", "pref_name": "3-oxo-5-alpha-steroid 4-dehydrogenase 1", "organism": "Homo sapiens", "uniprot_accessions": ["P18405"], "gene_symbol": "SRD5A1"}
+{"target_chembl_id": "CHEMBL249", "target_type": "SINGLE PROTEIN", "pref_name": "Substance-P receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P25103"], "gene_symbol": "TACR1"}
+{"target_chembl_id": "CHEMBL2647", "target_type": "SINGLE PROTEIN", "pref_name": "Substance-K receptor", "organism": "Cavia porcellus", "uniprot_accessions": ["Q64077"], "gene_symbol": "TACR2"}
+{"target_chembl_id": "CHEMBL2803", "target_type": "SINGLE PROTEIN", "pref_name": "Tyrosine-protein kinase ZAP-70", "organism": "Homo sapiens", "uniprot_accessions": ["P43403"], "gene_symbol": "ZAP70"}
+{"target_chembl_id": "CHEMBL2003", "target_type": "SINGLE PROTEIN", "pref_name": "Retinoic acid receptor gamma", "organism": "Homo sapiens", "uniprot_accessions": ["P13631"], "gene_symbol": "RARG"}
+{"target_chembl_id": "CHEMBL1944", "target_type": "SINGLE PROTEIN", "pref_name": "Neprilysin", "organism": "Homo sapiens", "uniprot_accessions": ["P08473"], "gene_symbol": "MME"}
+{"target_chembl_id": "CHEMBL3243", "target_type": "SINGLE PROTEIN", "pref_name": "Receptor-type tyrosine-protein phosphatase C", "organism": "Homo sapiens", "uniprot_accessions": ["P08575"], "gene_symbol": "PTPRC"}
+{"target_chembl_id": "CHEMBL3890", "target_type": "SINGLE PROTEIN", "pref_name": "E-selectin", "organism": "Homo sapiens", "uniprot_accessions": ["P16581"], "gene_symbol": "SELE"}
+{"target_chembl_id": "CHEMBL248", "target_type": "SINGLE PROTEIN", "pref_name": "Neutrophil elastase", "organism": "Homo sapiens", "uniprot_accessions": ["P08246"], "gene_symbol": "ELANE"}
+{"target_chembl_id": "CHEMBL267", "target_type": "SINGLE PROTEIN", "pref_name": "Proto-oncogene tyrosine-protein kinase Src", "organism": "Homo sapiens", "uniprot_accessions": ["P12931"], "gene_symbol": "SRC"}
+{"target_chembl_id": "CHEMBL4010", "target_type": "SINGLE PROTEIN", "pref_name": "Capsid scaffolding protein", "organism": "Human herpesvirus 6A (strain Uganda-1102) (HHV-6 variant A) (Human Blymphotropic virus)", "uniprot_accessions": ["P24433"], "gene_symbol": "U53"}
+{"target_chembl_id": "CHEMBL333", "target_type": "SINGLE PROTEIN", "pref_name": "72 kDa type IV collagenase", "organism": "Homo sapiens", "uniprot_accessions": ["P08253"], "gene_symbol": "MMP2"}
+{"target_chembl_id": "CHEMBL614590", "target_type": "CELL-LINE", "pref_name": "KB 3-1", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2094", "target_type": "SINGLE PROTEIN", "pref_name": "P2X purinoceptor 1", "organism": "Homo sapiens", "uniprot_accessions": ["P51575"], "gene_symbol": "P2RX1"}
+{"target_chembl_id": "CHEMBL2095197", "target_type": "PROTEIN COMPLEX", "pref_name": "Protein farnesyltransferase", "organism": "Rattus norvegicus", "uniprot_accessions": ["Q04631", "Q02293"], "gene_symbol": "Fntb"}
+{"target_chembl_id": "CHEMBL2845", "target_type": "SINGLE PROTEIN", "pref_name": "Protein phosphatase 1B", "organism": "Homo sapiens", "uniprot_accessions": ["O75688"], "gene_symbol": "PPM1B"}
+{"target_chembl_id": "CHEMBL3974", "target_type": "SINGLE PROTEIN", "pref_name": "Proteinase-activated receptor 1", "organism": "Homo sapiens", "uniprot_accessions": ["P25116"], "gene_symbol": "F2R"}
+{"target_chembl_id": "CHEMBL2026", "target_type": "SINGLE PROTEIN", "pref_name": "Beta-lactamase", "organism": "Escherichia coli K-12", "uniprot_accessions": ["P00811"], "gene_symbol": "ampC"}
+{"target_chembl_id": "CHEMBL3921", "target_type": "SINGLE PROTEIN", "pref_name": "Heparanase", "organism": "Homo sapiens", "uniprot_accessions": ["Q9Y251"], "gene_symbol": "HPSE"}
+{"target_chembl_id": "CHEMBL4335", "target_type": "SINGLE PROTEIN", "pref_name": "Mitogen-activated protein kinase 11", "organism": "Mus musculus", "uniprot_accessions": ["Q9WUI1"], "gene_symbol": "Mapk11"}
+{"target_chembl_id": "CHEMBL369", "target_type": "ORGANISM", "pref_name": "Cavia porcellus", "organism": "Cavia porcellus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3590", "target_type": "SINGLE PROTEIN", "pref_name": "Hormone-sensitive lipase", "organism": "Homo sapiens", "uniprot_accessions": ["Q05469"], "gene_symbol": "LIPE"}
+{"target_chembl_id": "CHEMBL1871", "target_type": "SINGLE PROTEIN", "pref_name": "Androgen receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P10275"], "gene_symbol": "AR"}
+{"target_chembl_id": "CHEMBL612809", "target_type": "CELL-LINE", "pref_name": "WIL2", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL612849", "target_type": "ORGANISM", "pref_name": "Trypanosoma brucei", "organism": "Trypanosoma brucei", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2466", "target_type": "SINGLE PROTEIN", "pref_name": "Interleukin-2", "organism": "Mus musculus", "uniprot_accessions": ["P04351"], "gene_symbol": "Il2"}
+{"target_chembl_id": "CHEMBL3287", "target_type": "SINGLE PROTEIN", "pref_name": "Interleukin-2 receptor subunit alpha", "organism": "Mus musculus", "uniprot_accessions": ["P01590"], "gene_symbol": "Il2ra"}
+{"target_chembl_id": "CHEMBL4018", "target_type": "SINGLE PROTEIN", "pref_name": "Neuropeptide Y receptor type 2", "organism": "Homo sapiens", "uniprot_accessions": ["P49146"], "gene_symbol": "NPY2R"}
+{"target_chembl_id": "CHEMBL378", "target_type": "ORGANISM", "pref_name": "Human immunodeficiency virus 1", "organism": "Human immunodeficiency virus 1", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2496", "target_type": "SINGLE PROTEIN", "pref_name": "P2X purinoceptor 7", "organism": "Rattus norvegicus", "uniprot_accessions": ["Q64663"], "gene_symbol": "P2rx7"}
+{"target_chembl_id": "CHEMBL4128", "target_type": "SINGLE PROTEIN", "pref_name": "Angiopoietin-1 receptor", "organism": "Homo sapiens", "uniprot_accessions": ["Q02763"], "gene_symbol": "TEK"}
+{"target_chembl_id": "CHEMBL313", "target_type": "SINGLE PROTEIN", "pref_name": "Sodium-dependent serotonin transporter", "organism": "Rattus norvegicus", "uniprot_accessions": ["P31652"], "gene_symbol": "Slc6a4"}
+{"target_chembl_id": "CHEMBL2002", "target_type": "SINGLE PROTEIN", "pref_name": "Inosine-5'-monophosphate dehydrogenase 2", "organism": "Homo sapiens", "uniprot_accessions": ["P12268"], "gene_symbol": "IMPDH2"}
+{"target_chembl_id": "CHEMBL614740", "target_type": "CELL-LINE", "pref_name": "NCI-H226", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL375", "target_type": "ORGANISM", "pref_name": "Mus musculus", "organism": "Mus musculus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL1907609", "target_type": "PROTEIN FAMILY", "pref_name": "Muscarinic acetylcholine receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["P08482", "P08483", "P08485", "P08911", "P10980"], "gene_symbol": "Chrm2"}
+{"target_chembl_id": "CHEMBL309", "target_type": "SINGLE PROTEIN", "pref_name": "Muscarinic acetylcholine receptor M2", "organism": "Rattus norvegicus", "uniprot_accessions": ["P10980"], "gene_symbol": "Chrm2"}
+{"target_chembl_id": "CHEMBL3397", "target_type": "SINGLE PROTEIN", "pref_name": "Cytochrome P450 2C9", "organism": "Homo sapiens", "uniprot_accessions": ["P11712"], "gene_symbol": "CYP2C9"}
+{"target_chembl_id": "CHEMBL273", "target_type": "SINGLE PROTEIN", "pref_name": "5-hydroxytryptamine receptor 1A", "organism": "Rattus norvegicus", "uniprot_accessions": ["P19327"], "gene_symbol": "Htr1a"}
+{"target_chembl_id": "CHEMBL3161", "target_type": "SINGLE PROTEIN", "pref_name": "L-selectin", "organism": "Homo sapiens", "uniprot_accessions": ["P14151"], "gene_symbol": "SELL"}
+{"target_chembl_id": "CHEMBL614182", "target_type": "CELL-LINE", "pref_name": "MRC5CV1", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3948", "target_type": "SINGLE PROTEIN", "pref_name": "Type-1 angiotensin II receptor", "organism": "Oryctolagus cuniculus", "uniprot_accessions": ["P34976"], "gene_symbol": "AGTR1"}
+{"target_chembl_id": "CHEMBL4048", "target_type": "SINGLE PROTEIN", "pref_name": "Malate dehydrogenase, cytoplasmic", "organism": "Sus scrofa", "uniprot_accessions": ["P11708"], "gene_symbol": "MDH1"}
+{"target_chembl_id": "CHEMBL354", "target_type": "ORGANISM", "pref_name": "Escherichia coli", "organism": "Escherichia coli", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2065", "target_type": "SINGLE PROTEIN", "pref_name": "Beta-lactamase TEM", "organism": "Escherichia coli", "uniprot_accessions": ["P62593"], "gene_symbol": "bla"}
+{"target_chembl_id": "CHEMBL219", "target_type": "SINGLE PROTEIN", "pref_name": "D(4) dopamine receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P21917"], "gene_symbol": "DRD4"}
+{"target_chembl_id": "CHEMBL4777", "target_type": "SINGLE PROTEIN", "pref_name": "Neuropeptide Y receptor type 1", "organism": "Homo sapiens", "uniprot_accessions": ["P25929"], "gene_symbol": "NPY1R"}
+{"target_chembl_id": "CHEMBL392", "target_type": "CELL-LINE", "pref_name": "A549", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL234", "target_type": "SINGLE PROTEIN", "pref_name": "D(3) dopamine receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P35462"], "gene_symbol": "DRD3"}
+{"target_chembl_id": "CHEMBL3081", "target_type": "SINGLE PROTEIN", "pref_name": "Aldo-keto reductase family 1 member B1", "organism": "Bos taurus", "uniprot_accessions": ["P16116"], "gene_symbol": "AKR1B1"}
+{"target_chembl_id": "CHEMBL1994", "target_type": "SINGLE PROTEIN", "pref_name": "Mineralocorticoid receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P08235"], "gene_symbol": "NR3C2"}
+{"target_chembl_id": "CHEMBL2111408", "target_type": "PROTEIN FAMILY", "pref_name": "Heart phosphodiesterase", "organism": "Bos taurus", "uniprot_accessions": ["Q01061", "P14100", "E1BN64"], "gene_symbol": "PDE3B"}
+{"target_chembl_id": "CHEMBL2094255", "target_type": "PROTEIN FAMILY", "pref_name": "DNA topoisomerase II", "organism": "Homo sapiens", "uniprot_accessions": ["P11388", "Q02880"], "gene_symbol": "TOP2B"}
+{"target_chembl_id": "CHEMBL2055", "target_type": "SINGLE PROTEIN", "pref_name": "Retinoic acid receptor alpha", "organism": "Homo sapiens", "uniprot_accessions": ["P10276"], "gene_symbol": "RARA"}
+{"target_chembl_id": "CHEMBL614806", "target_type": "CELL-LINE", "pref_name": "H9", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL4315", "target_type": "SINGLE PROTEIN", "pref_name": "P2Y purinoceptor 1", "organism": "Homo sapiens", "uniprot_accessions": ["P47900"], "gene_symbol": "P2RY1"}
+{"target_chembl_id": "CHEMBL4632", "target_type": "SINGLE PROTEIN", "pref_name": "Peroxisomal acyl-coenzyme A oxidase 1", "organism": "Rattus norvegicus", "uniprot_accessions": ["P07872"], "gene_symbol": "Acox1"}
+{"target_chembl_id": "CHEMBL2094111", "target_type": "PROTEIN FAMILY", "pref_name": "Adrenergic receptor alpha", "organism": "Rattus norvegicus", "uniprot_accessions": ["P15823", "P23944", "P43140", "P22086", "P19328", "P22909"], "gene_symbol": "Adra2a"}
+{"target_chembl_id": "CHEMBL614774", "target_type": "CELL-LINE", "pref_name": "T-24", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL1856", "target_type": "SINGLE PROTEIN", "pref_name": "3-oxo-5-alpha-steroid 4-dehydrogenase 2", "organism": "Homo sapiens", "uniprot_accessions": ["P31213"], "gene_symbol": "SRD5A2"}
+{"target_chembl_id": "CHEMBL613132", "target_type": "ORGANISM", "pref_name": "Human alphaherpesvirus 3", "organism": "Human alphaherpesvirus 3", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL357", "target_type": "ORGANISM", "pref_name": "Enterococcus faecium", "organism": "Enterococcus faecium", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL4803", "target_type": "SINGLE PROTEIN", "pref_name": "Nitric oxide synthase 3", "organism": "Homo sapiens", "uniprot_accessions": ["P29474"], "gene_symbol": "NOS3"}
+{"target_chembl_id": "CHEMBL269", "target_type": "SINGLE PROTEIN", "pref_name": "Delta-type opioid receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["P33533"], "gene_symbol": "Oprd1"}
+{"target_chembl_id": "CHEMBL397", "target_type": "CELL-LINE", "pref_name": "Jurkat", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL4973", "target_type": "SINGLE PROTEIN", "pref_name": "Excitatory amino acid transporter 2", "organism": "Homo sapiens", "uniprot_accessions": ["P43004"], "gene_symbol": "SLC1A2"}
+{"target_chembl_id": "CHEMBL614676", "target_type": "SUBCELLULAR", "pref_name": "Liposome", "organism": null, "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL270", "target_type": "SINGLE PROTEIN", "pref_name": "Mu-type opioid receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["P33535"], "gene_symbol": "Oprm1"}
+{"target_chembl_id": "CHEMBL4620", "target_type": "SINGLE PROTEIN", "pref_name": "Genome polyprotein", "organism": "Hepatitis C virus genotype 1a (isolate 1) (HCV)", "uniprot_accessions": ["P26664"], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL289", "target_type": "SINGLE PROTEIN", "pref_name": "Cytochrome P450 2D6", "organism": "Homo sapiens", "uniprot_accessions": ["P10635"], "gene_symbol": "CYP2D6"}
+{"target_chembl_id": "CHEMBL4607", "target_type": "SINGLE PROTEIN", "pref_name": "Type-2 angiotensin II receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P50052"], "gene_symbol": "AGTR2"}
+{"target_chembl_id": "CHEMBL612888", "target_type": "ORGANISM", "pref_name": "Toxoplasma gondii", "organism": "Toxoplasma gondii", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL4703", "target_type": "SINGLE PROTEIN", "pref_name": "Serine/threonine-protein phosphatase 2A catalytic subunit alpha isoform", "organism": "Homo sapiens", "uniprot_accessions": ["P67775"], "gene_symbol": "PPP2CA"}
+{"target_chembl_id": "CHEMBL3942", "target_type": "SINGLE PROTEIN", "pref_name": "Substance-P receptor", "organism": "Cavia porcellus", "uniprot_accessions": ["P30547"], "gene_symbol": "TACR1"}
+{"target_chembl_id": "CHEMBL614177", "target_type": "CELL-LINE", "pref_name": "MOLT-4", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL5102", "target_type": "SINGLE PROTEIN", "pref_name": "Transient receptor potential cation channel subfamily V member 1", "organism": "Rattus norvegicus", "uniprot_accessions": ["O35433"], "gene_symbol": "Trpv1"}
+{"target_chembl_id": "CHEMBL382", "target_type": "CELL-LINE", "pref_name": "CCRF-CEM", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2871", "target_type": "SINGLE PROTEIN", "pref_name": "Cholecystokinin receptor type A", "organism": "Rattus norvegicus", "uniprot_accessions": ["P30551"], "gene_symbol": "Cckar"}
+{"target_chembl_id": "CHEMBL3142", "target_type": "SINGLE PROTEIN", "pref_name": "DNA-dependent protein kinase catalytic subunit", "organism": "Homo sapiens", "uniprot_accessions": ["P78527"], "gene_symbol": "PRKDC"}
+{"target_chembl_id": "CHEMBL286", "target_type": "SINGLE PROTEIN", "pref_name": "Renin", "organism": "Homo sapiens", "uniprot_accessions": ["P00797"], "gene_symbol": "REN"}
+{"target_chembl_id": "CHEMBL377", "target_type": "ORGANISM", "pref_name": "Human alphaherpesvirus 1", "organism": "Human alphaherpesvirus 1", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL1824", "target_type": "SINGLE PROTEIN", "pref_name": "Receptor tyrosine-protein kinase erbB-2", "organism": "Homo sapiens", "uniprot_accessions": ["P04626"], "gene_symbol": "ERBB2"}
+{"target_chembl_id": "CHEMBL285", "target_type": "SINGLE PROTEIN", "pref_name": "Sterol O-acyltransferase 1", "organism": "Rattus norvegicus", "uniprot_accessions": ["O70536"], "gene_symbol": "Soat1"}
+{"target_chembl_id": "CHEMBL3771", "target_type": "SINGLE PROTEIN", "pref_name": "Capsid scaffolding protein", "organism": "Human cytomegalovirus (strain AD169) (HHV-5) (Human herpesvirus 5)", "uniprot_accessions": ["P16753"], "gene_symbol": "UL80"}
+{"target_chembl_id": "CHEMBL2060", "target_type": "SINGLE PROTEIN", "pref_name": "Lipoprotein lipase", "organism": "Homo sapiens", "uniprot_accessions": ["P06858"], "gene_symbol": "LPL"}
+{"target_chembl_id": "CHEMBL203", "target_type": "SINGLE PROTEIN", "pref_name": "Epidermal growth factor receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P00533"], "gene_symbol": "EGFR"}
+{"target_chembl_id": "CHEMBL2093866", "target_type": "PROTEIN FAMILY", "pref_name": "Estrogen receptor", "organism": "Homo sapiens", "uniprot_accessions": ["Q92731", "P03372"], "gene_symbol": "ESR1"}
+{"target_chembl_id": "CHEMBL4114", "target_type": "SINGLE PROTEIN", "pref_name": "Beta-lactamase", "organism": "Staphylococcus aureus", "uniprot_accessions": ["P00807"], "gene_symbol": "blaZ"}
+{"target_chembl_id": "CHEMBL4033", "target_type": "SINGLE PROTEIN", "pref_name": "Cyclooxygenase-2", "organism": "Canis lupus familiaris", "uniprot_accessions": ["Q8SPQ9"], "gene_symbol": "PTGS2"}
+{"target_chembl_id": "CHEMBL3444", "target_type": "SINGLE PROTEIN", "pref_name": "Malate dehydrogenase, mitochondrial", "organism": "Sus scrofa", "uniprot_accessions": ["P00346"], "gene_symbol": "MDH2"}
+{"target_chembl_id": "CHEMBL370", "target_type": "ORGANISM", "pref_name": "Human alphaherpesvirus 2", "organism": "Human alphaherpesvirus 2", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL4791", "target_type": "SINGLE PROTEIN", "pref_name": "Endothelin-converting enzyme 1", "organism": "Homo sapiens", "uniprot_accessions": ["P42892"], "gene_symbol": "ECE1"}
+{"target_chembl_id": "CHEMBL614297", "target_type": "CELL-LINE", "pref_name": "FM3A", "organism": "Mus musculus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL614462", "target_type": "CELL-LINE", "pref_name": "Col2", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL387", "target_type": "CELL-LINE", "pref_name": "MCF7", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2854", "target_type": "SINGLE PROTEIN", "pref_name": "Gastrin/cholecystokinin type B receptor", "organism": "Mus musculus", "uniprot_accessions": ["P56481"], "gene_symbol": "Cckbr"}
+{"target_chembl_id": "CHEMBL1907601", "target_type": "PROTEIN COMPLEX", "pref_name": "Cyclin-dependent kinase 4/cyclin D1", "organism": "Homo sapiens", "uniprot_accessions": ["P11802", "P24385"], "gene_symbol": "CCND1"}
+{"target_chembl_id": "CHEMBL2729", "target_type": "SINGLE PROTEIN", "pref_name": "Alkaline phosphatase, tissue-nonspecific isozyme", "organism": "Rattus norvegicus", "uniprot_accessions": ["P08289"], "gene_symbol": "Alpl"}
+{"target_chembl_id": "CHEMBL2093870", "target_type": "PROTEIN FAMILY", "pref_name": "Serotonin 2 (5-HT2) receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["P30994", "P08909", "P14842"], "gene_symbol": "Htr2a"}
+{"target_chembl_id": "CHEMBL1907608", "target_type": "PROTEIN COMPLEX GROUP", "pref_name": "Glutamate NMDA receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["P35439", "Q00959", "Q00960", "Q00961", "Q62645", "Q8VHN2", "Q9R1M7"], "gene_symbol": "Grin3a"}
+{"target_chembl_id": "CHEMBL2522", "target_type": "SINGLE PROTEIN", "pref_name": "Beta-galactosidase", "organism": "Homo sapiens", "uniprot_accessions": ["P16278"], "gene_symbol": "GLB1"}
+{"target_chembl_id": "CHEMBL2413", "target_type": "SINGLE PROTEIN", "pref_name": "C-C chemokine receptor type 1", "organism": "Homo sapiens", "uniprot_accessions": ["P32246"], "gene_symbol": "CCR1"}
+{"target_chembl_id": "CHEMBL302", "target_type": "SINGLE PROTEIN", "pref_name": "Adenosine receptor A2a", "organism": "Rattus norvegicus", "uniprot_accessions": ["P30543"], "gene_symbol": "Adora2a"}
+{"target_chembl_id": "CHEMBL2778", "target_type": "SINGLE PROTEIN", "pref_name": "Ileal sodium/bile acid cotransporter", "organism": "Homo sapiens", "uniprot_accessions": ["Q12908"], "gene_symbol": "SLC10A2"}
+{"target_chembl_id": "CHEMBL2094250", "target_type": "PROTEIN FAMILY", "pref_name": "Angiotensin II receptor (AT-1) type-1", "organism": "Rattus norvegicus", "uniprot_accessions": ["P29089", "P25095"], "gene_symbol": "Agtr1"}
+{"target_chembl_id": "CHEMBL2094115", "target_type": "PROTEIN FAMILY", "pref_name": "MAP kinase p38", "organism": "Homo sapiens", "uniprot_accessions": ["O15264", "Q15759", "Q16539", "P53778"], "gene_symbol": "MAPK12"}
+{"target_chembl_id": "CHEMBL2520", "target_type": "SINGLE PROTEIN", "pref_name": "Neutral alpha-glucosidase C", "organism": "Homo sapiens", "uniprot_accessions": ["Q8TET4"], "gene_symbol": "GANC"}
+{"target_chembl_id": "CHEMBL332", "target_type": "SINGLE PROTEIN", "pref_name": "Interstitial collagenase", "organism": "Homo sapiens", "uniprot_accessions": ["P03956"], "gene_symbol": "MMP1"}
+{"target_chembl_id": "CHEMBL1835", "target_type": "SINGLE PROTEIN", "pref_name": "Thromboxane-A synthase", "organism": "Homo sapiens", "uniprot_accessions": ["P24557"], "gene_symbol": "TBXAS1"}
+{"target_chembl_id": "CHEMBL614865", "target_type": "PROTEIN COMPLEX", "pref_name": "Mitochondrial complex I; NADH oxidoreductase", "organism": "Bos taurus", "uniprot_accessions": ["P25708", "P52505"], "gene_symbol": "NDUFAB1"}
+{"target_chembl_id": "CHEMBL1804", "target_type": "SINGLE PROTEIN", "pref_name": "Somatostatin receptor type 2", "organism": "Homo sapiens", "uniprot_accessions": ["P30874"], "gene_symbol": "SSTR2"}
+{"target_chembl_id": "CHEMBL614293", "target_type": "CELL-LINE", "pref_name": "EL4", "organism": "Mus musculus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3373", "target_type": "SINGLE PROTEIN", "pref_name": "Beta-2 adrenergic receptor", "organism": "Bos taurus", "uniprot_accessions": ["Q28044"], "gene_symbol": "ADRB2"}
+{"target_chembl_id": "CHEMBL3521", "target_type": "SINGLE PROTEIN", "pref_name": "Receptor-type tyrosine-protein phosphatase F", "organism": "Homo sapiens", "uniprot_accessions": ["P10586"], "gene_symbol": "PTPRF"}
+{"target_chembl_id": "CHEMBL230", "target_type": "SINGLE PROTEIN", "pref_name": "Prostaglandin G/H synthase 2", "organism": "Homo sapiens", "uniprot_accessions": ["P35354"], "gene_symbol": "PTGS2"}
+{"target_chembl_id": "CHEMBL3222", "target_type": "SINGLE PROTEIN", "pref_name": "Delta-type opioid receptor", "organism": "Mus musculus", "uniprot_accessions": ["P32300"], "gene_symbol": "Oprd1"}
+{"target_chembl_id": "CHEMBL2853", "target_type": "SINGLE PROTEIN", "pref_name": "Inositol 1,4,5-trisphosphate-gated calcium channel ITPR3", "organism": "Bos taurus", "uniprot_accessions": ["Q8WN95"], "gene_symbol": "ITPR3"}
+{"target_chembl_id": "CHEMBL1983", "target_type": "SINGLE PROTEIN", "pref_name": "5-hydroxytryptamine receptor 1D", "organism": "Homo sapiens", "uniprot_accessions": ["P28221"], "gene_symbol": "HTR1D"}
+{"target_chembl_id": "CHEMBL2902", "target_type": "SINGLE PROTEIN", "pref_name": "Dihydrofolate reductase", "organism": "Lactobacillus casei", "uniprot_accessions": ["P00381"], "gene_symbol": "folA"}
+{"target_chembl_id": "CHEMBL376", "target_type": "ORGANISM", "pref_name": "Rattus norvegicus", "organism": "Rattus norvegicus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL338", "target_type": "SINGLE PROTEIN", "pref_name": "Sodium-dependent dopamine transporter", "organism": "Rattus norvegicus", "uniprot_accessions": ["P23977"], "gene_symbol": "Slc6a3"}
+{"target_chembl_id": "CHEMBL2530", "target_type": "SINGLE PROTEIN", "pref_name": "P2X purinoceptor 1", "organism": "Rattus norvegicus", "uniprot_accessions": ["P47824"], "gene_symbol": "P2rx1"}
+{"target_chembl_id": "CHEMBL1806", "target_type": "SINGLE PROTEIN", "pref_name": "DNA topoisomerase 2-alpha", "organism": "Homo sapiens", "uniprot_accessions": ["P11388"], "gene_symbol": "TOP2A"}
+{"target_chembl_id": "CHEMBL2363", "target_type": "SINGLE PROTEIN", "pref_name": "Dihydrofolate reductase", "organism": "Rattus norvegicus", "uniprot_accessions": ["Q920D2"], "gene_symbol": "Dhfr"}
+{"target_chembl_id": "CHEMBL3706", "target_type": "SINGLE PROTEIN", "pref_name": "Disintegrin and metalloproteinase domain-containing protein 17", "organism": "Homo sapiens", "uniprot_accessions": ["P78536"], "gene_symbol": "ADAM17"}
+{"target_chembl_id": "CHEMBL2095204", "target_type": "PROTEIN FAMILY", "pref_name": "Trypsin", "organism": "Homo sapiens", "uniprot_accessions": ["P07477", "P07478", "P35030"], "gene_symbol": "PRSS3"}
+{"target_chembl_id": "CHEMBL612517", "target_type": "CELL-LINE", "pref_name": "RPMI 8402", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL347", "target_type": "ORGANISM", "pref_name": "Streptococcus pneumoniae", "organism": "Streptococcus pneumoniae", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL2096674", "target_type": "PROTEIN FAMILY", "pref_name": "Cyclooxygenase", "organism": "Bos taurus", "uniprot_accessions": ["O62664", "O62698"], "gene_symbol": "PTGS2"}
+{"target_chembl_id": "CHEMBL383", "target_type": "CELL-LINE", "pref_name": "HL-60", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL4071", "target_type": "SINGLE PROTEIN", "pref_name": "Cathepsin G", "organism": "Homo sapiens", "uniprot_accessions": ["P08311"], "gene_symbol": "CTSG"}
+{"target_chembl_id": "CHEMBL3085", "target_type": "SINGLE PROTEIN", "pref_name": "Excitatory amino acid transporter 1", "organism": "Homo sapiens", "uniprot_accessions": ["P43003"], "gene_symbol": "SLC1A3"}
+{"target_chembl_id": "CHEMBL2818", "target_type": "SINGLE PROTEIN", "pref_name": "P2X purinoceptor 4", "organism": "Rattus norvegicus", "uniprot_accessions": ["P51577"], "gene_symbol": "P2rx4"}
+{"target_chembl_id": "CHEMBL4013", "target_type": "SINGLE PROTEIN", "pref_name": "Capsid scaffolding protein", "organism": "Epstein-Barr virus (strain B95-8) (HHV-4) (Human herpesvirus 4)", "uniprot_accessions": ["P03234"], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL5378", "target_type": "SINGLE PROTEIN", "pref_name": "P-selectin", "organism": "Homo sapiens", "uniprot_accessions": ["P16109"], "gene_symbol": "SELP"}
+{"target_chembl_id": "CHEMBL614004", "target_type": "CELL-LINE", "pref_name": "A2780", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL4715", "target_type": "SINGLE PROTEIN", "pref_name": "Phospholipase A2, major isoenzyme", "organism": "Sus scrofa", "uniprot_accessions": ["P00592"], "gene_symbol": "PLA2G1B"}
+{"target_chembl_id": "CHEMBL276", "target_type": "SINGLE PROTEIN", "pref_name": "Muscarinic acetylcholine receptor M1", "organism": "Rattus norvegicus", "uniprot_accessions": ["P08482"], "gene_symbol": "Chrm1"}
+{"target_chembl_id": "CHEMBL3102", "target_type": "SINGLE PROTEIN", "pref_name": "Dopamine beta-hydroxylase", "organism": "Homo sapiens", "uniprot_accessions": ["P09172"], "gene_symbol": "DBH"}
+{"target_chembl_id": "CHEMBL613888", "target_type": "CELL-LINE", "pref_name": "HEL", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3508", "target_type": "SINGLE PROTEIN", "pref_name": "Gastrin/cholecystokinin type B receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["P30553"], "gene_symbol": "Cckbr"}
+{"target_chembl_id": "CHEMBL613296", "target_type": "UNKNOWN", "pref_name": "AF2 neuropeptide receptor", "organism": null, "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL614455", "target_type": "CELL-LINE", "pref_name": "CH1", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL372", "target_type": "ORGANISM", "pref_name": "Homo sapiens", "organism": "Homo sapiens", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL3563", "target_type": "SINGLE PROTEIN", "pref_name": "Cruzipain", "organism": "Trypanosoma cruzi", "uniprot_accessions": ["P25779"], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL391", "target_type": "CELL-LINE", "pref_name": "Vero", "organism": "Chlorocebus sabaeus", "uniprot_accessions": [], "gene_symbol": ""}
+{"target_chembl_id": "CHEMBL1873", "target_type": "SINGLE PROTEIN", "pref_name": "Tissue-type plasminogen activator", "organism": "Homo sapiens", "uniprot_accessions": ["P00750"], "gene_symbol": "PLAT"}
+{"target_chembl_id": "CHEMBL1973", "target_type": "SINGLE PROTEIN", "pref_name": "Tyrosinase", "organism": "Homo sapiens", "uniprot_accessions": ["P14679"], "gene_symbol": "TYR"}
+{"target_chembl_id": "CHEMBL2531", "target_type": "SINGLE PROTEIN", "pref_name": "P2X purinoceptor 2", "organism": "Homo sapiens", "uniprot_accessions": ["Q9UBL9"], "gene_symbol": "P2RX2"}
+{"target_chembl_id": "CHEMBL3559", "target_type": "SINGLE PROTEIN", "pref_name": "Steryl-sulfatase", "organism": "Homo sapiens", "uniprot_accessions": ["P08842"], "gene_symbol": "STS"}
+{"target_chembl_id": "CHEMBL213", "target_type": "SINGLE PROTEIN", "pref_name": "Beta-1 adrenergic receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P08588"], "gene_symbol": "ADRB1"}
+{"target_chembl_id": "CHEMBL204", "target_type": "SINGLE PROTEIN", "pref_name": "Prothrombin", "organism": "Homo sapiens", "uniprot_accessions": ["P00734"], "gene_symbol": "F2"}
+{"target_chembl_id": "CHEMBL3849", "target_type": "SINGLE PROTEIN", "pref_name": "Lanosterol 14-alpha demethylase", "organism": "Homo sapiens", "uniprot_accessions": ["Q16850"], "gene_symbol": "CYP51A1"}
+{"target_chembl_id": "CHEMBL2094127", "target_type": "PROTEIN COMPLEX GROUP", "pref_name": "Cyclin-dependent kinase 1/cyclin B", "organism": "Homo sapiens", "uniprot_accessions": ["P06493", "P14635", "Q8WWL7", "O95067"], "gene_symbol": "CCNB2"}
+{"target_chembl_id": "CHEMBL4622", "target_type": "SINGLE PROTEIN", "pref_name": "Beta-glucosidase A", "organism": "Caldicellulosiruptor saccharolyticus", "uniprot_accessions": ["P10482"], "gene_symbol": "bglA"}
+{"target_chembl_id": "CHEMBL4804", "target_type": "SINGLE PROTEIN", "pref_name": "M-phase inducer phosphatase 2", "organism": "Homo sapiens", "uniprot_accessions": ["P30305"], "gene_symbol": "CDC25B"}
+{"target_chembl_id": "CHEMBL238", "target_type": "SINGLE PROTEIN", "pref_name": "Sodium-dependent dopamine transporter", "organism": "Homo sapiens", "uniprot_accessions": ["Q01959"], "gene_symbol": "SLC6A3"}
+{"target_chembl_id": "CHEMBL2096986", "target_type": "PROTEIN FAMILY", "pref_name": "Cholecystokinin receptor", "organism": "Rattus norvegicus", "uniprot_accessions": ["P30551", "P30553"], "gene_symbol": "Cckbr"}
+{"target_chembl_id": "CHEMBL2094108", "target_type": "PROTEIN COMPLEX", "pref_name": "Protein farnesyltransferase", "organism": "Homo sapiens", "uniprot_accessions": ["P49354", "P49356"], "gene_symbol": "FNTB"}
+{"target_chembl_id": "CHEMBL236", "target_type": "SINGLE PROTEIN", "pref_name": "Delta-type opioid receptor", "organism": "Homo sapiens", "uniprot_accessions": ["P41143"], "gene_symbol": "OPRD1"}

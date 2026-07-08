@@ -1,0 +1,68 @@
+# Data fetching
+requests>=2.31.0
+
+# Data processing
+pandas>=2.1.4
+numpy>=1.26.3
+
+# Chemistry (InChIKey conversion)
+# RDKit — chemistry toolkit for SMILES to InChIKey conversion
+#
+# audit-2025 ROOT FIX (issue 37): the previous marker
+# ``platform_machine=="x86_64"`` silently skipped rdkit-pypi on ARM64
+# hosts (Apple Silicon M1/M2/M3, AWS Graviton EC2, Azure arm64 VMs).
+# On those hosts the pipeline's ``convert_to_inchikey()`` degraded to
+# returning ``None`` for every SMILES — silently dropping InChIKey
+# conversion for the entire run. The fix adds ``platform_machine==
+# "aarch64"`` (the Linux ARM64 uname; macOS ARM64 also reports
+# "arm64" so we include that too) so RDKit is installed on ARM64
+# hosts as well. rdkit-pypi publishes aarch64 wheels since the 2023.9
+# release.
+rdkit-pypi>=2023.9.1; python_version>="3.8" and (platform_machine=="x86_64" or platform_machine=="aarch64" or platform_machine=="arm64")
+
+# Database
+sqlalchemy>=2.0.25
+psycopg2-binary>=2.9.9
+
+# XML parsing (DrugBank)
+lxml>=5.1.0
+
+# Airflow — required by phase1/dags/*.py (8 DAG files do
+# `from airflow.decorators import dag, task` at module top level).
+# FIX-C6: previously omitted here (old comment claimed Airflow was supplied
+# only by the Docker image), which made every DAG un-importable outside
+# Docker and caused tests/test_dag_structure.py to
+# pytest.importorskip("airflow"), silently SKIPPING all DAG structure
+# validation. Now declared explicitly.
+#
+# audit-2025 ROOT FIX (issue 38): the previous line had no
+# ``python_version`` marker. Apache Airflow 2.x does NOT support
+# Python 3.13+ (Airflow 2.10 added 3.12 support; 3.13 support is
+# tracked in apache/airflow#39125 and slated for Airflow 3.0).
+# Installing this requirements.txt on Python 3.13 would pull in
+# Airflow 2.x and then fail at import time with cryptic
+# ``AttributeError`` / ``ImportError`` errors. The fix adds the
+# ``python_version < "3.13"`` marker so pip skips Airflow on
+# Python 3.13+ and prints a clear "no matching distribution" message
+# instead. When Airflow 3.0 ships with 3.13 support, bump the version
+# constraint and remove the marker.
+apache-airflow>=2.8.0; python_version < "3.13"
+
+# Fuzzy matching (entity resolution)
+rapidfuzz>=3.6.1
+
+# Utils
+python-dotenv>=1.0.0
+
+# audit-2025 ROOT FIX (issue 39): the codebase imports ``filelock``
+# (pipelines/base_pipeline.py uses it for cross-process file locking
+# to prevent concurrent file corruption) and ``pyarrow`` (the
+# Parquet read/write path in base_pipeline.py and the dtype-backend
+# for nullable pandas Int64 columns used throughout the cleaning
+# module). Both were previously TRANSITIVE dependencies that came in
+# via ``pandas`` / ``sqlalchemy`` — but transitive dependencies can
+# silently disappear when the parent library changes its extras
+# (pandas 2.2 dropped pyarrow from its default install). The fix
+# declares both as direct dependencies so the build is reproducible.
+filelock>=3.13.0
+pyarrow>=14.0.0

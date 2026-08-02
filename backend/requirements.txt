@@ -1,0 +1,8 @@
+fastapi>=0.110
+uvicorn[standard]>=0.27
+pydantic>=2.6
+python-jose[cryptography]>=3.3
+psycopg2-binary>=2.9
+sqlalchemy>=2.0.25
+neo4j>=5.19
+python-multipart>=0.0.9
